@@ -10,6 +10,7 @@ export function Header() {
             {/*Style them how you like, but use these <Link> elements instead of <a> elements to navigate the react router dom*/}
 
             <Link to='/'>Home</Link> &nbsp;
+            <Link to='/register'>Register</Link> &nbsp;
             <Link to='/login'>Login</Link> &nbsp;
             <Link to='/profile'>Profile</Link> &nbsp;
             <br/><br/>
