@@ -7,7 +7,8 @@ export function Profile() {
         <div>
             Welcome to your profile
             <br/>
-            <Link to='/profile/edit'>Edit Profile</Link> &nbsp;
+            <Link to='/profile/edit'>Edit Profile</Link>
+
         </div>
     )
 }
