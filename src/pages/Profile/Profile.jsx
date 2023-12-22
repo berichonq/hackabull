@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 export function Profile() {
-    let user = useSelector(state => state.user.data)
+    const user = useSelector(state => state.user.data)
 
     return (
         <div>
