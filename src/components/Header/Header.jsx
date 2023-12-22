@@ -5,7 +5,7 @@ export function Header() {
 
     return (
         <div>
-            <h2>Welcome to Hackabull</h2>
+            <h2>Welcome to HackaBull</h2>
 
             {/*Style them how you like, but use these <Link> elements instead of <a> elements to navigate the react router dom*/}
 
