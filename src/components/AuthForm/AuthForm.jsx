@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { logOn, logOff } from '../../store/user/user-slice'
 
 import { auth, usersDB } from '../../config/firebase'
-import { createUserWithEmailAndPassword, signOut } from 'firebase/auth'
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import { doc, getDoc } from 'firebase/firestore'
 
 export function AuthForm() {
@@ -13,9 +13,12 @@ export function AuthForm() {
 
     let dispatch = useDispatch()
 
-    const signInWithEmailAndPassword = async () => {
+    const login = async () => {
         try {
-            await createUserWithEmailAndPassword(auth, email, password);
+            await signInWithEmailAndPassword(auth, email, password)
+            
+            ///////////////////////////////////////////////////////////////////////////////
+            // Access the logged in user's data from Firestore and update the Redux state
             const docRef = doc(usersDB, 'users', auth?.currentUser?.email)
             let user;
             try {
@@ -23,7 +26,9 @@ export function AuthForm() {
             } catch(err) {
                 console.error(err)
             }
+
             dispatch(logOn(user.data()))
+            //////////////////////////////////////////////////////////////////////////////
         } catch (err) {
             console.error(err)
         }
@@ -43,7 +48,7 @@ export function AuthForm() {
             <input placeholder="Email" type="email" onChange={(e) => setEmail(e.target.value)}/>
             <input placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}/>
             <br/>
-            <button onClick={signInWithEmailAndPassword}>Login</button>
+            <button onClick={login}>Login</button>
             <br/>
             <button onClick={logout}> Logout </button>
         </div>

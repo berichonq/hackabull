@@ -2,11 +2,16 @@ import s from './style.module.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { auth, usersDB } from '../../config/firebase'
+import { useDispatch } from 'react-redux'
+import { logOn } from '../../store/user/user-slice'
+
+import { auth, usersDB, usersCollectionRef } from '../../config/firebase'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-import { collection, addDoc } from 'firebase/firestore' // See later
+import { doc, setDoc, getDoc } from 'firebase/firestore' // See later
 
 export function RegistrationForm() {
+    let dispatch = useDispatch()
+    
     // Input field states
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
@@ -26,8 +31,6 @@ export function RegistrationForm() {
     const [confirmPasswordError, setConfirmPasswordError] = useState()
 
     const [validated, setValidated] = useState()
-
-    const usersCollectionRef = collection(usersDB, "users")
 
 
     const validEmail = () => {
@@ -107,8 +110,7 @@ export function RegistrationForm() {
             setValidated(true)
             let newUserCreated = false
 
-            // We're validated, now let's create a new user in our Firebase Auth Directory
-            // Check first though, if this email already registered!!!
+            // We're validated, now create a new user in our Firebase Auth Directory
             try {
                 await createUserWithEmailAndPassword(auth, email, password);
                 alert("New account created!")
@@ -120,17 +122,30 @@ export function RegistrationForm() {
             // We also need to give them their own doc in the Firestore DB, this represents their registration
             if (newUserCreated) {
                 try {
-                    await addDoc(usersCollectionRef, {
+                    await setDoc(doc(usersCollectionRef, auth?.currentUser?.email), {
                         first: firstName,
                         last: lastName,
                         university: college,
-                        classification: grade
+                        classification: grade,
                     })
 
                     alert("Registration complete!")
                 } catch (err) {
                     console.error(err)
                 }
+
+                ///////////////////////////////////////////////////////////////////////////////
+                // Account creation and registration complete, they should now have data we can access to update our Redux store
+                const docRef = doc(usersDB, 'users', auth?.currentUser?.email)
+                let user;
+                try {
+                    user = await getDoc(docRef)
+                } catch(err) {
+                    console.error(err)
+                }
+
+                dispatch(logOn(user.data()))
+                //////////////////////////////////////////////////////////////////////////////
             }
         } else {
             setValidated(false) // This state change will trigger a re-render with any error messages
