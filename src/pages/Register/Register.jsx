@@ -1,13 +1,14 @@
 import s from './style.module.css'
+import { RegistrationForm } from '../../components/RegistrationForm/RegistrationForm'
 import { Link } from 'react-router-dom'
 
 export function Register() {
 
     return (
         <div>
-            Welcome to registration
+            Welcome to HackaBull!
             <br/>
-            Already registered? <Link to='/login'>Login here</Link>
+            <RegistrationForm />
         </div>
     )
 }
