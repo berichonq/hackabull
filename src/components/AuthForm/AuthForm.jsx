@@ -45,7 +45,7 @@ export function AuthForm() {
 
     return (
         <div>
-            <input placeholder="Email" type="email" onChange={(e) => setEmail(e.target.value)}/>
+            <input placeholder="Email" id="email" autoComplete="email" type="email" onChange={(e) => setEmail(e.target.value)}/>
             <input placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}/>
             <br/>
             <button onClick={login}>Login</button>

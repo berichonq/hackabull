@@ -155,11 +155,11 @@ export function RegistrationForm() {
     return (
         <div>
 
-            <input required placeholder="First name" onChange={(e) => setFirstName(e.target.value)}/>
+            <input required id="first-name" autoComplete="given-name" placeholder="First name" onChange={(e) => setFirstName(e.target.value)}/>
             { firstNameError && <p>{firstNameError}</p>}
             <br/>
 
-            <input required placeholder="Last name" onChange={(e) => setLastName(e.target.value)}/>
+            <input required id="last-name" autoComplete="family-name" placeholder="Last name" onChange={(e) => setLastName(e.target.value)}/>
             { lastNameError && <p>{lastNameError}</p>}
             <br/>
             
@@ -181,19 +181,19 @@ export function RegistrationForm() {
             { collegeError && <p>{collegeError}</p>}
             <br/>
 
-            <input required placeholder="Email" type="email" onChange={(e) => setEmail(e.target.value)}/>
+            <input required id="email" autoComplete="email" placeholder="Email" type="email" onChange={(e) => setEmail(e.target.value)}/>
             { emailError && <p>{emailError}</p>}
             <br/>
 
-            <input required placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}/>
+            <input required id="password" placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}/>
             { passwordError && <p>{passwordError}</p>}
             <br/>
 
-            <input required placeholder="Confirm password" type="password" onChange={(e) => setConfirmPassword(e.target.value)}/>
+            <input required id="password-confirmation" placeholder="Confirm password" type="password" onChange={(e) => setConfirmPassword(e.target.value)}/>
             { confirmPasswordError && <p>{confirmPasswordError}</p>}
             <br/>
 
-            <button onClick={register}>Register</button>
+            <button id="submit" onClick={register}>Register</button>
 
             <br/><br/>
 
