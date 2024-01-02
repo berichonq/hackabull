@@ -155,11 +155,11 @@ export function RegistrationForm() {
     return (
         <div>
 
-            <input required placeholder="First name *" onChange={(e) => setFirstName(e.target.value)}/>
+            <input required placeholder="First name" onChange={(e) => setFirstName(e.target.value)}/>
             { firstNameError && <p>{firstNameError}</p>}
             <br/>
 
-            <input required placeholder="Last name *" onChange={(e) => setLastName(e.target.value)}/>
+            <input required placeholder="Last name" onChange={(e) => setLastName(e.target.value)}/>
             { lastNameError && <p>{lastNameError}</p>}
             <br/>
             
@@ -177,7 +177,7 @@ export function RegistrationForm() {
             <br/>
 
             <label htmlFor="college-input">Please include the full name of your education institution </label>
-            <input id="college-input" disabled={true ? grade === "N/A" : false} placeholder="University *" onChange={(e) => setCollege(e.target.value)}/>
+            <input id="college-input" disabled={true ? grade === "N/A" : false} placeholder="University" onChange={(e) => setCollege(e.target.value)}/>
             { collegeError && <p>{collegeError}</p>}
             <br/>
 
