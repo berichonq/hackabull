@@ -18,6 +18,7 @@ import { RegistrationConfirmation } from './pages/RegistrationConfirmation/Regis
 import { Login } from './pages/Login/Login.jsx'
 import { Profile } from './pages/Profile/Profile.jsx'
 import { EditProfile } from './pages/EditProfile/EditProfile.jsx'
+import { PageNotFound } from './pages/PageNotFound/PageNotFound.jsx'
 import userSlice from './store/user/user-slice.js'
 
 
@@ -67,6 +68,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route exact path='/login' element={<Login />}/>
               <Route exact path='/profile' element={<Profile />}/>
               <Route exact path='/profile/edit' element={<EditProfile />}/>
+              <Route path='*' element={<PageNotFound />}/>
             </Route>
           </Routes>
         </BrowserRouter>
