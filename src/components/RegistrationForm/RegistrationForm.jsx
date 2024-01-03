@@ -1,6 +1,6 @@
 import s from './style.module.css'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { useDispatch } from 'react-redux'
 import { logOn } from '../../store/user/user-slice'
@@ -11,6 +11,7 @@ import { doc, setDoc, getDoc } from 'firebase/firestore' // See later
 
 export function RegistrationForm() {
     let dispatch = useDispatch()
+    let navigate = useNavigate()
     
     // Input field states
     const [firstName, setFirstName] = useState("")
@@ -146,6 +147,8 @@ export function RegistrationForm() {
 
                 dispatch(logOn(user.data()))
                 //////////////////////////////////////////////////////////////////////////////
+
+                navigate('/')
             }
         } else {
             setValidated(false) // This state change will trigger a re-render with any error messages
