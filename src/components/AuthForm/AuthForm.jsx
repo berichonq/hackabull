@@ -1,11 +1,12 @@
 import s from './style.module.css'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { logOn, logOff } from '../../store/user/user-slice'
+import { logOn } from '../../store/user/user-slice'
 
 import { auth, usersDB } from '../../config/firebase'
-import { signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 import { doc, getDoc } from 'firebase/firestore'
+
 
 export function AuthForm() {
     const [email, setEmail] = useState("")
@@ -34,23 +35,13 @@ export function AuthForm() {
         }
     }
 
-    const logout = async () => {
-        try {
-            await signOut(auth);
-            dispatch(logOff())
-        } catch (err) {
-            console.error(err)
-        }
-    }
-
     return (
         <div>
             <input placeholder="Email" id="email" autoComplete="email" type="email" onChange={(e) => setEmail(e.target.value)}/>
-            <input placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}/>
+            <input placeholder="Password" name="password" type="password" onChange={(e) => setPassword(e.target.value)}/>
             <br/>
             <button onClick={login}>Login</button>
             <br/>
-            <button onClick={logout}> Logout </button>
         </div>
     )
 }

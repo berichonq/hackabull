@@ -6,7 +6,10 @@ function App() {
 
   return (
     <div>
+      {/*Since a few of the pages won't need the navbar, delete this header eventually and mount the navbar directly on the pages that need it*/}
       <Header />
+      {/***************************************************************************************************************************************/}
+
       <Outlet />
     </div>
   )

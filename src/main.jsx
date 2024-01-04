@@ -11,15 +11,17 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import storage from 'redux-persist/lib/storage'
 import { PersistGate } from 'redux-persist/integration/react'
 
+import { AuthContext } from './context/AuthContext.jsx'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Protected } from './pages/Protected.jsx'
+import { Anonymous } from './pages/Anonymous.jsx'
 import { Home } from './pages/Home/Home.jsx'
 import { Register } from './pages/Register/Register.jsx'
-import { RegistrationConfirmation } from './pages/RegistrationConfirmation/RegistrationConfirmation.jsx'
 import { Login } from './pages/Login/Login.jsx'
 import { Profile } from './pages/Profile/Profile.jsx'
 import { EditProfile } from './pages/EditProfile/EditProfile.jsx'
 import { PageNotFound } from './pages/PageNotFound/PageNotFound.jsx'
-import userSlice from './store/user/user-slice.js'
 
 
 // 1. Combine the reducers (slices content) into a single reducer
@@ -57,22 +59,27 @@ const persistor = persistStore(store)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<App />}>
-              <Route exact path='/' element={<Home />}/>
-              <Route exact path='/register' element={<Register />}/>
-              <Route exact path='/register/confirmation' element={<RegistrationConfirmation />}/>
-              <Route exact path='/login' element={<Login />}/>
-              <Route exact path='/profile' element={<Profile />}/>
-              <Route exact path='/profile/edit' element={<EditProfile />}/>
-              <Route path='*' element={<PageNotFound />}/>
-            </Route>
-          </Routes>
-        </BrowserRouter>
-        </PersistGate>
-    </Provider>
+    <AuthContext>
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <BrowserRouter>
+            <Routes>
+              <Route path='/' element={<App />}>
+                <Route exact path='/' element={<Home />}/>
+                <Route path='*' element={<PageNotFound />}/>
+
+                {/*Only anonymous users can access*/}
+                <Route exact path='/register' element={<Anonymous><Register /></Anonymous>}/>
+                <Route exact path='/login' element={<Anonymous><Login /></Anonymous>}/>
+
+                {/*Only authenticated users can access*/}
+                <Route exact path='/profile' element={<Protected><Profile /></Protected>}/>
+                <Route exact path='/profile/edit' element={<Protected><EditProfile /></Protected>}/>
+              </Route>
+            </Routes>
+          </BrowserRouter>
+          </PersistGate>
+      </Provider>
+    </AuthContext>
   </React.StrictMode>,
 )
