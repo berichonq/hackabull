@@ -10,6 +10,8 @@ export function Login() {
         <br/>
         <AuthForm />
         Haven't registered yet? <Link to='/register'>Register here</Link>
+        <br/>
+        Forgot password? <Link to='/password-reset'>Click here</Link>
         </div>
     )
 }

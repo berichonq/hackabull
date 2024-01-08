@@ -22,6 +22,7 @@ import { Login } from './pages/Login/Login.jsx'
 import { Profile } from './pages/Profile/Profile.jsx'
 import { EditProfile } from './pages/EditProfile/EditProfile.jsx'
 import { PageNotFound } from './pages/PageNotFound/PageNotFound.jsx'
+import { PasswordReset } from './pages/PasswordReset/PasswordReset.jsx'
 
 
 // 1. Combine the reducers (slices content) into a single reducer
@@ -71,6 +72,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
                 {/*Only anonymous users can access*/}
                 <Route exact path='/register' element={<Anonymous><Register /></Anonymous>}/>
                 <Route exact path='/login' element={<Anonymous><Login /></Anonymous>}/>
+                <Route exact path='/password-reset' element={<Anonymous><PasswordReset /></Anonymous>}/>
 
                 {/*Only authenticated users can access*/}
                 <Route exact path='/profile' element={<Protected><Profile /></Protected>}/>
