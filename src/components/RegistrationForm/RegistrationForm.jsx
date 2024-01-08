@@ -3,10 +3,9 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 import { useDispatch } from 'react-redux'
-import { logOn } from '../../store/user/user-slice'
 
-import { auth, usersDB, usersCollectionRef } from '../../config/firebase'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth, usersCollectionRef } from '../../config/firebase'
+import { createUserWithEmailAndPassword, sendEmailVerification, signOut, updateProfile } from 'firebase/auth'
 import { doc, setDoc, getDoc } from 'firebase/firestore' // See later
 
 export function RegistrationForm() {
@@ -114,7 +113,7 @@ export function RegistrationForm() {
             // We're validated, now create a new user in our Firebase Auth Directory
             try {
                 await createUserWithEmailAndPassword(auth, email, password)
-                alert("New account created!")
+                await updateProfile(auth?.currentUser, { displayName: firstName })
                 newUserCreated = true
             } catch(err) {
                 alert(err) // Later, can we find a more elegant way to notify the user. Perhaps tell them they're already registered
@@ -129,27 +128,20 @@ export function RegistrationForm() {
                         university: college,
                         classification: grade,
                     })
-
-                    alert("Registration complete!")
                 } catch (err) {
                     console.error(err)
                 }
-
-                ///////////////////////////////////////////////////////////////////////////////
-                // Account creation and registration complete, they should now have data we can access to update our Redux store
-                const docRef = doc(usersDB, 'users', auth?.currentUser?.email)
-                let user;
-                try {
-                    user = await getDoc(docRef)
-                } catch(err) {
-                    console.error(err)
-                }
-
-                dispatch(logOn(user.data()))
-                //////////////////////////////////////////////////////////////////////////////
-
-                navigate('/')
             }
+
+            // Send email verification
+            try {
+                await signOut(auth)
+                await sendEmailVerification(auth?.currentUser)
+                alert("Email verification was sent.")
+            } catch(err) {
+                console.error(err)
+            }
+            navigate('/login')
 
         } else {
             setValidated(false) // This state change will trigger a re-render with any error messages

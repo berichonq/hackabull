@@ -6,7 +6,7 @@ export function Anonymous({ children }) {
     const {user} = useContext(Context)
 
     if (user) {
-        return <Navigate to="/profile" replace />
+        return <Navigate to="/" replace />
     } else {
         return children
     }
