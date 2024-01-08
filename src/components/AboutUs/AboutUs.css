@@ -1,5 +1,18 @@
-.about-us{
-    width: about;
-    height: 400px;
-    background-color: rgb(0, 153, 255, 0.4);
+@import url("https://db.onlinewebfonts.com/c/193fb4851c1aa4a6d0ccc3fe2c90a186?family=AntiqueTuscan8+Bold");
+.antique-tuscan {
+    font-family: 'AntiqueTuscan8 Bold', sans-serif;
+    text-transform: none; 
+  }
+  
+
+.about-us {
+  color: #fdedb9;
+  height: auto;
+  margin: auto;
+  padding: 8rem;
+  /* background-color: rgb(0, 153, 255, 0.4); */
+}
+
+.about-us-font-color {
+  color: #fdedb9;
 }
