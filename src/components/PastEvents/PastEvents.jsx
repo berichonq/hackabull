@@ -1,10 +1,10 @@
 import React from "react";
-import "./PastEvents.css"
+import "./PastEvents.css";
 
 export function PastEvents() {
   return (
     <div className="past-events">
-      <h2>Past Events</h2>
+        <h2>Past Events</h2>
     </div>
   );
 }
