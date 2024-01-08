@@ -31,7 +31,7 @@ export function AuthForm() {
             dispatch(logOn(user.data()))
             //////////////////////////////////////////////////////////////////////////////
         } catch (err) {
-            console.error(err)
+            alert(err)
         }
     }
 

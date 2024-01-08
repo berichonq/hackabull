@@ -113,7 +113,7 @@ export function RegistrationForm() {
 
             // We're validated, now create a new user in our Firebase Auth Directory
             try {
-                await createUserWithEmailAndPassword(auth, email, password);
+                await createUserWithEmailAndPassword(auth, email, password)
                 alert("New account created!")
                 newUserCreated = true
             } catch(err) {
@@ -150,6 +150,7 @@ export function RegistrationForm() {
 
                 navigate('/')
             }
+
         } else {
             setValidated(false) // This state change will trigger a re-render with any error messages
         }
