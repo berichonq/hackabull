@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Century PS Pro';
+    src: url('CenturyPSPro.eot');
+    src: local('Century PS Pro'), local('CenturyPSPro'),
+        url('CenturyPSPro.eot?#iefix') format('embedded-opentype'),
+        url('CenturyPSPro.woff2') format('woff2'),
+        url('CenturyPSPro.woff') format('woff'),
+        url('CenturyPSPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century PS Pro';
+    src: url('CenturyPSPro-Bold.eot');
+    src: local('Century PS Pro Bold'), local('CenturyPSPro-Bold'),
+        url('CenturyPSPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('CenturyPSPro-Bold.woff2') format('woff2'),
+        url('CenturyPSPro-Bold.woff') format('woff'),
+        url('CenturyPSPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century PS Pro';
+    src: url('CenturyPSPro-Italic.eot');
+    src: local('Century PS Pro Italic'), local('CenturyPSPro-Italic'),
+        url('CenturyPSPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('CenturyPSPro-Italic.woff2') format('woff2'),
+        url('CenturyPSPro-Italic.woff') format('woff'),
+        url('CenturyPSPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Century PS Pro';
+    src: url('CenturyPSPro-BoldItalic.eot');
+    src: local('Century PS Pro Bold Italic'), local('CenturyPSPro-BoldItalic'),
+        url('CenturyPSPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('CenturyPSPro-BoldItalic.woff2') format('woff2'),
+        url('CenturyPSPro-BoldItalic.woff') format('woff'),
+        url('CenturyPSPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+

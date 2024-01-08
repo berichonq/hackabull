@@ -1,15 +1,31 @@
 @import url("https://db.onlinewebfonts.com/c/193fb4851c1aa4a6d0ccc3fe2c90a186?family=AntiqueTuscan8+Bold");
+
+@font-face {
+  font-family: "CenturyPSPro";
+  src: url("../../assets/font/century-font/CenturyPSPro.eot  "); /* IE9 Compat Modes */
+  src: url("../../assets/font/century-font/CenturyPSPro.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../../assets/font/century-font/CenturyPSPro.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../../assets/font/century-font/CenturyPSPro.woff") format("woff"),
+    /* Pretty Modern Browsers */
+      url("../../assets/font/century-font/CenturyPSPro.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
 .antique-tuscan {
-    font-family: 'AntiqueTuscan8 Bold', sans-serif;
-    text-transform: none; 
-  }
-  
+  font-family: "AntiqueTuscan8 Bold", sans-serif;
+  text-transform: none;
+}
+
+.century-ps {
+  font-family: "CenturyPSPro", serif;
+}
 
 .about-us {
   color: #fdedb9;
   height: auto;
   margin: auto;
-  padding: 8rem;
   /* background-color: rgb(0, 153, 255, 0.4); */
 }
 
