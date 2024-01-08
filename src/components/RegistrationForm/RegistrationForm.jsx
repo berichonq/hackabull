@@ -2,14 +2,11 @@ import s from './style.module.css'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import { useDispatch } from 'react-redux'
-
 import { auth, usersCollectionRef } from '../../config/firebase'
 import { createUserWithEmailAndPassword, sendEmailVerification, signOut, updateProfile } from 'firebase/auth'
-import { doc, setDoc, getDoc } from 'firebase/firestore' // See later
+import { doc, setDoc } from 'firebase/firestore'
 
 export function RegistrationForm() {
-    let dispatch = useDispatch()
     let navigate = useNavigate()
     
     // Input field states
@@ -33,6 +30,7 @@ export function RegistrationForm() {
     const [validated, setValidated] = useState()
 
 
+    // Returns -1 if incorrectly formatted, 0 if email in use, 1 if valid
     const validEmail = () => {
         let validRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
         if (email.match(validRegex)) {
@@ -79,7 +77,6 @@ export function RegistrationForm() {
         } else {
             setGradeError("")
         }
-
 
         if (!validEmail()) {
             setEmailError("Invalid email")
@@ -135,8 +132,9 @@ export function RegistrationForm() {
 
             // Send email verification
             try {
+                let user = auth?.currentUser
                 await signOut(auth)
-                await sendEmailVerification(auth?.currentUser)
+                await sendEmailVerification(user)
                 alert("Email verification was sent.")
             } catch(err) {
                 console.error(err)
@@ -152,11 +150,11 @@ export function RegistrationForm() {
         <div>
 
             <input required id="first-name" autoComplete="given-name" placeholder="First name" onChange={(e) => setFirstName(e.target.value)}/>
-            { firstNameError && <p>{firstNameError}</p>}
+            { firstNameError && <p>{firstNameError}</p> }
             <br/>
 
             <input required id="last-name" autoComplete="family-name" placeholder="Last name" onChange={(e) => setLastName(e.target.value)}/>
-            { lastNameError && <p>{lastNameError}</p>}
+            { lastNameError && <p>{lastNameError}</p> }
             <br/>
             
             <label htmlFor="grade-select">If applicable, what year in college are you? </label>
@@ -169,24 +167,24 @@ export function RegistrationForm() {
                 <option value="5+">5+</option>
                 <option value="N/A">N/A</option>
             </select>
-            { gradeError && <p>{gradeError}</p>}
+            { gradeError && <p>{gradeError}</p> }
             <br/>
 
             <label htmlFor="college-input">Please include the full name of your education institution </label>
             <input id="college-input" disabled={true ? grade === "N/A" : false} placeholder="University" onChange={(e) => setCollege(e.target.value)}/>
-            { collegeError && <p>{collegeError}</p>}
+            { collegeError && <p>{collegeError}</p> }
             <br/>
 
             <input required id="email" autoComplete="email" placeholder="Email" type="email" onChange={(e) => setEmail(e.target.value)}/>
-            { emailError && <p>{emailError}</p>}
+            { emailError && <p>{emailError}</p> }
             <br/>
 
             <input required id="password" placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}/>
-            { passwordError && <p>{passwordError}</p>}
+            { passwordError && <p>{passwordError}</p> }
             <br/>
 
             <input required id="password-confirmation" placeholder="Confirm password" type="password" onChange={(e) => setConfirmPassword(e.target.value)}/>
-            { confirmPasswordError && <p>{confirmPasswordError}</p>}
+            { confirmPasswordError && <p>{confirmPasswordError}</p> }
             <br/>
 
             <button id="submit" onClick={register}>Register</button>

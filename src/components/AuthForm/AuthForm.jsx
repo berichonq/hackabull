@@ -11,13 +11,17 @@ import { doc, getDoc } from 'firebase/firestore'
 export function AuthForm() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [validate, setValidated] = useState()
 
     let dispatch = useDispatch()
 
     const login = async () => {
+        if (true) {
+
+        }
         try {
             await signInWithEmailAndPassword(auth, email, password)
-            
+
             ///////////////////////////////////////////////////////////////////////////////
             // Access the logged in user's data from Firestore and update the Redux state
             const docRef = doc(usersDB, 'users', auth?.currentUser?.email)
