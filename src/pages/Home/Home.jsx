@@ -1,10 +1,16 @@
-import s from './style.module.css'
+import './Home.css'
 
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logOff } from '../../store/user/user-slice';
 import { auth } from '../../config/firebase';
 import { signOut } from 'firebase/auth';
+import { AboutUs } from '../../components/AboutUs/aboutus';
+import { PastEvents } from '../../components/PastEvents/PastEvents';
+import { QnA } from '../../components/QnA/QnA';
+import { Schedule } from '../../components/Schedule/Schedule';
+import { Sponsors } from '../../components/Sponsors/Sponsors';
+import { Team } from '../../components/Team/Team';
 
 export function Home() {
     //////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,6 +34,15 @@ export function Home() {
             Welcome home
             <br/>
             <button onClick={logout}> Logout </button>
+            
+            <div className='home'>
+                <AboutUs/>
+                <PastEvents/>
+                <Schedule/>
+                <Sponsors/>
+                <QnA />
+                <Team />
+            </div>
         </div>
     )
 }
