@@ -4,11 +4,11 @@ import "./AboutUs.css";
 export function AboutUs() {
   return (
     <div className="container about-us py-20">
-      <h1 className="mb-4 antique-tuscan text-8xl text-left m-3	pb-3">ABOUT US</h1>
+      <h1 className="mb-4 antique-tuscan text-9xl text-left m-4	pb-3">ABOUT US</h1>
       <div className="col">
-        <div className="col-md-8 m-3">
+        <div className="col-md-8 m-4">
           <p
-            className="century-ps about-us-font-color text-left"
+            className="century-ps about-us-font-color text-xl text-left"
             style={{ columnCount: 2, overflow: "hidden" }}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
@@ -26,8 +26,8 @@ export function AboutUs() {
             accusantium.{" "}
           </p>
         </div>
-        <div className="col-md-8 m-3">
-          <p className="century-ps about-us-font-color text-left">
+        <div className="col-md-8 m-4">
+          <p className="century-ps about-us-font-color text-xl text-left">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
             distinctio earum beatae quos corrupti dolores, consequatur tempora
             dicta at doloremque. Autem saepe necessitatibus dolorem eaque
