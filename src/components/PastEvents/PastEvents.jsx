@@ -13,9 +13,9 @@ export function PastEvents() {
             
             <div
                 id="carouselExampleAutoplaying"
-                className="carousel slide p-3"
+                className="carousel  slide p-3"
                 data-bs-ride="carousel">
-                <div className="carousel-inner vanish-shadow">
+                <div className="carousel-inner ">
                     {/* Slide 1 */}
                     <div
                         className="carousel-item active"
