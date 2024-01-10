@@ -4,8 +4,8 @@ import "./Schedule.css";
 export function Schedule() {
     return (
       
-      <div className="">
-        <h2 className="mb-4 antique-tuscan relative z-20 about-us-font-color text-9xl text-center m-4	pb-3">EVENT TIMELINE</h2>
+      <div>
+        <h2 className="mb-12 antique-tuscan relative z-20 about-us-font-color text-9xl text-center m-4	pb-3">EVENT TIMELINE</h2>
       
         <div className="container schedule-page w-full h-vh px-auto">
           <div className="schedule-main text-center	 w-full z-10 px-20 absolute"></div>
