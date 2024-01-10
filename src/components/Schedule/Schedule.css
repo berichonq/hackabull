@@ -1,26 +1,27 @@
 .schedule-page {
     display: flex;
     align-items: center; /* Center vertically */
-    height: 200vh; /* Full height of the viewport */
+    height: 100%; /* Full height of the viewport */
     flex-direction: column;
 }
 
 .schedule-main {
-    height: 200vh; /* Take up the full height of the viewport */
+    height: 140%; /* Take up the full height of the viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
     width: 80%;
     background: url("../../assets/images/papyrus.png");
-    background-size: 100% auto; /* Scale the background width to 100% and height automatically */
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    /* opacity: 0.5; */
     mix-blend-mode: multiply;
     color: #fdedb9;
 }
 
 .container {
-    font-family: Arial, sans-serif;
+    font-family: "CenturyPSPro", serif;
 }
 
 .schedule {
@@ -42,7 +43,6 @@
     color: #fdedb9;
     border: 2px solid #fdedb9;
 }
-
 
 @media screen and (max-width: 600px) {
     .schedule,
@@ -90,9 +90,6 @@
     display: block;
 }
 
-.schedule td:last-child {
-    border-bottom: 0;
-}
 @media screen and (max-width: 600px) {
     .schedule th {
         position: sticky;

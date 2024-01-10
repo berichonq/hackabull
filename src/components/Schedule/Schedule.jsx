@@ -9,7 +9,7 @@ export function Schedule() {
       
         <div className="container schedule-page w-full h-vh px-auto">
           <div className="schedule-main text-center	 w-full z-10 px-20 absolute"></div>
-            <div className="schedule-container  py-5 relative z-20 select-none">
+            <div className="schedule-container  py-24 w-5/6 relative z-20 select-none">
                 <table className="schedule">
                     <thead>
                         <tr>

@@ -1,5 +1,31 @@
-.sponsors{
+.sponsors {
     width: about;
     height: 400px;
-    /* background-color: rgb(208, 0, 255, 0.4); */
+    /* background-color: rgba(246, 197, 71, 0.561); */
+}
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 1rem));
+    }
+}
+/* .partners_logo_wrapper{
+    margin: 0px 10px;
+} */
+
+.marquee_content {
+    width: 100%;
+    animation: scroll 30s linear infinite;
+}
+
+.reverse {
+    animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee_content {
+        animation-play-state: paused;
+    }
 }
