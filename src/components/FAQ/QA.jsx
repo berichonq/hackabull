@@ -10,8 +10,8 @@ export function QA({question, answer}) {
   
   return (
     <div className={container}>
-      <div className="p-4 text-xl relative font-medium flex">
-        <div className="text-left montserrat w-5/6 flex-auto q-text text">
+      <div className="p-4 text-xl relative font-medium flex ">
+        <div className="century-ps about-us-font-color text-xl text-left w-5/6 flex-auto">
           {question}
         </div>
         <button
