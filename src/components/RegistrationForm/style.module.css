@@ -1,3 +1,29 @@
 p {
-    color: red
+  color: red;
 }
+
+.login-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  width: 100%;
+}
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 1; /* Equal width columns */
+  }
+  
+  .image-column {
+    display: flex;
+    align-items: stretch; /* Make the image column take up full height */
+  }
+  
+  .image-column img {
+    width: 100%; /* Make the image width fill its container */
+    height: 100%; /* Make the image height fill its container */
+    object-fit: cover; /* Preserve aspect ratio while covering the entire container */
+  }

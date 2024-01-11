@@ -6,8 +6,6 @@ export function Register() {
 
     return (
         <div>
-            Welcome to HackaBull!
-            <br/>
             <RegistrationForm />
         </div>
     )
