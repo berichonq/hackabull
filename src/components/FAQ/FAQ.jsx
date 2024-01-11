@@ -2,8 +2,8 @@ import { QA } from "./QA";
 
 export function FAQ() {  
   return (
-    <div id="faq" className="section montserrat relative">
-      <h1 className="m-auto section-title montserrat text">FAQ</h1>
+    <div id="faq" className="section container montserrat relative">
+      <h1  className="mb-4 antique-tuscan about-us-font-color text-9xl text-left m-4	pb-3">FAQ</h1>
       <br/>
       <div className="absolute pink_shadow"></div>
       <div className="flex-col faq-flex justify-items-center">
