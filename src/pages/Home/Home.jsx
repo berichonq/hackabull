@@ -31,9 +31,10 @@ export function Home() {
 
     return (
         <div className="home">
-            Welcome home
-            <br />
-            <button onClick={logout}> Logout </button>
+            <div className="home-page">
+                Welcome home
+                <button onClick={logout}> Logout </button>
+            </div>
             <div className="content">
                 <AboutUs />
                 <PastEvents />
