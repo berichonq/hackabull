@@ -7,7 +7,7 @@ import { auth } from "../../config/firebase";
 import { signOut } from "firebase/auth";
 import { AboutUs } from "../../components/AboutUs/aboutus";
 import { PastEvents } from "../../components/PastEvents/PastEvents";
-import { QnA } from "../../components/QnA/QnA";
+import { FAQ } from "../../components/FAQ/FAQ";
 import { Schedule } from "../../components/Schedule/Schedule";
 import { Sponsors } from "../../components/Sponsors/Sponsors";
 import { Team } from "../../components/Team/Team";
@@ -39,7 +39,7 @@ export function Home() {
                 <PastEvents />
                 <Schedule />
                 <Sponsors />
-                <QnA />
+                <FAQ />
                 <Team />
             </div>
         </div>

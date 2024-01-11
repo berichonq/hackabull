@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 
-function QA({question, answer}) {
+export function QA({question, answer}) {
   const [expand, setExpand] = useState(false);
   const expandClass = expand ? 'display' : 'hidden';
   const borderRadius = expand ? 'rounded-3xl' : 'rounded-t-full rounded-b-full'
@@ -33,5 +33,3 @@ function QA({question, answer}) {
     </div>
   )
 }
-
-export default QA
