@@ -1,5 +1,42 @@
-.sponsors{
-    width: about;
-    height: 400px;
-    /* background-color: rgb(208, 0, 255, 0.4); */
+.sponsors {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.marquee_content {
+    display: flex;
+    width: 200%; /* Adjust as needed */
+    animation: scroll 15s linear infinite;
+}
+
+.partners_logo_wrapper {
+    flex: 0 0 auto;
+    display: inline-block; /* Display logos inline */
+    margin: 0 50px !important; /* Adjust spacing as needed */
+}
+
+.partners_logo_wrapper img {
+    width: auto; /* Or set a fixed width */
+    height: 100px; /* Adjust height as needed */
+}
+
+.reverse {
+    animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee_content {
+        animation-play-state: paused;
+    }
 }

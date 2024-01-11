@@ -1,5 +1,123 @@
-.schedule{
-    width: about;
-    height: 400px;
-    /* background-color: rgb(255, 230, 0, 0.4); */
+.schedule-page {
+    display: flex;
+    align-items: center; /* Center vertically */
+    height: 100%; /* Full height of the viewport */
+    flex-direction: column;
+}
+
+.schedule-main {
+    height: 140%; /* Take up the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    background: url("../../assets/images/papyrus.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* opacity: 0.5; */
+    mix-blend-mode: multiply;
+    color: #fdedb9;
+}
+
+.container {
+    font-family: "CenturyPSPro", serif;
+}
+
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule th {
+    background-color: #366bbf9f;
+    color: #fdedb9;
+    padding: 8px;
+}
+
+.schedule td {
+    padding: 8px;
+    text-align: center;
+    font-family: "CenturyPSPro", serif;
+    color: #fdedb9;
+    border: 2px solid #fdedb9;
+}
+
+@media screen and (max-width: 600px) {
+    .schedule,
+    .schedule thead,
+    .schedule tbody,
+    .schedule th,
+    .schedule td,
+    .schedule tr {
+        display: block;
+    }
+
+    .schedule thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .schedule tr {
+        margin-bottom: 10px;
+    }
+
+    .schedule td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    .schedule td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    /* Label the data */
+}
+.schedule td:before {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .schedule th {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+}
+/* Custom scrollbar styles */
+.schedule::-webkit-scrollbar {
+    width: 10px;
+}
+
+.schedule::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.schedule::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.schedule::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.schedule th,
+.schedule td {
+    font-size: 16px; /* Adjust as needed */
+}
+
+.schedule th {
+    letter-spacing: 0.1em;
 }
