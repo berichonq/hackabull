@@ -1,4 +1,4 @@
-import s from "./style.module.css";
+import "./style.module.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -156,44 +156,56 @@ export function RegistrationForm() {
   return (
     <div className="h-screen century-ps text-xl text-left">
       <div className="row">
-        <div className="col-lg">
-          <h1>Welcome to Hackabull 2024 at USF!</h1>
-          <input
-            required
-            id="first-name"
-            autoComplete="given-name"
-            placeholder="First name"
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-          {firstNameError && <p>{firstNameError}</p>}
-          <br />
-          <input
-            required
-            id="last-name"
-            autoComplete="family-name"
-            placeholder="Last name"
-            onChange={(e) => setLastName(e.target.value)}
-          />
-          {lastNameError && <p>{lastNameError}</p>}
-          <br />
-          <label htmlFor="grade-select">
-            If applicable, what year in college are you?{" "}
-          </label>
-          <select
-            required
-            id="grade-select"
-            onChange={(e) => setGrade(e.target.value)}
-          >
-            <option value=""></option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5+">5+</option>
-            <option value="N/A">N/A</option>
-          </select>
-          {gradeError && <p>{gradeError}</p>}
-          <br />
+        <div className="pl-5 ml-5 col-lg">
+          <p className="title text-2xl" id="title">
+            Welcome to Hackabull 2024 at USF!
+          </p>
+          <div className="form-line">
+            <label htmlFor="first-name" className="block text-sm font-medium text-gray-900 dark:text-white">
+              First Name
+            </label>
+            <input
+              required
+              id="first-name"
+              autoComplete="given-name"
+              placeholder="John"
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+            {firstNameError && <p>{firstNameError}</p>}
+          </div>
+          <div className="form-line">
+            <label htmlFor="last-name" className="block text-sm font-medium text-gray-900 dark:text-white">
+              Last Name
+            </label>
+            <input
+              required
+              id="last-name"
+              autoComplete="family-name"
+              placeholder="Last name"
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            {lastNameError && <p>{lastNameError}</p>}
+          </div>
+          <div className="form-line">
+            <label htmlFor="grade-select">
+              If applicable, what year in college are you?{" "}
+            </label>
+            <select
+              required
+              id="grade-select"
+              onChange={(e) => setGrade(e.target.value)}
+            >
+              <option value=""></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5+">5+</option>
+              <option value="N/A">N/A</option>
+            </select>
+            {gradeError && <p>{gradeError}</p>}
+          </div>
+          <div className="form-line">
           <label htmlFor="college-input">
             Please include the full name of your education institution{" "}
           </label>
@@ -204,7 +216,8 @@ export function RegistrationForm() {
             onChange={(e) => setCollege(e.target.value)}
           />
           {collegeError && <p>{collegeError}</p>}
-          <br />
+          </div>
+          <div className="form-line">
           <input
             required
             id="email"
@@ -214,7 +227,8 @@ export function RegistrationForm() {
             onChange={(e) => setEmail(e.target.value)}
           />
           {emailError && <p>{emailError}</p>}
-          <br />
+          </div>
+          <div className="form-line">
           <input
             required
             id="password"
@@ -223,7 +237,8 @@ export function RegistrationForm() {
             onChange={(e) => setPassword(e.target.value)}
           />
           {passwordError && <p>{passwordError}</p>}
-          <br />
+          </div>
+          <div className="form-line">
           <input
             required
             id="password-confirmation"
@@ -232,7 +247,7 @@ export function RegistrationForm() {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           {confirmPasswordError && <p>{confirmPasswordError}</p>}
-          <br />
+          </div>
           <button id="submit" onClick={register}>
             Register
           </button>
