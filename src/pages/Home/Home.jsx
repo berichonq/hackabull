@@ -33,6 +33,7 @@ export function Home() {
         <div className="home">
             <div className="home-page">
                 Welcome home
+                
                 <button onClick={logout}> Logout </button>
             </div>
             <div className="content">
