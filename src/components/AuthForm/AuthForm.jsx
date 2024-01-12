@@ -16,9 +16,6 @@ export function AuthForm() {
     let dispatch = useDispatch()
 
     const login = async () => {
-        if (true) {
-
-        }
         try {
             await signInWithEmailAndPassword(auth, email, password)
 

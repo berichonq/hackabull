@@ -68,11 +68,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path='/' element={<App />}>
                 <Route exact path='/' element={<Home />}/>
                 <Route path='*' element={<PageNotFound />}/>
+                <Route exact path='/password-reset' element={<PasswordReset />}/>
 
                 {/*Only anonymous users can access*/}
                 <Route exact path='/register' element={<Anonymous><Register /></Anonymous>}/>
                 <Route exact path='/login' element={<Anonymous><Login /></Anonymous>}/>
-                <Route exact path='/password-reset' element={<Anonymous><PasswordReset /></Anonymous>}/>
 
                 {/*Only authenticated users can access*/}
                 <Route exact path='/profile' element={<Protected><Profile /></Protected>}/>
