@@ -1,4 +1,4 @@
-import "./style.module.css";
+import "./RegistrationForm.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -151,12 +151,12 @@ export function RegistrationForm() {
       setValidated(false); // This state change will trigger a re-render with any error messages
     }
   };
-
+//
   return (
     <div className="h-screen century-ps text-xl text-left">
       <div className="row">
         <div className="pl-5 ml-5 col-lg">
-          <p className="title text-2xl" id="title">
+          <p className="title text-2xl bold-century" id="title">
             Welcome to Hackabull 2024 at USF!
           </p>
           <div className="form-line">

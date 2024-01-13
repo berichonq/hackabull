@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'CenturyPSPro-Bold';
+  src: url('../../assets/font/century-font/CenturyPSPro-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../../assets/font/century-font/CenturyPSPro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../assets/font/century-font/CenturyPSPro-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../../assets/font/century-font/CenturyPSPro-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../assets/font/century-font/CenturyPSPro-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+  font-weight: bold;
+  font-style: normal;
+}
+
+.bold-century {
+  font-family: 'CenturyPSPro-Bold', sans-serif;
+  font-weight: bold;
+}
+
+.login-img {
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1; /* Equal width columns */
+}
+
+.image-column {
+  display: flex;
+  align-items: stretch; /* Make the image column take up full height */
+}
+
+.image-column img {
+  width: 100%; /* Make the image width fill its container */
+  height: 100%; /* Make the image height fill its container */
+  object-fit: cover; /* Preserve aspect ratio while covering the entire container */
+}
