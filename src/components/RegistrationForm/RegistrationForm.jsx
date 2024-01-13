@@ -130,7 +130,7 @@ export function RegistrationForm() {
           await setDoc(doc(usersCollectionRef, auth?.currentUser?.email), {
             first: firstName,
             last: lastName,
-            university: college,
+            university: college ? grade !== "N/A" : "",
             classification: grade,
           });
         } catch (err) {
@@ -143,7 +143,6 @@ export function RegistrationForm() {
         let user = auth?.currentUser;
         await signOut(auth);
         await sendEmailVerification(user);
-        alert("Email verification was sent.");
       } catch (err) {
         console.error(err);
       }

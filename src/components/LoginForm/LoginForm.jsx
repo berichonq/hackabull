@@ -8,7 +8,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import { doc, getDoc } from 'firebase/firestore'
 
 
-export function AuthForm() {
+export function LoginForm() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [validate, setValidated] = useState()

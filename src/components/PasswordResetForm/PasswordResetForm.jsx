@@ -13,7 +13,7 @@ export function PasswordResetForm() {
     const resetPassword = async () => {
         try {
             await sendPasswordResetEmail(auth, email)
-            alert("A link to reset your password")
+            alert("A link to reset your password was sent to your email")
             navigate('/login')
         } catch(err) {
             console.error(err)
