@@ -14,7 +14,7 @@ export function Login() {
             <br/>
             Forgot your password? <Link to='/password-reset'>Click here</Link>
             <br/>
-            Having issues? <a href="mailto:shpe.hackabull@gmail.com?subject=Account%20support%20request">Contact us</a>
+            Experiencing issues? <a href="mailto:shpe.hackabull@gmail.com?subject=Account%20support%20request">Contact us</a>
         </div>
     )
 }
