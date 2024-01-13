@@ -10,9 +10,3 @@
     background-size: 100% auto; /* Scale the background width to 100% and height automatically */
     background-repeat: no-repeat;
 }
-.home-page {
-    height: 100vh;
-    background: url("../../assets/images/home_back.png");
-    background-size: 100% auto; /* Scale the background width to 100% and height automatically */
-    background-repeat: no-repeat;
-}
