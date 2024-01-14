@@ -23,7 +23,7 @@
 .login-img {
   height: 100vh;
   object-fit: cover;
-  object-position: right;
+  object-position: center;
 }
 
 .row {

@@ -1,6 +1,15 @@
+.col-lg {
+  padding: 0;
+}
+
+.col-md {
+  padding: 0;
+}
+
 .linkStyle {
   color: #052b56;
   transition: color 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .linkStyle:hover {
@@ -15,6 +24,7 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 
 @media (max-width: 767px) {
   .center {

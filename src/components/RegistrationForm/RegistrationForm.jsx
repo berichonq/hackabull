@@ -204,7 +204,7 @@ export function RegistrationForm() {
       <div className="row">
         <div className="pl-5 ml-5 col-lg">
           <p className="title text-2xl bold-century" id="title">
-            Welcome to Hackabull 2024 at USF!
+            Register to Hackabull 2024
           </p>
           <div className="form-line">
             <label
@@ -217,7 +217,7 @@ export function RegistrationForm() {
               required
               id="first-name"
               autoComplete="given-name"
-              placeholder="John"
+              placeholder="First Name"
               onChange={(e) => setFirstName(e.target.value)}
               className="bg-white border border-gray-800 rounded-md p-2"
             />

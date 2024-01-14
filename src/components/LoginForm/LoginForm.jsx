@@ -7,9 +7,9 @@ import { auth, usersCollectionRef } from "../../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 const textColor = {
-    color: "#052B56",
-    transition: "color 0.3s ease", // Smooth color transition on hover
-  };
+  color: "#052B56",
+  transition: "color 0.3s ease", // Smooth color transition on hover
+};
 export function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,7 +43,7 @@ export function LoginForm() {
       <div className="form-line">
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-gray-900 dark:text-white"
+          className="block text-medium font-medium text-gray-900 dark:text-white"
           style={textColor}
         >
           Email
@@ -61,7 +61,7 @@ export function LoginForm() {
       <div className="form-line">
         <label
           htmlFor="password"
-          className="block text-sm font-medium text-gray-900 dark:text-white"
+          className="block text-medium font-medium text-gray-900 dark:text-white"
           style={textColor}
         >
           Password
@@ -76,7 +76,9 @@ export function LoginForm() {
         />
       </div>
       <br />
-      <button onClick={login} className="login-button">Login</button>
+      <button onClick={login} className="login-button">
+        Login
+      </button>
       <br />
     </div>
   );

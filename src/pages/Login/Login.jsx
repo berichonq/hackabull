@@ -12,7 +12,7 @@ const linkStyle = {
 
 export function Login() {
   return (
-    <div className="century-ps text-xl text-left h-screen">
+    <div className="container-fluid century-ps text-xl text-left h-screen">
       <div className="row">
         <div className="col-lg col-md">
           <div className="center">
