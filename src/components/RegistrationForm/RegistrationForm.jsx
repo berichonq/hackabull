@@ -109,6 +109,7 @@ export function RegistrationForm() {
       }
     } else {
       setGradeError("");
+      setCollege("");
     }
 
     let errorMessage = validateResume();
