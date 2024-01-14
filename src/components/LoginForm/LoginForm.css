@@ -22,3 +22,8 @@
 .text-medium {
     font-size: 1rem;
 }
+
+.error-message {
+  font-size: 0.9rem;
+  color: red;
+}

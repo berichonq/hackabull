@@ -13,7 +13,7 @@ const textColor = {
 export function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [validate, setValidated] = useState();
+  const [credentialsError, setCredentialsError] = useState("")
 
   let dispatch = useDispatch();
 
@@ -34,7 +34,8 @@ export function LoginForm() {
       dispatch(logOn(user.data()));
       //////////////////////////////////////////////////////////////////////////////
     } catch (err) {
-      alert(err);
+      console.error(err)
+      setCredentialsError("Incorrect email or password. Please try again")
     }
   };
 
@@ -54,6 +55,9 @@ export function LoginForm() {
           autoComplete="email"
           placeholder="Email"
           type="email"
+          onFocus={() => {
+            setCredentialsError("")
+          }}
           onChange={(e) => setEmail(e.target.value)}
           className="bg-white border border-gray-800 rounded-md p-2 login-input"
         />
@@ -71,6 +75,9 @@ export function LoginForm() {
           id="password"
           placeholder="Password"
           type="password"
+          onFocus={() => {
+            setCredentialsError("")
+          }}
           onChange={(e) => setPassword(e.target.value)}
           className="bg-white border border-gray-800 rounded-md p-2 login-input"
         />
@@ -79,6 +86,7 @@ export function LoginForm() {
       <button onClick={login} className="login-button">
         Login
       </button>
+      {credentialsError && <p className="error-message">{credentialsError}</p>}
       <br />
     </div>
   );
