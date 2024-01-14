@@ -1,5 +1,4 @@
 import "./RegistrationForm.css";
-import loginImage from "../../assets/images/login-page.png";
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -164,7 +163,7 @@ export function RegistrationForm() {
           await setDoc(doc(usersCollectionRef, auth?.currentUser?.email), {
             first: firstName,
             last: lastName,
-            university: college ? grade !== "N/A" : "",
+            university: college,
             classification: grade,
           });
         } catch (err) {
@@ -327,7 +326,7 @@ export function RegistrationForm() {
             htmlFor="college-input"
             className="block text-medium font-medium text-gray-900 dark:text-white"
           >
-            Please include the full name of your education institution{" "}
+            Please include the full name of your education institution
           </label>
           <input
             id="college-input"
