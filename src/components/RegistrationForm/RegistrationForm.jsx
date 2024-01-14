@@ -108,6 +108,7 @@ export function RegistrationForm() {
       }
     } else {
       setGradeError("");
+      setCollegeError("")
       setCollege("");
     }
 
@@ -356,7 +357,7 @@ export function RegistrationForm() {
         <button className="login-button" id="submit" onClick={register}>
           Register
         </button>
-        <p className="pt-2 pb-2 already-register text-right">Already registered? <Link to="/login" className="linkStyle">Login here</Link></p>
+        <p className="pt-2 pb-2 already-register text-left">Already registered? <Link to="/login" className="linkStyle">Login here</Link></p>
       </div>
     </div>
   );

@@ -1,7 +1,35 @@
-import React from "react";
 import "./HomeSection.css";
+import React, { useContext, useEffect, useState } from "react";
+
+import { Link, useNavigate } from "react-router-dom";
+
+import { logOff } from "../../store/user/user-slice";
+import { useDispatch } from "react-redux";
+
+import { Context } from "../../context/AuthContext"
+
+import { auth } from "../../config/firebase";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+
 
 export function HomeSection() {
+    let {user} = useContext(Context)
+    let dispatch = useDispatch();
+    let navigate = useNavigate();
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    // Logout button needs to be moved to navbar. Should only be rendered if user is authenticated
+    const logout = async () => {
+        try {
+            await signOut(auth);
+            dispatch(logOff())
+            navigate('/')
+        } catch (err) {
+            console.error(err)
+        }
+    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+    
     return (
         <div>
         <div className="mx-15 right-0 px-10 mlh navbar-expand-lg">
@@ -97,22 +125,22 @@ export function HomeSection() {
                         </ul>
                         <div className="d-flex">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li className="nav-item">
-                                    <a
-                                        className="nav-link about-us-font-color"
-                                        aria-current="page"
-                                        href="#">
-                                        Sign In
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a
-                                        className="nav-link about-us-font-color"
-                                        aria-current="page"
-                                        href="#">
-                                        Register
-                                    </a>
-                                </li>
+                                { user && <li className="nav-item">
+                                            <Link to='/profile' className="nav-link about-us-font-color">Profile</Link>
+                                          </li>
+                                }
+                                { !user && <li className="nav-item">
+                                            <Link to='/register' className="nav-link about-us-font-color">Register</Link>
+                                           </li>
+                                }
+                                { user && <li className="nav-item">
+                                            <button onClick={logout} className="nav-link about-us-font-color"> Logout </button>
+                                          </li>
+                                }
+                                { !user && <li className="nav-item">
+                                                <Link to="/login" className="nav-link about-us-font-color">Login</Link>
+                                           </li>
+                                }
                             </ul>
                         </div>
                     </div>

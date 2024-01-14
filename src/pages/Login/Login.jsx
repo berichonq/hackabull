@@ -29,11 +29,6 @@ export function Login() {
               Haven't registered?
             </Link>
             <br />
-            <Link to="/password-reset" className="linkStyle">
-              Forgot password?{" "}
-            </Link>
-
-            <br />
             <a
               href="mailto:shpe.hackabull@gmail.com?subject=Account%20support%20request"
               className="linkStyle"

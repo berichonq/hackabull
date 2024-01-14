@@ -88,9 +88,17 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .center-h {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .center-h {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: hidden;
   }
 }

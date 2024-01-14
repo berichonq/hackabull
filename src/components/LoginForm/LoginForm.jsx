@@ -6,6 +6,7 @@ import { logOn } from "../../store/user/user-slice";
 import { auth, usersCollectionRef } from "../../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 const textColor = {
   color: "#052B56",
   transition: "color 0.3s ease", // Smooth color transition on hover
@@ -62,7 +63,7 @@ export function LoginForm() {
           className="bg-white border border-gray-800 rounded-md p-2 login-input"
         />
       </div>
-      <div className="form-line">
+      <div className="form-line -mb-3">
         <label
           htmlFor="password"
           className="block text-medium font-medium text-gray-900 dark:text-white"
@@ -82,8 +83,11 @@ export function LoginForm() {
           className="bg-white border border-gray-800 rounded-md p-2 login-input"
         />
       </div>
+      <Link to="/password-reset" className="linkStyle">
+        Forgot password?{" "}
+      </Link>
       <br />
-      <button onClick={login} className="login-button">
+      <button onClick={login} className="login-button mt-3">
         Login
       </button>
       {credentialsError && <p className="error-message">{credentialsError}</p>}
