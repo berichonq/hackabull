@@ -10,15 +10,13 @@ import {
   sendEmailVerification,
   signOut,
   updateProfile,
-  validatePassword,
 } from "firebase/auth";
-import { doc, setDoc, getDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import { ref, uploadBytes } from "firebase/storage";
 
 
 export function RegistrationForm() {
   let navigate = useNavigate();
-  const storageRef = ref(storage, '/resumes/_resume.pdf');
 
   // Input field states
   const [firstName, setFirstName] = useState("");
@@ -171,6 +169,14 @@ export function RegistrationForm() {
         } catch (err) {
           console.error(err);
         }
+      }
+
+      // Upload their resume to the Firebase Cloud Storage bucket
+      const storageRef = ref(storage, '/resumes/' + firstName + '_' + lastName + '_resume.pdf');
+      try {
+        await uploadBytes(storageRef, resume);
+      } catch(err) {
+        console.error(err)
       }
 
       // Send email verification
