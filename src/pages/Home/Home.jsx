@@ -11,6 +11,7 @@ import { FAQ } from "../../components/FAQ/FAQ";
 import { Schedule } from "../../components/Schedule/Schedule";
 import { Sponsors } from "../../components/Sponsors/Sponsors";
 import { Team } from "../../components/Team/Team";
+import {HomeSection} from "../../components/HomeSection/HomeSection";
 
 export function Home() {
     //////////////////////////////////////////////////////////////////////////////////////////////
@@ -31,11 +32,8 @@ export function Home() {
 
     return (
         <div className="home">
-            <div className="home-page">
-                Welcome home
-                
-                <button onClick={logout}> Logout </button>
-            </div>
+            <HomeSection/>
+{/* <button onClick={logout}> Logout </button> */}
             <div className="content">
                 <AboutUs />
                 <PastEvents />
