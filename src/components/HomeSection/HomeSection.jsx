@@ -4,7 +4,17 @@ import "./HomeSection.css";
 export function HomeSection() {
     return (
         <div>
-            <nav className="navbar my-5 mx-15 fixed-top navbar-expand-lg bg-glass">
+        <div className="mx-15 right-0 px-10 mlh navbar-expand-lg">
+            <a className="navbar-brand" href="#">
+                <img
+                    src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
+                    alt="MLH"
+                    width="90"
+                    height="54"
+                />
+            </a>
+        </div>
+            <nav className="navbar my-3 mx-44 fixed-top navbar-expand-lg bg-glass">
                 <div className="container-fluid mx-44">
                     <a className="navbar-brand" href="#">
                         <img
@@ -108,14 +118,6 @@ export function HomeSection() {
                     </div>
                 </div>
             </nav>
-                    <a className="navbar-brand absolute right-0" href="#">
-                        <img
-                            src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
-                            alt="MLH"
-                            width="90"
-                            height="54"
-                        />
-                    </a>
             <div className="home_section"></div>
         </div>
     );
