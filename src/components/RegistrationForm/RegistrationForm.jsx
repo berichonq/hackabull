@@ -1,25 +1,31 @@
 import "./RegistrationForm.css";
+import loginImage from "../../assets/images/login-page.png";
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import { auth, usersCollectionRef } from "../../config/firebase";
+import { auth, storage, usersCollectionRef } from "../../config/firebase";
 import {
   createUserWithEmailAndPassword,
   sendEmailVerification,
   signOut,
   updateProfile,
+  validatePassword,
 } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
-import loginImage from "../../assets/images/login-page.png";
+import { doc, setDoc, getDoc } from "firebase/firestore";
+import { ref, uploadBytes } from "firebase/storage";
+
 
 export function RegistrationForm() {
   let navigate = useNavigate();
+  const storageRef = ref(storage, '/resumes/_resume.pdf');
 
   // Input field states
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [grade, setGrade] = useState("");
   const [college, setCollege] = useState("");
+  const [resume, setResume] = useState();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -29,32 +35,55 @@ export function RegistrationForm() {
   const [lastNameError, setLastNameError] = useState();
   const [gradeError, setGradeError] = useState();
   const [collegeError, setCollegeError] = useState();
+  const [resumeError, setResumeError] = useState();
   const [emailError, setEmailError] = useState();
   const [passwordError, setPasswordError] = useState();
   const [confirmPasswordError, setConfirmPasswordError] = useState();
 
   const [validated, setValidated] = useState();
 
+  // Validate the resume file
+  // Returns -1 if no file is chosen, 0 if the file chosen is too large, 
+  const validateResume = () => {
+    if (!resume) {
+      return "You must upload a resume. Accepted file format: .pdf | Maximum file size: 500 KB";
+    }
+
+    // Limit the file type to only allow PDFs
+    if (resume.type !== 'application/pdf') {
+      return "Upload must be a PDF";
+    // Limit the file size to 500 KB == 512000 bytes
+    } else if (resume.size >= 512000) {
+      return "Upload must be less than 500 KB";
+    } else {
+      return "";
+    }
+  }
+
+  // Validate the email field
   // Returns -1 if incorrectly formatted, 0 if email in use, 1 if valid
-  const validEmail = () => {
+  const validateEmail = () => {
     let validRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (email.match(validRegex)) {
-      return true;
+    if (!email.match(validRegex)) {
+      return "Invalid email format";
     }
-    return false;
+    return "";
   };
 
-  const validPassword = () => {
-    let validRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_!@#$%^&*])[-_!@#$%^&*a-zA-Z\d]{8,20}$/;
-    if (password.match(validRegex)) {
-      return true;
+  // Validate the password field
+  const validatePassword = () => {
+    let validRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_!@#$%^&*])[-_!@#$%^&*a-zA-Z\d]{8,20}$/;
+    if (!password.match(validRegex)) {
+      return "Password must have 8-16 characters, including at least 1 lowercase letter, 1 uppercase letter, 1 number, and 1 special character in [!@#$%^&*-_]";
+    } else {
+      return "";
     }
-    return false;
   };
 
+  // Validate the form
   const validForm = () => {
     let valid = true;
+
     if (!firstName) {
       setFirstNameError("Cannot leave this field empty");
       valid = false;
@@ -84,21 +113,23 @@ export function RegistrationForm() {
       setGradeError("");
     }
 
-    if (!validEmail()) {
-      setEmailError("Invalid email");
+    let errorMessage = validateResume();
+    if (errorMessage) {
       valid = false;
-    } else {
-      setEmailError("");
     }
+    setResumeError(errorMessage);
 
-    if (!validPassword()) {
-      setPasswordError(
-        "Password must have 8-16 characters, including at least 1 lowercase letter, 1 uppercase letter, 1 number, and 1 special character in [!@#$%^&*-_]"
-      );
+    errorMessage = validateEmail();
+    if (errorMessage) {
       valid = false;
-    } else {
-      setPasswordError("");
     }
+    setEmailError(errorMessage);
+
+    errorMessage = validatePassword();
+    if (errorMessage) {
+      valid = false;
+    }
+    setPasswordError(errorMessage);
 
     if (password !== confirmPassword) {
       setConfirmPasswordError("Passwords don't match");
@@ -110,6 +141,7 @@ export function RegistrationForm() {
     return valid;
   };
 
+  // Handles form submission
   const register = async () => {
     if (validForm()) {
       setValidated(true);
@@ -121,7 +153,10 @@ export function RegistrationForm() {
         await updateProfile(auth?.currentUser, { displayName: firstName });
         newUserCreated = true;
       } catch (err) {
-        alert(err); // Later, can we find a more elegant way to notify the user. Perhaps tell them they're already registered
+        console.error(err);
+        if (err.code === 'auth/email-already-in-use') {
+          setEmailError("This email has already been registered")
+        }
       }
 
       // We also need to give them their own doc in the Firestore DB, this represents their registration
@@ -139,19 +174,22 @@ export function RegistrationForm() {
       }
 
       // Send email verification
-      try {
-        let user = auth?.currentUser;
-        await signOut(auth);
-        await sendEmailVerification(user);
-      } catch (err) {
-        console.error(err);
+      if (newUserCreated) {
+        try {
+          let user = auth?.currentUser;
+          await signOut(auth);
+          await sendEmailVerification(user);
+        } catch (err) {
+          console.error(err);
+        }
+        navigate("/login");
       }
-      navigate("/login");
     } else {
       setValidated(false); // This state change will trigger a re-render with any error messages
     }
   };
-//
+
+
   return (
     <div className="h-screen century-ps text-xl text-left">
       <div className="row">
@@ -205,16 +243,28 @@ export function RegistrationForm() {
             {gradeError && <p>{gradeError}</p>}
           </div>
           <div className="form-line">
-          <label htmlFor="college-input">
-            Please include the full name of your education institution{" "}
-          </label>
-          <input
-            id="college-input"
-            disabled={true ? grade === "N/A" : false}
-            placeholder="University"
-            onChange={(e) => setCollege(e.target.value)}
-          />
-          {collegeError && <p>{collegeError}</p>}
+            <label htmlFor="college-input">
+              Please include the full name of your education institution{" "}
+            </label>
+            <input
+              id="college-input"
+              disabled={true ? grade === "N/A" : false}
+              placeholder="University"
+              onChange={(e) => setCollege(e.target.value)}
+            />
+            {collegeError && <p>{collegeError}</p>}
+          </div>
+          <div className="form-line">
+            <label htmlFor="resume" className="block text-sm font-medium text-gray-900 dark:text-white">
+              Please upload your resume
+            </label>
+            <input
+              type="file"
+              id="file-input"
+              accept=".pdf"
+              onChange={(e) => setResume(e.target.files[0]) }
+            />
+            { resumeError && <p>{resumeError}</p> }
           </div>
           <div className="form-line">
           <input

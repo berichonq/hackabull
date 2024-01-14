@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { logOn } from '../../store/user/user-slice'
 
-import { auth, usersDB } from '../../config/firebase'
+import { auth, usersCollectionRef } from '../../config/firebase'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { doc, getDoc } from 'firebase/firestore'
 
@@ -21,7 +21,7 @@ export function LoginForm() {
 
             ///////////////////////////////////////////////////////////////////////////////
             // Access the logged in user's data from Firestore and update the Redux state
-            const docRef = doc(usersDB, 'users', auth?.currentUser?.email)
+            const docRef = doc(usersCollectionRef, auth?.currentUser?.email)
             let user;
             try {
                 user = await getDoc(docRef)
