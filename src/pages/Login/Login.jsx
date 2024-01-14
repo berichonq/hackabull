@@ -21,7 +21,7 @@ export function Login() {
               style={linkStyle}
               id="title"
             >
-              Welcome to Hackabull 2024 at USF!
+              Welcome to Hackabull 2024!
             </p>
             <br />
             <LoginForm />
