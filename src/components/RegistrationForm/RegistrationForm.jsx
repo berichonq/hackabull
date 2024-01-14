@@ -200,163 +200,164 @@ export function RegistrationForm() {
   };
 
   return (
-    <div className="h-screen century-ps text-xl text-left">
-      <div className="row">
-        <div className="pl-5 ml-5 col-lg">
-          <p className="title text-2xl bold-century" id="title">
-            Register to Hackabull 2024
-          </p>
-          <div className="form-line">
-            <label
-              htmlFor="first-name"
-              className="block text-sm font-medium text-gray-900 dark:text-white"
-            >
-              First Name
-            </label>
-            <input
-              required
-              id="first-name"
-              autoComplete="given-name"
-              placeholder="First Name"
-              onChange={(e) => setFirstName(e.target.value)}
-              className="bg-white border border-gray-800 rounded-md p-2"
-            />
-            {firstNameError && <p>{firstNameError}</p>}
+    <div className="register-container century-ps text-xl text-left">
+      <div className="center-h">
+        <br />
+        <p className="title text-2xl bold-century title-center" id="title">
+          Register to Hackabull 2024
+        </p>
+        <br />
+        <div className="row">
+          <div className="col-lg-6 col-md-12">
+            <div className="form-line">
+              <label
+                htmlFor="first-name"
+                className="block text-medium font-medium text-gray-900 dark:text-white "
+              >
+                First Name
+              </label>
+              <input
+                required
+                id="first-name"
+                autoComplete="given-name"
+                placeholder="First Name"
+                onChange={(e) => setFirstName(e.target.value)}
+                className="bg-white border border-gray-800 rounded-md p-2 login-input"
+              />
+              {firstNameError && <p className="error-message">{firstNameError}</p>}
+            </div>
+            <div className="form-line">
+              <label
+                htmlFor="last-name"
+                className="block text-medium font-medium text-gray-900 dark:text-white"
+              >
+                Last Name
+              </label>
+              <input
+                required
+                id="last-name"
+                autoComplete="family-name"
+                placeholder="Last name"
+                onChange={(e) => setLastName(e.target.value)}
+                className="bg-white border border-gray-800 rounded-md p-2 login-input"
+              />
+              {lastNameError && <p className="error-message">{lastNameError}</p>}
+            </div>
+            <div className="form-line">
+              <label
+                htmlFor="grade-select"
+                className="block text-medium font-medium text-gray-900 dark:text-white"
+              >
+                What college year are you in?{" "}
+              </label>
+              <select
+                required
+                id="grade-select"
+                onChange={(e) => setGrade(e.target.value)}
+                className="bg-white border border-gray-800 rounded-md p-2 login-input"
+              >
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+">5+</option>
+                <option value="N/A">N/A</option>
+              </select>
+              {gradeError && <p className="error-message">{gradeError}</p>}
+            </div>
           </div>
-          <div className="form-line">
-            <label
-              htmlFor="last-name"
-              className="block text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Last Name
-            </label>
-            <input
-              required
-              id="last-name"
-              autoComplete="family-name"
-              placeholder="Last name"
-              onChange={(e) => setLastName(e.target.value)}
-              className="bg-white border border-gray-800 rounded-md p-2"
-            />
-            {lastNameError && <p>{lastNameError}</p>}
+          <div className="col-lg-6 col-md-12">
+            <div className="form-line">
+              <label
+                htmlFor="email"
+                className="block text-medium font-medium text-gray-900 dark:text-white"
+              >
+                Email
+              </label>
+              <input
+                required
+                id="email"
+                autoComplete="email"
+                placeholder="Email"
+                type="email"
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-white border border-gray-800 rounded-md p-2 login-input"
+              />
+              {emailError && <p className="error-message">{emailError}</p>}
+            </div>
+            <div className="form-line">
+              <label
+                htmlFor="password"
+                className="block text-medium font-medium text-gray-900 dark:text-white"
+              >
+                Password
+              </label>
+              <input
+                required
+                id="password"
+                placeholder="Password"
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+                className="bg-white border border-gray-800 rounded-md p-2 login-input"
+              />
+              {passwordError && <p className="error-message">{passwordError}</p>}
+            </div>
+            <div className="form-line">
+              <label
+                htmlFor="password-confirmation"
+                className="block text-medium font-medium text-gray-900 dark:text-white"
+              >
+                Confirm Password
+              </label>
+              <input
+                required
+                id="password-confirmation"
+                placeholder="Confirm password"
+                type="password"
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                className="bg-white border border-gray-800 rounded-md p-2 login-input"
+              />
+              {confirmPasswordError && <p className="error-message">{confirmPasswordError}</p>}
+            </div>
           </div>
-          <div className="form-line">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Email
-            </label>
-            <input
-              required
-              id="email"
-              autoComplete="email"
-              placeholder="Email"
-              type="email"
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-white border border-gray-800 rounded-md p-2"
-            />
-            {emailError && <p>{emailError}</p>}
-          </div>
-          <div className="form-line">
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Password
-            </label>
-            <input
-              required
-              id="password"
-              placeholder="Password"
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-              className="bg-white border border-gray-800 rounded-md p-2"
-            />
-            {passwordError && <p>{passwordError}</p>}
-          </div>
-          <div className="form-line">
-            <label
-              htmlFor="password-confirmation"
-              className="block text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Confirm Password
-            </label>
-            <input
-              required
-              id="password-confirmation"
-              placeholder="Confirm password"
-              type="password"
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              className="bg-white border border-gray-800 rounded-md p-2"
-            />
-            {confirmPasswordError && <p>{confirmPasswordError}</p>}
-          </div>
-          <div className="form-line">
-            <label
-              htmlFor="grade-select"
-              className="block text-sm font-medium text-gray-900 dark:text-white"
-            >
-              If applicable, what year in college are you?{" "}
-            </label>
-            <select
-              required
-              id="grade-select"
-              onChange={(e) => setGrade(e.target.value)}
-              className="bg-white border border-gray-800 rounded-md p-2"
-            >
-              <option value=""></option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5+">5+</option>
-              <option value="N/A">N/A</option>
-            </select>
-            {gradeError && <p>{gradeError}</p>}
-          </div>
-          <div className="form-line">
-            <label
-              htmlFor="college-input"
-              className="block text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Please include the full name of your education institution{" "}
-            </label>
-            <input
-              id="college-input"
-              disabled={true ? grade === "N/A" : false}
-              placeholder="University"
-              onChange={(e) => setCollege(e.target.value)}
-              className="bg-white border border-gray-800 rounded-md p-2"
-            />
-            {collegeError && <p>{collegeError}</p>}
-          </div>
-          <div className="form-line">
-            <label
-              htmlFor="resume"
-              className="block text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Please upload your resume
-            </label>
-            <input
-              type="file"
-              id="file-input"
-              accept=".pdf"
-              onChange={(e) => setResume(e.target.files[0])}
-            />
-            {resumeError && <p>{resumeError}</p>}
-          </div>
-          <button id="submit" onClick={register}>
-            Register
-          </button>
-          <br />
-          <br />
-          Already registered? <Link to="/login">Login here</Link>
         </div>
-
-        <div className="col-lg">
-          <img className="login-img" src={loginImage} alt="" />
+        <div className="form-line">
+          <label
+            htmlFor="college-input"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Please include the full name of your education institution{" "}
+          </label>
+          <input
+            id="college-input"
+            disabled={true ? grade === "N/A" : false}
+            placeholder="University"
+            onChange={(e) => setCollege(e.target.value)}
+            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+          />
+          {collegeError && <p className="error-message">{collegeError}</p>}
         </div>
+        <div className="form-line mb-2">
+          <label
+            htmlFor="resume"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Please upload your resume (File Format: pdf, Max: 500 KB)
+          </label>
+          <input
+            type="file"
+            id="file-input"
+            accept=".pdf"
+            onChange={(e) => setResume(e.target.files[0])}
+          />
+          {resumeError && <p className="error-message">{resumeError}</p>}
+        </div>
+        
+        <button className="login-button" id="submit" onClick={register}>
+          Register
+        </button>
+        <p className="pt-2 pb-2 already-register text-right">Already registered? <Link to="/login" className="linkStyle">Login here</Link></p>
       </div>
     </div>
   );

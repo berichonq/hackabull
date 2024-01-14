@@ -30,7 +30,6 @@
   display: flex;
 }
 
-
 .image-column {
   display: flex;
   align-items: stretch; /* Make the image column take up full height */
@@ -39,4 +38,59 @@
 .image-column img {
   height: 100%; /* Make the image height fill its container */
   object-fit: cover; /* Preserve aspect ratio while covering the entire container */
+}
+
+.center-h {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
+.register-bg {
+  background-color: white;
+  height: fit-content;
+}
+
+.register-container {
+  min-height: 100vh;
+  max-height: fit-content;
+  position: relative;
+  margin: 0;
+}
+
+.form-line {
+  padding-bottom: 0.5rem;
+}
+
+.title-center {
+  text-align: center;
+}
+
+.already-register {
+  font-size: 0.9rem;
+}
+
+.error-message {
+  font-size: 0.9rem;
+  color: red;
+}
+
+@media (max-width: 1300px) {
+  .center-h {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+@media (max-width: 1025px) {
+  .center-h {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .center-h {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
