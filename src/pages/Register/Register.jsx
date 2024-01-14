@@ -1,19 +1,5 @@
-<<<<<<< Updated upstream
-import s from './style.module.css'
-import { RegistrationForm } from '../../components/RegistrationForm/RegistrationForm'
-
-export function Register() {
-
-    return (
-        <div>
-            <RegistrationForm />
-        </div>
-    )
-}
-=======
 import s from "./style.module.css";
-import { Link } from "react-router-dom";
-import RegisterForm from "../../components/RegisterForm/RegisterForm";
+import { RegistrationForm } from "../../components/RegistrationForm/RegistrationForm";
 
 export function Register() {
   return (
@@ -25,4 +11,3 @@ export function Register() {
     </div>
   );
 }
->>>>>>> Stashed changes
