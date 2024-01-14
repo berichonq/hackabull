@@ -1,0 +1,28 @@
+.linkStyle {
+  color: #052b56;
+  transition: color 0.3s ease;
+}
+
+.linkStyle:hover {
+  text-decoration: underline;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
