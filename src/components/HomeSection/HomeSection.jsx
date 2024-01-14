@@ -15,7 +15,7 @@ export function HomeSection() {
             </a>
         </div>
             <nav className="navbar my-3 mx-44 fixed-top navbar-expand-lg bg-glass">
-                <div className="container-fluid mx-44">
+                <div className="container-fluid mx-20">
                     <a className="navbar-brand" href="#">
                         <img
                             src="https://seeklogo.com/images/B/blank-badge-logo-3871B3A656-seeklogo.com.png"
@@ -37,10 +37,10 @@ export function HomeSection() {
                     <div
                         className="collapse navbar-collapse"
                         id="navbarSupportedContent">
-                        <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav mx-auto about-us-font-color mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a
-                                    className="nav-link active"
+                                    className="nav-link about-us-font-color "
                                     aria-current="page"
                                     href="#">
                                     Home
@@ -48,7 +48,7 @@ export function HomeSection() {
                             </li>
                             <li className="nav-item">
                                 <a
-                                    className="nav-link active"
+                                    className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#">
                                     About
@@ -56,7 +56,7 @@ export function HomeSection() {
                             </li>
                             <li className="nav-item">
                                 <a
-                                    className="nav-link active"
+                                    className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#">
                                     Past Events
@@ -64,7 +64,7 @@ export function HomeSection() {
                             </li>
                             <li className="nav-item">
                                 <a
-                                    className="nav-link active"
+                                    className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#">
                                     Schedule
@@ -72,7 +72,7 @@ export function HomeSection() {
                             </li>
                             <li className="nav-item">
                                 <a
-                                    className="nav-link active"
+                                    className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#">
                                     Sponsors
@@ -80,7 +80,7 @@ export function HomeSection() {
                             </li>
                             <li className="nav-item">
                                 <a
-                                    className="nav-link active"
+                                    className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#">
                                     FAQ
@@ -88,7 +88,7 @@ export function HomeSection() {
                             </li>
                             <li className="nav-item">
                                 <a
-                                    className="nav-link active"
+                                    className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#">
                                     Team
@@ -99,7 +99,7 @@ export function HomeSection() {
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
                                     <a
-                                        className="nav-link active"
+                                        className="nav-link about-us-font-color"
                                         aria-current="page"
                                         href="#">
                                         Sign In
@@ -107,7 +107,7 @@ export function HomeSection() {
                                 </li>
                                 <li className="nav-item">
                                     <a
-                                        className="nav-link active"
+                                        className="nav-link about-us-font-color"
                                         aria-current="page"
                                         href="#">
                                         Register
