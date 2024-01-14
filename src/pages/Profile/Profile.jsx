@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logOff } from '../../store/user/user-slice';
 
 import { auth, usersCollectionRef } from '../../config/firebase';
-import { signOut, reauthenticateWithCredential, EmailAuthProvider } from 'firebase/auth';
-import { deleteDoc, doc } from 'firebase/firestore';
+import { signOut, reauthenticateWithCredential, EmailAuthProvider, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { deleteDoc, doc, setDoc } from 'firebase/firestore';
 
 export function Profile() {    
     const user = useSelector(state => state.user.data)
@@ -18,6 +18,9 @@ export function Profile() {
     const [accountDeletionConfirmation, setAccountDeletionConfirmation] = useState()
     const [passwordField, setPasswordField] = useState()
     const [reauthenticated, setReauthenticated] = useState(false)
+
+    const email = auth?.currentUser?.email;
+    const firstName = user.first;
 
     const forcePageReload = () => {
         setTimeout(() => {
@@ -89,40 +92,55 @@ export function Profile() {
             setReauthenticated(true)
         }
     }
-    
-    const deleteAccount = async () => {
-        let flagged = false
-
-        // Delete their Firestore document
-        if (!flagged) {
-            try {
-                await deleteDoc(doc(usersCollectionRef, auth?.currentUser?.email))
-            } catch(err) {
-                console.error(err)
-                flagged = true
-            }
-        }        
-
-        // Delete their Firebase auth identity
-        if (!flagged) {
-            try {
-                await auth?.currentUser?.delete()
-            } catch(err) {
-                alert(err)
-                flagged = true
-            }
-        }
-        
-
-        // Update the redux store and navigate back to home
-        dispatch(logOff())
-        navigate('/')
-    }
 
     const cancelAccountDeletion = () => {
+        setPasswordField("");
+        setAccountDeletionConfirmation("")
         setDeleteButtonClicked(false);
-        setReauthenticated(false)
+        setReauthenticated(false);
     }
+    
+    const deleteAccount = async () => {
+        let docDeleted = false
+        let userDeleted = false
+
+        // Delete their Firestore document
+        try {
+            await deleteDoc(doc(usersCollectionRef, auth?.currentUser?.email))
+            docDeleted = true
+        } catch(err) {
+            console.error(err)
+            alert('Oops, something went wrong. Try again later')
+        }
+
+        // Delete their Firebase auth identity
+        if (docDeleted) {
+            try {
+                await auth?.currentUser?.delete()
+                userDeleted = true
+            } catch(err) {
+                console.error(err)
+                alert('Oops, something went wrong. Try again later')
+                // If user deletion fails, we must restore their document
+                await setDoc(doc(usersCollectionRef, auth?.currentUser?.email), {
+                    first: user.first,
+                    last: user.last,
+                    university: user.university,
+                    classification: user.classification,
+                  });
+            }
+        }
+
+        // Update the redux store and navigate back to home
+        if (docDeleted && userDeleted) {
+            dispatch(logOff())
+            navigate('/')
+        // If something failed along the way, a message has already been displayed and now return to profile
+        } else {
+            cancelAccountDeletion();
+        }
+    }
+
 
     return (
         <div>

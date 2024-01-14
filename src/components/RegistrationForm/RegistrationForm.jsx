@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, storage, usersCollectionRef } from "../../config/firebase";
 import {
   createUserWithEmailAndPassword,
+  deleteUser,
   sendEmailVerification,
   signOut,
   updateProfile,
@@ -145,6 +146,7 @@ export function RegistrationForm() {
     if (validForm()) {
       setValidated(true);
       let newUserCreated = false;
+      let newDocCreated = false;
 
       // We're validated, now create a new user in our Firebase Auth Directory
       try {
@@ -167,33 +169,36 @@ export function RegistrationForm() {
             university: college,
             classification: grade,
           });
+          newDocCreated = true;
         } catch (err) {
           console.error(err);
+          alert('Oops, something went wrong. Try again later')
+          // If doc creation fails, the entire process should fail back. Delete the new user
+          await auth?.currentUser?.delete()
         }
       }
 
       // Upload their resume to the Firebase Cloud Storage bucket
-      const storageRef = ref(
-        storage,
-        "/resumes/" + firstName + "_" + lastName + "_resume.pdf"
-      );
-      try {
-        await uploadBytes(storageRef, resume);
-      } catch (err) {
-        console.error(err);
-      }
-
-      // Send email verification
-      if (newUserCreated) {
+      if (newUserCreated && newDocCreated) {
+        const storageRef = ref(storage, "/resumes/" + firstName + "_" + lastName + "_resume.pdf");
         try {
-          let user = auth?.currentUser;
-          await signOut(auth);
-          await sendEmailVerification(user);
+          await uploadBytes(storageRef, resume);
         } catch (err) {
           console.error(err);
         }
-        navigate("/login");
       }
+
+      // Send email verification
+      if (newUserCreated && newDocCreated) {
+        try {
+          await sendEmailVerification(auth?.currentUser);
+          await signOut(auth);
+          navigate("/login");
+        } catch (err) {
+          console.error(err);
+        }
+      }
+      
     } else {
       setValidated(false); // This state change will trigger a re-render with any error messages
     }
