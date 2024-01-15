@@ -1,0 +1,20 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f8f9fa; /* Light background color */
+  }
+  
+  .not-found-title {
+    font-size: 4rem;
+    color: #dc3545; /* Red color for the title */
+  }
+  
+  .not-found-message {
+    font-size: 1.5rem;
+    color: #495057; /* Dark color for the message */
+  }
+  
