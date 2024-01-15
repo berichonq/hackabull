@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+.blue-color {
+  color: #052b56;
+}
+
 .linkStyle {
   color: #052b56;
   transition: color 0.3s ease;
@@ -24,7 +28,6 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
 
 @media (max-width: 767.5px) {
   .center {
