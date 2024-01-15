@@ -1,10 +1,20 @@
 import React from "react";
 import "./PastEvents.css";
+    import { useEffect } from 'react';
 import firstImage from "../../assets/images/1.jpg";
 import secondImage from "../../assets/images/2.jpg";
 import thirdImage from "../../assets/images/3.jpg";
 
 export function PastEvents() {
+
+useEffect(() => {
+    var myCarousel = document.querySelector('#carouselExampleAutoplaying')
+    var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 2000,
+        wrap: true
+    })
+}, []);
+
     return (
         <div className="past-events container my-20">
             <h2 className="mb-4 antique-tuscan text-8xl text-center m-3 pb-3 past-events-color">
@@ -15,6 +25,11 @@ export function PastEvents() {
                 id="carouselExampleAutoplaying"
                 className="carousel  slide p-3"
                 data-bs-ride="carousel">
+                    <ol className="carousel-indicators">
+        <li data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" className="active"></li>
+        <li data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"></li>
+    </ol>
                 <div className="carousel-inner ">
                     {/* Slide 1 */}
                     <div
