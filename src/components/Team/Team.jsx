@@ -1,31 +1,26 @@
 import React from "react";
 import "./Team.css"
-import board1 from "../../assets/images/board.png"
-import board2 from "../../assets/images/board.png"
-import board3 from "../../assets/images/board.png"
-import board4 from "../../assets/images/board.png"
-import board5 from "../../assets/images/board.png"
-import board6 from "../../assets/images/board.png"
-import board7 from "../../assets/images/board.png"
-import board8 from "../../assets/images/board.png"
-import board9 from "../../assets/images/board.png"
-import board10 from "../../assets/images/board.png"
-import board11 from "../../assets/images/board.png"
-import board12 from "../../assets/images/board.png"
-import board13 from "../../assets/images/board.png"
+import Asadbek from "../../assets/images/Asadbek.png"
+import Linda from "../../assets/images/Linda.png"
+import Quinn from "../../assets/images/Quinn.png"
+import Ayush from "../../assets/images/Ayush.png"
+import Marsel from "../../assets/images/Marsel.png"
+import Vasili from "../../assets/images/Vasili.png"
+import Diya from "../../assets/images/Diya.png"
+import Michael from "../../assets/images/Michael.png"
+import Kashish from "../../assets/images/Kashish.png"
 
 export function Team() {
   const members = [
-    { image: board1, link: "https://www.linkedin.com/in/member1" },
-    { image: board2, link: "https://www.linkedin.com/in/member1" },
-    { image: board3, link: "https://www.linkedin.com/in/member1" },
-    { image: board4, link: "https://www.linkedin.com/in/member1" },
-    { image: board5, link: "https://www.linkedin.com/in/member1" },
-    { image: board6, link: "https://www.linkedin.com/in/member1" },
-    { image: board7, link: "https://www.linkedin.com/in/member1" },
-    { image: board8, link: "https://www.linkedin.com/in/member1" },
-    { image: board9, link: "https://www.linkedin.com/in/member1" },
-    { image: board10, link: "https://www.linkedin.com/in/member1" },
+    { image: Asadbek, link: "https://www.linkedin.com/in/asadbeknematov" },
+    { image: Linda, link: "https://www.linkedin.com/in/linda--nguyen/" },
+    { image: Quinn, link: "https://www.linkedin.com/in/berichonq" },
+    { image: Ayush, link: "https://www.linkedin.com/in/ayush278" },
+    { image: Marsel, link: "https://www.linkedin.com/in/marsel-fetlyaev" },
+    { image: Vasili, link: "https://www.linkedin.com/in/vasilikitaigorodv" },
+    { image: Diya, link: "https://www.linkedin.com/in/diyajain08" },
+    { image: Michael, link: "https://www.linkedin.com/in/ngu-truong" },
+    { image: Kashish, link: "https://www.linkedin.com/in/kashishadlakha8" },
     // Add other members similarly
   ];
 
