@@ -170,7 +170,7 @@ export function HomeSection() {
             </nav>
             <div className="home_section">
                 <div className="container">
-                    <div class="col container banner">
+                    <div className="col container banner">
                         <img src={banner} />
                         <div
                             style={{
