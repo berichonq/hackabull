@@ -116,7 +116,7 @@ export function EditProfile() {
               required
               id="first-name"
               autoComplete="given-name"
-              placeholder="John"
+              placeholder="First name"
               onChange={(e) => setFirstName(e.target.value)}
             />
             {firstNameError && <p>{firstNameError}</p>}
@@ -129,7 +129,7 @@ export function EditProfile() {
               required
               id="last-name"
               autoComplete="family-name"
-              placeholder="Doe"
+              placeholder="Last name"
               onChange={(e) => setLastName(e.target.value)}
             />
             {lastNameError && <p>{lastNameError}</p>}
@@ -160,7 +160,7 @@ export function EditProfile() {
             <input
               id="college-input"
               disabled={true ? grade === "N/A" : false}
-              placeholder="Harvard University"
+              placeholder="University"
               onChange={(e) => setCollege(e.target.value)}
             />
             {collegeError && <p>{collegeError}</p>}

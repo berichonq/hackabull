@@ -317,6 +317,7 @@ export function Profile() {
                 <p>Please re-enter your password</p>
                 <input
                   required
+                  type="password"
                   className="bg-white border border-gray-800 rounded-md p-2 login-input"
                   onChange={(e) => setPasswordField(e.target.value)}
                 ></input>
