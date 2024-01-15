@@ -1,7 +1,7 @@
 import "./Profile.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import profilePicture from "../../assets/images/profile-pic.png";
+
 import { useDispatch, useSelector } from "react-redux";
 import { logOff } from "../../store/user/user-slice";
 
@@ -10,10 +10,10 @@ import {
   signOut,
   reauthenticateWithCredential,
   EmailAuthProvider,
-  createUserWithEmailAndPassword,
-  updateProfile,
 } from "firebase/auth";
 import { deleteDoc, doc, setDoc } from "firebase/firestore";
+
+import profilePicture from "../../assets/images/profile-pic.png";
 
 export function Profile() {
   const user = useSelector((state) => state.user.data);
@@ -201,9 +201,11 @@ export function Profile() {
           )}
           {deleteButtonClicked && !reauthenticated && (
             <>
+              <br/>
               <p>Please re-enter your password</p>
               <input
                 required
+                type="password"
                 className="bg-white border border-gray-800 rounded-md p-2 login-input"
                 onChange={(e) => setPasswordField(e.target.value)}
               ></input>
