@@ -1,8 +1,10 @@
-import s from './style.module.css'
+import "./PageNotFound.css";
 
 export function PageNotFound() {
-
-    return (
-        <div>Page Not Found</div>
-    )
+  return (
+    <div className="not-found-container">
+      <h1 className="not-found-title">404</h1>
+      <p className="not-found-message">Page Not Found</p>
+    </div>
+  );
 }

@@ -2,7 +2,7 @@ import "./style.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logOn } from '../../store/user/user-slice'
+import { logOn } from "../../store/user/user-slice";
 
 import { auth, usersCollectionRef } from "../../config/firebase";
 
@@ -10,7 +10,7 @@ import { doc, setDoc, getDoc } from "firebase/firestore";
 
 export function EditProfile() {
   let navigate = useNavigate();
-  let dispatch = useDispatch()
+  let dispatch = useDispatch();
 
   // Input field states
   const [firstName, setFirstName] = useState("");
@@ -73,21 +73,21 @@ export function EditProfile() {
           university: college,
           classification: grade,
         });
-        docUpdated = true
+        docUpdated = true;
       } catch (err) {
         console.error(err);
       }
 
       // We also need to update the redux store
       if (docUpdated) {
-        let docRef = doc(usersCollectionRef, auth?.currentUser?.email)
+        let docRef = doc(usersCollectionRef, auth?.currentUser?.email);
         let user;
         try {
-            user = await getDoc(docRef)
-        } catch(err) {
-            console.error(err)
+          user = await getDoc(docRef);
+        } catch (err) {
+          console.error(err);
         }
-        dispatch(logOn(user.data()))
+        dispatch(logOn(user.data()));
       }
 
       // Return to profile
@@ -98,8 +98,8 @@ export function EditProfile() {
   };
 
   const returnToProfile = () => {
-    navigate('/profile')
-  }
+    navigate("/profile");
+  };
 
   return (
     <div className="h-screen century-ps text-xl text-left">
@@ -116,7 +116,7 @@ export function EditProfile() {
               required
               id="first-name"
               autoComplete="given-name"
-              placeholder="First name"
+              placeholder="John"
               onChange={(e) => setFirstName(e.target.value)}
             />
             {firstNameError && <p>{firstNameError}</p>}
@@ -129,7 +129,7 @@ export function EditProfile() {
               required
               id="last-name"
               autoComplete="family-name"
-              placeholder="Last name"
+              placeholder="Doe"
               onChange={(e) => setLastName(e.target.value)}
             />
             {lastNameError && <p>{lastNameError}</p>}
@@ -160,7 +160,7 @@ export function EditProfile() {
             <input
               id="college-input"
               disabled={true ? grade === "N/A" : false}
-              placeholder="University"
+              placeholder="Harvard University"
               onChange={(e) => setCollege(e.target.value)}
             />
             {collegeError && <p>{collegeError}</p>}

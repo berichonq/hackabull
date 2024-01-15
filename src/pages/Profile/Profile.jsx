@@ -1,7 +1,8 @@
 import "./Profile.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import profilePicture from "../../assets/images/profile-pic.png";
+import logo from "../../assets/images/LineArt-bold-blue.png";
 import { useDispatch, useSelector } from "react-redux";
 import { logOff } from "../../store/user/user-slice";
 
@@ -152,103 +153,243 @@ export function Profile() {
   };
 
   return (
-    <div className="container-fluid century-ps text-xl text-left register-container">
-      <div className="pt-5 row center-h">
-        {/* First Column */}
-        <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
-          <div>
+    <div>
+      {/* Nav-bar */}
+      <nav
+        className="navbar navbar-light fixed-top navbar-expand-lg bg-light century-ps blue-color"
+        style={{ "--bs-bg-opacity": ".5" }}
+      >
+        <div className="container-fluid ml-20 mr-40">
+          <a className="navbar-brand" href="/">
             <img
-              className="circle-picture"
-              src={profilePicture}
-              alt="Hacker's Profile Picture"
+              src={logo}
+              alt="Bootstrap"
+              width="30"
+              height="40"
             />
+          </a>
+          <p className="">HACKABULL 2024</p>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mx-auto about-us-font-color mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  aria-current="page"
+                  href="/"
+                >
+                  HOME
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  aria-current="page"
+                  href="#"
+                >
+                  ABOUT
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  aria-current="page"
+                  href="#"
+                >
+                  PAST EVENTS
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  aria-current="page"
+                  href="#"
+                >
+                  SCHEDULE
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  aria-current="page"
+                  href="#"
+                >
+                  SPONSORS
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  aria-current="page"
+                  href="#"
+                >
+                  FAQ
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  aria-current="page"
+                  href="#"
+                >
+                  TEAM
+                </a>
+              </li>
+            </ul>
+            <div className="d-flex">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                {user && (
+                  <li className="nav-item">
+                    <Link
+                      to="/profile"
+                      className="nav-link"
+                    >
+                      Profile
+                    </Link>
+                  </li>
+                )}
+                {!user && (
+                  <li className="nav-item">
+                    <Link
+                      to="/register"
+                      className="nav-link"
+                    >
+                      Register
+                    </Link>
+                  </li>
+                )}
+                {user && (
+                  <li className="nav-item">
+                    <button
+                      onClick={logout}
+                      className="nav-link"
+                    >
+                      {" "}
+                      Logout{" "}
+                    </button>
+                  </li>
+                )}
+                {!user && (
+                  <li className="nav-item">
+                    <Link to="/login" className="nav-link about-us-font-color">
+                      Login
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            </div>
           </div>
         </div>
-        {/* Second Column */}
-        <div className="col-lg-6 col-md-6 col-sm-12 blue-color">
-          <div className="title text-4xl bold-century">
-            {user.first} {user.last}
+      </nav>
+      {/* Profile-content */}
+      <div className="container-fluid century-ps text-xl text-left register-container">
+        <div className="padding-top-10 row center-h">
+          {/* First Column */}
+          <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
+            <div>
+              <img
+                className="circle-picture"
+                src={profilePicture}
+                alt="Hacker's Profile Picture"
+              />
+            </div>
           </div>
-          <div className="text-base">
-            {studentInfo().map((datapoint) => (
-              <div key={key++}>
-                <p>{datapoint}</p>
-              </div>
-            ))}
-          </div>
-          <div>
-            <button className="login-button2 mt-2">
-              <Link to="/profile/edit">Edit my profile</Link>
-            </button>
-          </div>
-          <div>
-            <button className="login-button2 mt-2">
-              <Link to="/password-reset">Change my password</Link>
-            </button>
-          </div>
-          <button className="login-button2 mt-2" onClick={logout}>
-            {" "}
-            Logout{" "}
-          </button>
-          {!deleteButtonClicked && (
-            <button
-              className="login-button2-red mt-2"
-              onClick={setDeleteButtonClicked}
-            >
-              {" "}
-              Delete my account{" "}
-            </button>
-          )}
-          {deleteButtonClicked && !reauthenticated && (
-            <>
-              <br/>
-              <p>Please re-enter your password</p>
-              <input
-                required
-                type="password"
-                className="bg-white border border-gray-800 rounded-md p-2 login-input"
-                onChange={(e) => setPasswordField(e.target.value)}
-              ></input>
-              <br />
-              <button className="login-button2 mt-2" onClick={reauthenticate}>
-                {" "}
-                Authenticate{" "}
+          {/* Second Column */}
+          <div className="col-lg-6 col-md-6 col-sm-12 blue-color">
+            <div className="title text-4xl bold-century">
+              {user.first} {user.last}
+            </div>
+            <div className="text-base">
+              {studentInfo().map((datapoint) => (
+                <div key={key++}>
+                  <p>{datapoint}</p>
+                </div>
+              ))}
+            </div>
+            <div>
+              <button className="login-button2 mt-2">
+                <Link to="/profile/edit">Edit my profile</Link>
               </button>
-            </>
-          )}
-          {reauthenticated && (
-            <>
-              <p>{`Are you sure you want to delete your account? This action is irreversible. To confirm, type "${auth?.currentUser?.email}" in the box below`}</p>
-              <input
-                required
-                className="bg-white border border-gray-800 rounded-md p-2 login-input"
-                onChange={(e) => setAccountDeletionConfirmation(e.target.value)}
-              ></input>
-              <br />
+            </div>
+            <div>
+              <button className="login-button2 mt-2">
+                <Link to="/password-reset">Change my password</Link>
+              </button>
+            </div>
+            <button className="login-button2 mt-2" onClick={logout}>
+              {" "}
+              Logout{" "}
+            </button>
+            {!deleteButtonClicked && (
               <button
-                onClick={deleteAccount}
                 className="login-button2-red mt-2"
-                disabled={
-                  true
-                    ? accountDeletionConfirmation !== auth?.currentUser?.email
-                    : false
-                }
+                onClick={setDeleteButtonClicked}
               >
                 {" "}
                 Delete my account{" "}
               </button>
-              <button
-                className="login-button2 mt-2"
-                onClick={cancelAccountDeletion}
-              >
-                {" "}
-                Cancel{" "}
-              </button>
-            </>
-          )}
+            )}
+            {deleteButtonClicked && !reauthenticated && (
+              <>
+                <p>Please re-enter your password</p>
+                <input
+                  required
+                  className="bg-white border border-gray-800 rounded-md p-2 login-input"
+                  onChange={(e) => setPasswordField(e.target.value)}
+                ></input>
+                <br />
+                <button className="login-button2 mt-2" onClick={reauthenticate}>
+                  {" "}
+                  Authenticate{" "}
+                </button>
+              </>
+            )}
+            {reauthenticated && (
+              <>
+                <p>{`Are you sure you want to delete your account? This action is irreversible. To confirm, type "${auth?.currentUser?.email}" in the box below`}</p>
+                <input
+                  required
+                  className="bg-white border border-gray-800 rounded-md p-2 login-input"
+                  onChange={(e) =>
+                    setAccountDeletionConfirmation(e.target.value)
+                  }
+                ></input>
+                <br />
+                <button
+                  onClick={deleteAccount}
+                  className="login-button2-red mt-2"
+                  disabled={
+                    true
+                      ? accountDeletionConfirmation !== auth?.currentUser?.email
+                      : false
+                  }
+                >
+                  {" "}
+                  Delete my account{" "}
+                </button>
+                <button
+                  className="login-button2 mt-2"
+                  onClick={cancelAccountDeletion}
+                >
+                  {" "}
+                  Cancel{" "}
+                </button>
+              </>
+            )}
 
-          <br />
-          <br />
+            <br />
+            <br />
+          </div>
         </div>
       </div>
     </div>
