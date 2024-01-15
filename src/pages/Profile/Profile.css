@@ -36,3 +36,7 @@
 .login-button2-red:hover {
   background: rgb(247, 122, 27);
 }
+
+.padding-top-10 {
+  padding-top: 6rem;
+}
