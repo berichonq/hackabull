@@ -1,8 +1,7 @@
 import "./Profile.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import profilePicture from "../../assets/images/profile-pic.png";
-import logo from "../../assets/images/LineArt-bold-blue.png";
+
 import { useDispatch, useSelector } from "react-redux";
 import { logOff } from "../../store/user/user-slice";
 
@@ -15,6 +14,7 @@ import {
 import { deleteDoc, doc, setDoc } from "firebase/firestore";
 
 import profilePicture from "../../assets/images/profile-pic.png";
+import logo from "../../assets/images/LineArt-bold-blue.png";
 
 export function Profile() {
   const user = useSelector((state) => state.user.data);
