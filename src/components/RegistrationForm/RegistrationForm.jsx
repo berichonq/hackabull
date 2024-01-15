@@ -6,7 +6,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, storage, usersCollectionRef } from "../../config/firebase";
 import {
   createUserWithEmailAndPassword,
-  deleteUser,
   sendEmailVerification,
   signOut,
   updateProfile,
@@ -209,7 +208,7 @@ export function RegistrationForm() {
       <div className="center-h">
         <br />
         <p className="title text-2xl bold-century title-center" id="title">
-          Register to Hackabull 2024
+          Register for HackaBull 2024!
         </p>
         <br />
         <div className="row">
