@@ -250,26 +250,6 @@ export function Profile() {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 {user && (
                   <li className="nav-item">
-                    <Link
-                      to="/profile"
-                      className="nav-link"
-                    >
-                      Profile
-                    </Link>
-                  </li>
-                )}
-                {!user && (
-                  <li className="nav-item">
-                    <Link
-                      to="/register"
-                      className="nav-link"
-                    >
-                      Register
-                    </Link>
-                  </li>
-                )}
-                {user && (
-                  <li className="nav-item">
                     <button
                       onClick={logout}
                       className="nav-link"
@@ -277,13 +257,6 @@ export function Profile() {
                       {" "}
                       Logout{" "}
                     </button>
-                  </li>
-                )}
-                {!user && (
-                  <li className="nav-item">
-                    <Link to="/login" className="nav-link about-us-font-color">
-                      Login
-                    </Link>
                   </li>
                 )}
               </ul>
