@@ -15,3 +15,29 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* For Webkit browsers like Chrome, Safari, etc. */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #062b56; /* Color for the scrolling line */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c4ab56; /* Color for the little scroller */
+  border-radius: 6px; /* Optional: adds rounded corners to the scrollbar thumb */
+  border: 3px solid #062b56; /* Optional: adds a border around the scrollbar thumb */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: auto; /* 'auto' or 'thin' */
+  scrollbar-color: #c4ab56 #062b56; /* thumb and track colors */
+}
+
+/* For IE and Edge */
+* {
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* Optional: only show scrollbar when scrolling */
+}
