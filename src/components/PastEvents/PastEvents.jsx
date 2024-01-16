@@ -1,20 +1,41 @@
 import React from "react";
 import "./PastEvents.css";
+import { useEffect } from "react";
 import firstImage from "../../assets/images/1.jpg";
 import secondImage from "../../assets/images/2.jpg";
 import thirdImage from "../../assets/images/3.jpg";
 
 export function PastEvents() {
+    useEffect(() => {
+        var myCarousel = document.querySelector("#carouselExampleAutoplaying");
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 2000,
+            wrap: true,
+        });
+    }, []);
+
     return (
         <div className="past-events container my-20">
-            <h2 className="mb-4 antique-tuscan text-8xl text-center m-3 pb-3 past-events-color">
+            <h2 className="mb-4 antique-tuscan text-8xl text-center m-3 pb-3 past-events-color" data-aos="zoom-in">
                 Past Events
             </h2>
-            
+
             <div
                 id="carouselExampleAutoplaying"
                 className="carousel  slide p-3"
-                data-bs-ride="carousel">
+                data-bs-ride="carousel"  data-aos="zoom-in">
+                <ol className="carousel-indicators">
+                    <li
+                        data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide-to="0"
+                        className="active"></li>
+                    <li
+                        data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide-to="1"></li>
+                    <li
+                        data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide-to="2"></li>
+                </ol>
                 <div className="carousel-inner ">
                     {/* Slide 1 */}
                     <div
@@ -28,7 +49,7 @@ export function PastEvents() {
                                     alt="First slide"
                                 />
                             </div>
-                            <div className="col-md-6 d-flex p-10 align-items-center">
+                            <div className="col-md-6 d-flex p-10 align-items-center" >
                                 <div>
                                     <h3 className="century-ps p-3 font-bold text-4xl text-left">
                                         Heading for First Slide
@@ -56,7 +77,7 @@ export function PastEvents() {
                                     alt="Second slide"
                                 />
                             </div>
-                            <div className="col-md-6 d-flex p-10 align-items-center">
+                            <div className="col-md-6 d-flex p-10 align-items-center" >
                                 <div>
                                     <h3 className="century-ps font-bold  p-3 text-4xl text-left">
                                         Heading for Second Slide

@@ -11,7 +11,8 @@ import { FAQ } from "../../components/FAQ/FAQ";
 import { Schedule } from "../../components/Schedule/Schedule";
 import { Sponsors } from "../../components/Sponsors/Sponsors";
 import { Team } from "../../components/Team/Team";
-import {HomeSection} from "../../components/HomeSection/HomeSection";
+import { HomeSection } from "../../components/HomeSection/HomeSection";
+import { Footer } from "../../components/Footer/Footer";
 
 export function Home() {
     //////////////////////////////////////////////////////////////////////////////////////////////
@@ -32,15 +33,29 @@ export function Home() {
 
     return (
         <div className="home">
-            <HomeSection/>
-{/* <button onClick={logout}> Logout </button> */}
+            <div id="home">
+                <HomeSection />
+            </div>
             <div className="content">
-                <AboutUs />
-                <PastEvents />
-                <Schedule />
-                <Sponsors />
-                <FAQ />
-                <Team />
+                <div id="about">
+                    <AboutUs />
+                </div>
+                <div id="events">
+                    <PastEvents />
+                </div>
+                <div id="schedule">
+                    <Schedule />
+                </div>
+                <div id="sponsors">
+                    <Sponsors />
+                </div>
+                <div id="faq">
+                    <FAQ />
+                </div>
+                <div id="team">
+                    <Team />
+                </div>
+                <Footer />
             </div>
         </div>
     );

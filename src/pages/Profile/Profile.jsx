@@ -1,8 +1,7 @@
 import "./Profile.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import profilePicture from "../../assets/images/profile-pic.png";
-import logo from "../../assets/images/LineArt-bold-blue.png";
+
 import { useDispatch, useSelector } from "react-redux";
 import { logOff } from "../../store/user/user-slice";
 
@@ -11,10 +10,11 @@ import {
   signOut,
   reauthenticateWithCredential,
   EmailAuthProvider,
-  createUserWithEmailAndPassword,
-  updateProfile,
 } from "firebase/auth";
 import { deleteDoc, doc, setDoc } from "firebase/firestore";
+
+import profilePicture from "../../assets/images/profile-pic.png";
+import logo from "../../assets/images/LineArt-bold-blue.png";
 
 export function Profile() {
   const user = useSelector((state) => state.user.data);
@@ -250,26 +250,6 @@ export function Profile() {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 {user && (
                   <li className="nav-item">
-                    <Link
-                      to="/profile"
-                      className="nav-link"
-                    >
-                      Profile
-                    </Link>
-                  </li>
-                )}
-                {!user && (
-                  <li className="nav-item">
-                    <Link
-                      to="/register"
-                      className="nav-link"
-                    >
-                      Register
-                    </Link>
-                  </li>
-                )}
-                {user && (
-                  <li className="nav-item">
                     <button
                       onClick={logout}
                       className="nav-link"
@@ -277,13 +257,6 @@ export function Profile() {
                       {" "}
                       Logout{" "}
                     </button>
-                  </li>
-                )}
-                {!user && (
-                  <li className="nav-item">
-                    <Link to="/login" className="nav-link about-us-font-color">
-                      Login
-                    </Link>
                   </li>
                 )}
               </ul>
@@ -344,6 +317,7 @@ export function Profile() {
                 <p>Please re-enter your password</p>
                 <input
                   required
+                  type="password"
                   className="bg-white border border-gray-800 rounded-md p-2 login-input"
                   onChange={(e) => setPasswordField(e.target.value)}
                 ></input>

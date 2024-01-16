@@ -1,5 +1,15 @@
-.team{
-    width: about;
-    height: 400px;
+.team {
+    width: auto;
     /* background-color: rgba(0, 255, 21, 0.4); */
+}
+
+.team-card {
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover {
+    transform: translateY(
+        -10px
+    ); /* Adjust the value as needed for the desired effect */
+    
 }

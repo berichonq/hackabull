@@ -71,7 +71,7 @@ export function HomeSection() {
                                 <a
                                     className="nav-link about-us-font-color "
                                     aria-current="page"
-                                    href="#">
+                                    href="#home">
                                     Home
                                 </a>
                             </li>
@@ -79,7 +79,7 @@ export function HomeSection() {
                                 <a
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
-                                    href="#">
+                                    href="#about">
                                     About
                                 </a>
                             </li>
@@ -87,7 +87,7 @@ export function HomeSection() {
                                 <a
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
-                                    href="#">
+                                    href="#events">
                                     Past Events
                                 </a>
                             </li>
@@ -95,7 +95,7 @@ export function HomeSection() {
                                 <a
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
-                                    href="#">
+                                    href="#schedule">
                                     Schedule
                                 </a>
                             </li>
@@ -103,7 +103,7 @@ export function HomeSection() {
                                 <a
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
-                                    href="#">
+                                    href="#sponsors">
                                     Sponsors
                                 </a>
                             </li>
@@ -111,7 +111,7 @@ export function HomeSection() {
                                 <a
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
-                                    href="#">
+                                    href="#faq">
                                     FAQ
                                 </a>
                             </li>
@@ -119,7 +119,7 @@ export function HomeSection() {
                                 <a
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
-                                    href="#">
+                                    href="#team">
                                     Team
                                 </a>
                             </li>
@@ -172,35 +172,8 @@ export function HomeSection() {
                 <div className="container">
                     <div className="col container banner">
                         <img src={banner} />
-                        <div
-                            style={{
-                                width: "70%",
-                                marginTop: "20px",
-                                height: "50px",
-                                paddingLeft: 25,
-                                paddingRight: 25,
-                                paddingTop: 13,
-                                paddingBottom: 13,
-                                background:
-                                    "linear-gradient(180deg, #093460 0%, #0085A4 55%, #E9F0CB 100%)",
-                                boxShadow:
-                                    "-4px 5px 6.400000095367432px rgba(0, 0, 0, 0.25)",
-                                borderRadius: 10,
-                                border: "1px #FDEDB9 solid",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                display: "inline-flex",
-                            }}>
-                            <a
-                                href="#"
-                                style={{
-                                    color: "#FDEDB9",
-                                    fontSize: 20,
-                                    fontFamily: "Century PS Pro",
-                                    fontWeight: "700",
-                                    lineHeight: 23.33,
-                                    wordWrap: "break-word",
-                                }}>
+                        <div className="apply-btn">
+                            <a className="century-ps team-card apply-btn-link" href="/register">
                                 APPLY TO ATTEND
                             </a>
                         </div>

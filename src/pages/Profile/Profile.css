@@ -16,7 +16,10 @@
 }
 
 .login-button2:hover {
-  background: #1f7c98;
+  border: 3px solid #052b56;
+  background: white;
+  color: #052b56;
+
 }
 
 .login-button2-red {
@@ -34,7 +37,9 @@
 }
 
 .login-button2-red:hover {
-  background: rgb(247, 122, 27);
+  border: 3px solid red;
+  background: white;
+  color: red;
 }
 
 .padding-top-10 {

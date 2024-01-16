@@ -6,19 +6,33 @@
 }
 
 .schedule-main {
-    height: 140%; /* Take up the full height of the viewport */
+    position: relative; /* This is needed to position the pseudo-element correctly */
+    height: 140%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
     width: 80%;
-    background: url("../../assets/images/papyrus.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    /* opacity: 0.5; */
-    mix-blend-mode: multiply;
     color: #fdedb9;
 }
+
+.schedule-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../../assets/images/papyrus_rotated.png");
+    background-size: 100% 100%;
+    /* opacity: 1; Adjust this value for desired transparency */
+
+    mix-blend-mode: multiply;
+    z-index: 0; /* Ensures the background is behind the content */
+}
+
+/* Other styles for your elements */
+
 
 .container {
     font-family: "CenturyPSPro", serif;
