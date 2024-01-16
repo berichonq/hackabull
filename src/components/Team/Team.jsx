@@ -31,7 +31,7 @@ export function Team() {
     </h2>
       <div className="row justify-center">
         {members.map((member, index) => (
-          <div key={index} className="col-2  m-2">
+          <div key={index} className="col-2  m-2 team-card">
             <a href={member.link} target="_blank" rel="noopener noreferrer">
               <img src={member.image} alt={`Board member ${index + 1}`} className="w-full" />
             </a>

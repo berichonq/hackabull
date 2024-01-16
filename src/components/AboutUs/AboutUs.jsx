@@ -4,7 +4,7 @@ import "./AboutUs.css";
 export function AboutUs() {
   return (
     <div className="container about-us py-20">
-      <h1 className="mb-4 antique-tuscan text-9xl text-left m-4	pb-3">ABOUT US</h1>
+      <h1 className="mb-4 antique-tuscan text-9xl text-left m-4	pb-3">ABOUT Hackabull</h1>
       <div className="col">
         <div className="col-md-8 m-4">
           <p
