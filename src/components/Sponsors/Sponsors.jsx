@@ -19,19 +19,19 @@ export function Sponsors() {
                 sponsors
             </h2></div>
             <div className="container relative mx-auto my-8">
-                <div className="flex flex-row items-center justify-between">
-                    <div className="w-1/2" data-aos="fade-right">
-                        <h2 className="text-6xl font-bold mb-4 century-ps about-us-font-color text-left">
-                            Partnering with Leaders in Innovation
+                <div className="flex flex-row items-center justify-between sponsor-text-wrapper">
+                    <div className="sponsor-phrase mx-11" data-aos="fade-right">
+                        <h2 className="font-bold mb-4 century-ps about-us-font-color text-left">
+                            Partnering with leaders in innovation.
                         </h2>
                     </div>
-                    <div className="w-1/2 overflow-hidden" data-aos="fade-left">
-                        <p className="century-ps about-us-font-color text-2xl text-left">
+                    <div className="sponsor-text mx-11 overflow-hidden" data-aos="fade-left">
+                        <p className="century-ps about-us-font-color text-left">
                             Joining forces with industry giants, Hackabull
-                            Hackathon proudly collaborates with some of the most
+                            proudly collaborates with some of the most
                             influential names in technology and business. Our
                             sponsors, ranging from groundbreaking startups to
-                            Fortune 500 companies, are testament to our
+                            Fortune 500 companies, are a testament to our
                             commitment to excellence. With us, you're not just
                             sponsoring an event; you're shaping the future of
                             technology!
