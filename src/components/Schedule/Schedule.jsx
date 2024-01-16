@@ -4,12 +4,12 @@ import "./Schedule.css";
 export function Schedule() {
     return (
       
-      <div>
+      <div className=" schedule-main">
         <h2 className="mb-12 antique-tuscan relative z-20 about-us-font-color text-9xl text-center m-4	pb-3">EVENT TIMELINE</h2>
       
         <div className="container schedule-page w-full h-vh px-auto">
-          <div className="schedule-main text-center	 w-full z-10 px-20 absolute"></div>
-            <div className="schedule-container  py-24 w-5/6 relative z-20 select-none">
+          <div className=" text-center	 w-full z-10 px-20 absolute"></div>
+            <div className="schedule-container  pb-24 w-5/6 relative z-20 select-none">
                 <table className="schedule">
                     <thead>
                         <tr>

@@ -173,7 +173,7 @@ export function HomeSection() {
                     <div className="col container banner">
                         <img src={banner} />
                         <div className="apply-btn">
-                            <a className="century-ps apply-btn-link" href="/register">
+                            <a className="century-ps team-card apply-btn-link" href="/register">
                                 APPLY TO ATTEND
                             </a>
                         </div>
