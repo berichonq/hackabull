@@ -15,17 +15,17 @@ import SHPELogo from "../../assets/images/shpe_logo.png";
 export function Sponsors() {
     return (
         <div className="sponsors mt-16 section grey">
-            <h2 className="mb-4 antique-tuscan relative z-20 about-us-font-color text-9xl text-center m-4	pb-3">
+            <div><h2 className="mb-4 antique-tuscan relative z-20 about-us-font-color text-9xl text-center m-4	pb-3" data-aos="fade-up">
                 sponsors
-            </h2>
+            </h2></div>
             <div className="container relative mx-auto my-8">
                 <div className="flex flex-row items-center justify-between">
-                    <div className="w-1/2">
+                    <div className="w-1/2" data-aos="fade-right">
                         <h2 className="text-6xl font-bold mb-4 century-ps about-us-font-color text-left">
                             Partnering with Leaders in Innovation
                         </h2>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-1/2" data-aos="fade-left">
                         <p className="century-ps about-us-font-color text-2xl text-left">
                             Joining forces with industry giants, Hackabull
                             Hackathon proudly collaborates with some of the most
@@ -38,8 +38,8 @@ export function Sponsors() {
                         </p>
                     </div>
                 </div>
-                <div className="marquee-wrapper my-8">
-                    <div className="marquee my-12 flex overflow-hidden">
+                <div className="marquee-wrapper my-8" >
+                    <div className="marquee my-12 flex overflow-hidden"  data-aos="fade-up-left">
                         <div className="marquee_content flex animate-scroll">
                             <a href="/" className="partners_logo_wrapper m-2">
                                 <img
@@ -113,7 +113,7 @@ export function Sponsors() {
                             </a>
                         </div>
                     </div>
-                    <div className="marquee my-12 flex overflow-hidden">
+                    <div className="marquee my-12 flex overflow-hidden" data-aos="fade-up-right">
                         <div className="marquee_content flex animate-scroll reverse">
                             <a href="/" className="partners_logo_wrapper m-2">
                                 <img
@@ -189,7 +189,7 @@ export function Sponsors() {
                         </div>
                     </div>
                 </div>
-                <div className="w-full text-center">
+                <div className="w-full text-center" data-aos="zoom-in">
                     <h2 className="mb-4 century-ps relative z-20 about-us-font-color text-4xl text-center m-4	pb-3">
                         Organized by:
                     </h2>

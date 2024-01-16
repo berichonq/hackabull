@@ -9,6 +9,7 @@ function App() {
     AOS.init({
       // // Your settings
       // startEvent: 'load' // This line replaces the need for the additional event listener
+      duration: 1000
     });
 
     // Optional: If you still want to use the window event listener
