@@ -1,7 +1,7 @@
 .schedule-page {
     display: flex;
     align-items: center; /* Center vertically */
-    height: 100%; /* Full height of the viewport */
+    width: 100%;
     flex-direction: column;
 }
 
@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     color: #fdedb9;
 }
 
@@ -41,7 +41,14 @@
 .schedule {
     width: 100%;
     border-collapse: collapse;
+    background-color: transparent;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.schedule thead {
+    background-color: #012049;
+    border: 2px solid rgb(40, 54, 72);
 }
 
 .schedule th {
@@ -58,59 +65,70 @@
     border: 2px solid #fdedb9;
 }
 
-@media screen and (max-width: 600px) {
-    .schedule,
-    .schedule thead,
-    .schedule tbody,
-    .schedule th,
-    .schedule td,
-    .schedule tr {
-        display: block;
-    }
 
-    .schedule thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    .schedule tr {
-        margin-bottom: 10px;
-    }
-
-    .schedule td {
-        border: none;
-        position: relative;
-        padding-left: 50%;
-        text-align: right;
-    }
-
-    .schedule td:before {
-        position: absolute;
-        top: 6px;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-        text-align: left;
-        font-weight: bold;
-    }
-
-    /* Label the data */
-}
+/* Label the data */
 .schedule td:before {
     font-weight: bold;
     text-align: left;
     display: block;
 }
 
-@media screen and (max-width: 600px) {
-    .schedule th {
-        position: sticky;
-        top: 0;
-        z-index: 10;
+@media screen and (max-width: 1000px) {
+    .schedule {
+      width: 100vw;
+      height: auto;
+    }
+    .schedule .tbody tr td {
+      text-decoration: none;
+      display: inline-block;
+      font-weight: medium;
+      color: #ffeaf1;
+      text-align: center;
+      vertical-align: middle;
+      user-select: none;
+      opacity: 1;
     }
 }
+
+@media screen and (max-width: 1023.5px) {
+    .schedule-container {
+      margin: 40px auto 0;
+      display: block;
+      max-width: -moz-fit-content;
+      max-width: fit-content;
+      margin: 0 auto;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .schedule {
+      position: relative;
+    }
+    .schedule thead tr th {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      color: #ffffff;
+      opacity: 1;
+      padding: 8px;
+      vertical-align: top;
+      border: 1px solid #ffffff;
+    }
+    .schedule tbody tr td {
+      font-size: 10px;
+      letter-spacing: 0.3px;
+      font-weight: normal;
+      color: #ffeaf1;
+      background-color: transparent;
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #ffffff;
+    }
+  }
+
+
 /* Custom scrollbar styles */
 .schedule::-webkit-scrollbar {
     width: 10px;

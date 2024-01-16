@@ -10,8 +10,8 @@ export function Schedule() {
                 </h2>
             </div>
             <div className="container schedule-page w-full h-vh px-auto">
-                <div className=" text-center	 w-full z-10 px-20 absolute"></div>
-                <div className="schedule-container  pb-24 w-5/6 relative z-20 select-none">
+                <div className=" text-center w-full z-10 px-20 absolute"></div>
+                <div className="schedule-container pb-4 mb-5 w-5/6 relative z-20 select-none">
                     <table className="schedule">
                         <thead>
                             <tr>
