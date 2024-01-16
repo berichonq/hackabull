@@ -18,6 +18,13 @@
 .antique-tuscan {
     font-family: "AntiqueTuscan8 Bold", sans-serif;
     text-transform: none;
+    font-size: 7em;
+}
+
+@media (max-width: 500px) {
+    .antique-tuscan {
+        font-size: 4.75em;
+    }
 }
 
 .century-ps {

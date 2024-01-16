@@ -39,7 +39,7 @@ export function Sponsors() {
                     </div>
                 </div>
                 <div className="marquee-wrapper my-8" >
-                    <div className="marquee my-12 flex overflow-hidden"  data-aos="fade-up-left">
+                    <div className="marquee my-12 flex"  data-aos="fade-up-left">
                         <div className="marquee_content flex animate-scroll">
                             <a href="/" className="partners_logo_wrapper m-2">
                                 <img

@@ -16,6 +16,7 @@
 .marquee_content {
     display: flex;
     width: 300%; /* Adjust as needed */
+    height: auto;
     animation: scroll 20s linear infinite;
 }
 
@@ -35,7 +36,7 @@
 
 .partners_logo_wrapper img {
     width: auto; /* Or set a fixed width */
-    height: 100px; /* Adjust height as needed */
+    height: 10vh; /* Adjust height as needed */
 }
 
 .reverse {
@@ -89,5 +90,77 @@
         width: 100%;
         font-size: 2.75vw;
         line-height: 1.9;
+    }
+}
+
+@media (max-width: 600.5px) {
+    .sponsor-text-wrapper {
+        flex-wrap: wrap;
+    }
+    .sponsor-phrase {
+        margin: auto 20px;
+        width: 100%;
+        font-size: 6.5vw;
+    }
+    
+    .sponsor-text {
+        margin: auto 20px;
+        width: 100%;
+        font-size: 3.5vw;
+        line-height: 2;
+    }
+}
+
+@media (max-width: 500.5px) {
+    .sponsor-text-wrapper {
+        flex-wrap: wrap;
+    }
+    .sponsor-phrase {
+        margin: auto 20px;
+        width: 100%;
+        font-size: 7vw;
+    }
+    
+    .sponsor-text {
+        margin: auto 20px;
+        width: 100%;
+        font-size: 3.75vw;
+        line-height: 2.25;
+    }
+}
+
+@media (max-width: 450.5px) {
+    .sponsor-text-wrapper {
+        flex-wrap: wrap;
+    }
+    .sponsor-phrase {
+        margin: auto 20px;
+        width: 100%;
+        font-size: 8vw;
+    }
+    
+    .sponsor-text {
+        margin: auto 20px;
+        width: 100%;
+        font-size: 4.5vw;
+        line-height: 2.5;
+    }
+}
+
+@media (max-width: 350.5px) {
+    .sponsor-text-wrapper {
+        flex-wrap: wrap;
+    }
+    .sponsor-phrase {
+        margin: auto 20px;
+        width: 100%;
+        font-size: 9vw;
+    }
+    
+    .sponsor-text {
+        margin: auto 20px;
+        width: 100%;
+        font-size: 4.5vw;
+        line-height: 2.5;
     }
 }
