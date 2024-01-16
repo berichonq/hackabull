@@ -25,7 +25,7 @@ export function Sponsors() {
                             Partnering with Leaders in Innovation
                         </h2>
                     </div>
-                    <div className="w-1/2" data-aos="fade-left">
+                    <div className="w-1/2 overflow-hidden" data-aos="fade-left">
                         <p className="century-ps about-us-font-color text-2xl text-left">
                             Joining forces with industry giants, Hackabull
                             Hackathon proudly collaborates with some of the most

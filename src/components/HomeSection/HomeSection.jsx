@@ -1,5 +1,5 @@
 import "./HomeSection.css";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 
 import { Link, useNavigate } from "react-router-dom";
 
@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 import { Context } from "../../context/AuthContext";
 
 import { auth } from "../../config/firebase";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 
 import banner from "../../assets/images/banner.png";
 

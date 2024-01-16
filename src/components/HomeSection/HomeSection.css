@@ -34,6 +34,7 @@
     margin-top: 8.5rem;
     width: 35%;
     height: auto;
+    overflow: hidden;
     /* background: url("../../assets/images/banner.png");
     background-size: 100% auto; 
     background-repeat: no-repeat; */
