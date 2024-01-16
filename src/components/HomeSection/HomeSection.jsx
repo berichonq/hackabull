@@ -169,14 +169,12 @@ export function HomeSection() {
                 </div>
             </nav>
             <div className="home_section">
-                <div className="container">
-                    <div className="col container banner">
-                        <img src={banner} />
-                        <div className="apply-btn">
-                            <a className="century-ps team-card apply-btn-link" href="/register">
-                                APPLY TO ATTEND
-                            </a>
-                        </div>
+                <div className="col container banner">
+                    <img src={banner} />
+                    <div className="apply-btn">
+                        <a className="century-ps team-card apply-btn-link" href="/register">
+                            APPLY TO ATTEND
+                        </a>
                     </div>
                 </div>
             </div>

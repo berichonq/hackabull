@@ -40,14 +40,14 @@ export function Home() {
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
     return (
-        <div className="home">
+        <div className="home section">
             {isLoading ? (
                 <div className="loading-screen">
                     <div className="loader"></div>{" "}
                 </div>
             ) : (
-                <>
-                    <div id="home" className="">
+                <div className="flex flex-col">
+                    <div id="home">
                         <HomeSection />
                     </div>
                     <div className="content">
@@ -71,7 +71,7 @@ export function Home() {
                         </div>
                         <Footer />
                     </div>
-                </>
+                </div>
             )}
         </div>
     );
