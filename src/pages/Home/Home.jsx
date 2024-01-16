@@ -55,7 +55,7 @@ export function Home() {
                 <div id="team">
                     <Team />
                 </div>
-                <Footer/>
+                <Footer />
             </div>
         </div>
     );
