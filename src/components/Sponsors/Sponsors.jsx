@@ -262,6 +262,42 @@ export function Sponsors() {
                                     className="w-auto h-20"
                                 />
                             </a>
+
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={sixthImage}
+                                    alt="Brand Logo 6"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={seventhImage}
+                                    alt="Brand Logo 7"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={eighthImage}
+                                    alt="Brand Logo 8"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={ninthImage}
+                                    alt="Brand Logo 9"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={tenthImage}
+                                    alt="Brand Logo 10"
+                                    className="w-auto h-20"
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>

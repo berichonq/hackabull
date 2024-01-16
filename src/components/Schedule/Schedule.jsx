@@ -3,7 +3,7 @@ import "./Schedule.css";
 
 export function Schedule() {
     return (
-        <div className=" schedule-main"  >
+        <div className="schedule-main"  >
             <div>
                 <h2 className="mb-12 antique-tuscan relative z-20 about-us-font-color text-9xl text-center m-4	pb-3">
                     EVENT TIMELINE
