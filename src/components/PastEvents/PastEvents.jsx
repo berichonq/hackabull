@@ -1,21 +1,22 @@
 import React from "react";
 import "./PastEvents.css";
 import { useEffect } from "react";
-import firstImage from "../../assets/images/1.jpg";
-import secondImage from "../../assets/images/2.jpg";
-import thirdImage from "../../assets/images/3.jpg";
+import firstImage from "../../assets/images/Hackabull_Carousel_Image1.jpg";
+import secondImage from "../../assets/images/Hackabull_Carousel_Image2.jpeg";
+import thirdImage from "../../assets/images/Hackabull_Carousel_Image3.jpeg";
+import fourthImage from "../../assets/images/Hackabull_Carousel_Image4.jpg";
 
 export function PastEvents() {
     useEffect(() => {
         var myCarousel = document.querySelector("#carouselExampleAutoplaying");
         var carousel = new bootstrap.Carousel(myCarousel, {
-            interval: 2000,
+            interval: 2500,
             wrap: true,
         });
     }, []);
 
     return (
-        <div className="past-events container my-20">
+        <div className="past-events container my-20 section">
             <h2 className="mb-4 antique-tuscan text-8xl text-center m-3 pb-3 past-events-color" data-aos="zoom-in">
                 Past Events
             </h2>
@@ -35,92 +36,50 @@ export function PastEvents() {
                     <li
                         data-bs-target="#carouselExampleAutoplaying"
                         data-bs-slide-to="2"></li>
+                    <li
+                        data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide-to="3"></li>
                 </ol>
                 <div className="carousel-inner ">
                     {/* Slide 1 */}
                     <div
                         className="carousel-item active"
                         data-bs-interval="3000">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <img
-                                    src={firstImage}
-                                    className="d-block w-100"
-                                    alt="First slide"
-                                />
-                            </div>
-                            <div className="col-md-6 d-flex p-10 align-items-center" >
-                                <div>
-                                    <h3 className="century-ps p-3 font-bold text-4xl text-left">
-                                        Heading for First Slide
-                                    </h3>
-                                    <p className="century-ps p-3 past-events-p text-xl text-left">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Magnam adipisci iure
-                                        quasi inventore labore ex eius
-                                        assumenda, soluta voluptatibus
-                                        reprehenderit, veniam aperiam quia
-                                        dicta? Asperiores sequi harum fugiat
-                                        illo quasi?
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="row rounded">
+                            <img
+                                src={firstImage}
+                                className="d-block w-100"
+                                alt="First slide"
+                            />
                         </div>
                     </div>
                     {/* Slide 2 */}
                     <div className="carousel-item" data-bs-interval="3000">
                         <div className="row">
-                            <div className="col-md-6">
-                                <img
-                                    src={secondImage}
-                                    className="d-block w-100"
-                                    alt="Second slide"
-                                />
-                            </div>
-                            <div className="col-md-6 d-flex p-10 align-items-center" >
-                                <div>
-                                    <h3 className="century-ps font-bold  p-3 text-4xl text-left">
-                                        Heading for Second Slide
-                                    </h3>
-                                    <p className="century-ps p-3 past-events-p text-xl text-left">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Magnam adipisci iure
-                                        quasi inventore labore ex eius
-                                        assumenda, soluta voluptatibus
-                                        reprehenderit, veniam aperiam quia
-                                        dicta? Asperiores sequi harum fugiat
-                                        illo quasi?
-                                    </p>
-                                </div>
-                            </div>
+                            <img
+                                src={secondImage}
+                                className="d-block w-100"
+                                alt="Second slide"
+                            />
                         </div>
                     </div>
                     {/* Slide 3 */}
                     <div className="carousel-item" data-bs-interval="3000">
                         <div className="row">
-                            <div className="col-md-6">
-                                <img
-                                    src={thirdImage}
-                                    className="d-block w-100"
-                                    alt="Third slide"
-                                />
-                            </div>
-                            <div className="col-md-6 d-flex p-10 align-items-center">
-                                <div>
-                                    <h3 className="century-ps p-3 text-4xl font-bold text-left">
-                                        Heading for Third Slide
-                                    </h3>
-                                    <p className="century-ps p-3 past-events-p text-xl text-left">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Magnam adipisci iure
-                                        quasi inventore labore ex eius
-                                        assumenda, soluta voluptatibus
-                                        reprehenderit, veniam aperiam quia
-                                        dicta? Asperiores sequi harum fugiat
-                                        illo quasi?
-                                    </p>
-                                </div>
-                            </div>
+                            <img
+                                src={thirdImage}
+                                className="d-block w-100"
+                                alt="Third slide"
+                            />
+                        </div>
+                    </div>
+                    <div className="carousel-item" data-bs-interval="3000">
+                        <div className="row">
+                            <img
+                                src={fourthImage}
+                                className="d-block w-100"
+                                alt="fourth slide"
+                            />
                         </div>
                     </div>
                 </div>

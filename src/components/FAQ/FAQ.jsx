@@ -6,7 +6,7 @@ export function FAQ() {
     return (
         <div id="faq" className="section container mt-10 montserrat relative p-10">
             <div data-aos="fade-right">
-                <h1 className="mb-4 antique-tuscan about-us-font-color text-8xl text-left m-4	pb-3 fontSize80">
+                <h1 className="mb-4 antique-tuscan about-us-font-color text-8xl text-left pb-3 fontSize80">
                     COMMON QUESTIONS
                 </h1>
             </div>

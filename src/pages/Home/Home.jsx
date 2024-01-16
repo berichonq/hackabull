@@ -47,31 +47,29 @@ export function Home() {
                 </div>
             ) : (
                 <>
-                    <div id="home">
+                    <div id="home" className="">
                         <HomeSection />
                     </div>
                     <div className="content">
-                        <div className="content">
-                            <div id="about">
-                                <AboutUs />
-                            </div>
-                            <div id="events">
-                                <PastEvents />
-                            </div>
-                            <div id="schedule">
-                                <Schedule />
-                            </div>
-                            <div id="sponsors">
-                                <Sponsors />
-                            </div>
-                            <div id="faq">
-                                <FAQ />
-                            </div>
-                            <div id="team">
-                                <Team />
-                            </div>
-                            <Footer />
+                        <div id="about">
+                            <AboutUs />
                         </div>
+                        <div id="events">
+                            <PastEvents />
+                        </div>
+                        <div id="schedule">
+                            <Schedule />
+                        </div>
+                        <div id="sponsors">
+                            <Sponsors />
+                        </div>
+                        <div id="faq">
+                            <FAQ />
+                        </div>
+                        <div id="team">
+                            <Team />
+                        </div>
+                        <Footer />
                     </div>
                 </>
             )}

@@ -8,15 +8,19 @@
     color: #052b56;
 }
 
+.section {
+    max-width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    z-index: 9999;
+  }
+
 .past-events-color {
     color: #052b56;
 }
 .past-events-p {
     color: #073e7d;
-}
-
-.carousel-item {
-    height: 500px; /* Adjust the height as needed */
 }
 
 .carousel-item img {
