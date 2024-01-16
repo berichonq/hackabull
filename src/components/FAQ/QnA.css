@@ -6,5 +6,36 @@
 
 .fontSize80 {
     font-size: 80px;
+}
+
+.spin-right {
+    animation: spin-right 0.2s linear;
+    animation-fill-mode: forwards;
   }
-  
+  @keyframes spin-right {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(0.125turn);
+    }
+  }
+  .spin-left {
+    animation: spin-left 0.2s linear;
+  }
+  @keyframes spin-left {
+    from {
+      transform: rotate(0.125turn);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+.contact-us-link:hover {
+    color: rgb(255, 255, 255)
+}
+
+.contact-us-link::before {
+    content: ' '; /* This is a space */
+}

@@ -1,3 +1,5 @@
+import './QnA.css'
+
 import { QA } from "./QA";
 
 export function FAQ() {
@@ -5,7 +7,7 @@ export function FAQ() {
         <div id="faq" className="section container mt-28 montserrat relative">
             <div data-aos="fade-right">
                 <h1 className="mb-4 antique-tuscan about-us-font-color text-8xl text-left m-4	pb-3 fontSize80">
-                    COMMON QUESTIONS & ANSWERS
+                    COMMON QUESTIONS
                 </h1>
             </div>
             <br />
@@ -15,74 +17,114 @@ export function FAQ() {
                     <div className="flex-col faq-flex justify-items-center">
                         <div className="flex-none mb-3" data-aos="fade-up-right">
                             <QA
-                                question={"Where is it?"}
+                                question={"What is Hackabull?"}
                                 answer={
-                                    "HackJam will take place at the Engineering II building on October 22 this year."
+                                    "Hackabull is the University of South Florida's annual hackathon that encourages innovation, collaboration, and learning within technology. It's a 24-hour event where students can create, develop, and showcase projects in a dynamic and supportive environment."
                                 }
                             />
                         </div>
                         <div className="flex-none mb-3" data-aos="fade-up-right">
                             <QA
-                                question={"How can I register for HackJam?"}
+                                question={"Who is eligible to participate in Hackabull?"}
                                 answer={
-                                    "To register for HackJam, please click on the 'Register Now' button at the top of the page and fill out the form."
+                                    "All current students, whether you're an undergraduate or a graduate, from any university are welcome to apply. We are looking for a diverse group of participants including developers, designers, and all-around tech enthusiasts!"
                                 }
                             />
                         </div>
                         <div className="flex-none mb-3" data-aos="fade-up-right">
                             <QA
-                                question={"Who can participate in HackJam?"}
+                                question={"Do I need any prior experience to particpate in Hackabull?"}
                                 answer={
-                                    "HackJam is open to participants of all skill levels and backgrounds, including students, professionals, and enthusiasts. We welcome anyone with a passion for technology and innovation!"
+                                    "No! Whether you're writing your first line of code or you're a seasoned developer, Hackabull is for everyone who has an interest in technology and a desire to learn."
                                 }
                             />
                         </div>
 
                         <div className="flex-none mb-3" data-aos="fade-up-right">
                             <QA
-                                question={"How many people on a team?"}
+                                question={"Is there a fee to attend Hackabull?"}
                                 answer={
-                                    "You can make up to 4 people on one team. If you don't have a team yet, don't worry, we will have a team building area for people to get together."
+                                    "Hackabull is completely free for all participants. Our aim is to make learning and innovation accessible to everyone."
+                                }
+                            />
+                        </div>
+                        <div className="flex-none mb-3" data-aos="fade-up-left">
+                            <QA
+                                question={"How can I register for Hackabull?"}
+                                answer={
+                                    "It's simple! Click on the 'Apply' button at the top of this page to get started!"
+                                }
+                            />
+                        </div>
+                        <div className="flex-none mb-3" data-aos="fade-up-left">
+                            <QA
+                                question={"What should I bring to Hackabull?"}
+                                answer={
+                                    "Bring your laptop, charger, a valid student ID, any hardware you wish to use for your project, and lots of enthusiasm! If you plan to stay overnight, you might also want to bring a sleeping bag and any personal items you'll need."
                                 }
                             />
                         </div>
                     </div>
 
-                    <div className="col-lg-6"></div>
+                <div className="col-lg-6"></div>
                 </div>
 
                 <div className="col-lg-6">
                     <div className="flex-none mb-3" data-aos="fade-up-left">
                         <QA
-                            question={"What should I bring to HackJam?"}
+                            question={"Can I participate in Hackabull without a team?"}
                             answer={
-                                "It's recommended to bring your own laptop and any other necessary equipment for your project."
+                                "Absolutely! You can join as an individual and team up with other participants at the event. We'll have team-building activities to help you find the perfect group."
                             }
                         />
                     </div>
                     <div className="flex-none mb-3" data-aos="fade-up-left">
                         <QA
-                            question={
-                                "What are the judging criteria for projects?"
-                            }
+                            question={"What kind of projects can I work on at Hackabull?"}
                             answer={
-                                "The judging criteria typically include factors such as creativity, technial complexity, innovation, and presentation."
+                                "You can work on any project that interests you. It could be a web app, mobile app, hardware hack, or anything else you can think up. Creativity is key!"
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-left">
+                    <div className="flex-none mb-3" data-aos="fade-up-right">
                         <QA
-                            question={"Will there be winning prizes?"}
+                            question={"Will there be prizes or swag at Hackabull?"}
                             answer={
-                                "Yes, there will be prizes awarded to the top-performing teams or individuals!"
+                                "Yes! All participants will receive some awesome Hackabull swag, and there will be prizes for the best hacks!"
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-left">
+                    <div className="flex-none mb-3" data-aos="fade-up-right">
                         <QA
-                            question={"Will there be free food?"}
+                            question={"Are there any rules for the projects at Hackabull?"}
                             answer={
-                                "Yes, there will be free lunch and dinner served to participants, along with drinks and snacks throughout the event!"
+                                "Projects must be started from scratch during the hackathon and completed within the 24-hour timeframe."
+                            }
+                        />
+                    </div>
+                    <div className="flex-none mb-3" data-aos="fade-up-right">
+                        <QA
+                            question={"What resources will be available to me at Hackabull?"}
+                            answer={
+                                "We will provide mentors, workshops, and various tools to help you build your project. Plus, there will be plenty of food and drinks to keep you going!"
+                            }
+                        />
+                    </div>
+                    <div className="flex-none mb-3" data-aos="fade-up-right">
+                        <QA
+                            question={"What if I have more questions about Hackabull?"}
+                            answer={
+                                <>
+                                    <p>We're here to help! If you have more questions, feel free to reach out to us at
+                                        <a
+                                            href="mailto:shpe.hackabull@gmail.com?subject=Account%20support%20request"
+                                            className="contact-us-link"
+                                        >
+                                            shpe.hackabull@gmail.com
+                                        </a>
+                                        , and we'll get back to you as soon as possible.
+                                    </p>
+                                </>
                             }
                         />
                     </div>

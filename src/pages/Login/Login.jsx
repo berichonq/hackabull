@@ -33,7 +33,7 @@ export function Login() {
               href="mailto:shpe.hackabull@gmail.com?subject=Account%20support%20request"
               className="linkStyle"
             >
-              Experiencing issues?{" "}
+              Experiencing issues?
             </a>
           </div>
         </div>
