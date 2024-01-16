@@ -111,9 +111,47 @@ export function Sponsors() {
                                     className="w-auto h-20"
                                 />
                             </a>
+
+                            {/* Duplicate the content for continuity */}
+
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={firstImage}
+                                    alt="Brand Logo 1"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={secondImage}
+                                    alt="Brand Logo 2"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={thirdImage}
+                                    alt="Brand Logo 3"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper mx-4">
+                                <img
+                                    src={fourthImage}
+                                    alt="Brand Logo 4"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={fifthImage}
+                                    alt="Brand Logo 5"
+                                    className="w-auto h-20"
+                                />
+                            </a>
                         </div>
                     </div>
-                    <div className="marquee my-12 flex overflow-hidden" data-aos="fade-up-right">
+                    <div className="marquee my-12 flex" data-aos="fade-up-right">
                         <div className="marquee_content flex animate-scroll reverse">
                             <a href="/" className="partners_logo_wrapper m-2">
                                 <img
@@ -186,21 +224,57 @@ export function Sponsors() {
                                     className="w-auto h-20"
                                 />
                             </a>
+
+                            {/* Duplicate */}
+
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={sixthImage}
+                                    alt="Brand Logo 6"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={seventhImage}
+                                    alt="Brand Logo 7"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={eighthImage}
+                                    alt="Brand Logo 8"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={ninthImage}
+                                    alt="Brand Logo 9"
+                                    className="w-auto h-20"
+                                />
+                            </a>
+                            <a href="/" className="partners_logo_wrapper m-2">
+                                <img
+                                    src={tenthImage}
+                                    alt="Brand Logo 10"
+                                    className="w-auto h-20"
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div className="w-full text-center" data-aos="zoom-in">
-                    <h2 className="mb-4 century-ps relative z-20 about-us-font-color text-4xl text-center m-4	pb-3">
+                <div className="w-full pt-8 text-center" data-aos="zoom-in">
+                    <h2 className="mb-4 century-ps relative z-20 about-us-font-color text-4xl text-center m-4 pb-3">
                         Organized by:
                     </h2>
 
-                    <a href="/" className="partners_logo_wrapper m-2">
                     <img
                         src={SHPELogo}
                         alt="SHPE Logo"
-                        className="w-auto m-auto h-20"
+                        className="shpe-logo-wrapper mt-2 m-auto h-20"
                     />
-                    </a>
                 </div>
             </div>
         </div>

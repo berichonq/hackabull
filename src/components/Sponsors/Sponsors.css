@@ -9,19 +9,22 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-150%);
     }
 }
 
-.overflow-hidden {
-    overflow: hidden;
-}
-
-
 .marquee_content {
     display: flex;
-    width: 200%; /* Adjust as needed */
-    animation: scroll 15s linear infinite;
+    width: 300%; /* Adjust as needed */
+    animation: scroll 20s linear infinite;
+}
+
+.shpe-logo-wrapper {
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    justify-content: center;
 }
 
 .partners_logo_wrapper {
