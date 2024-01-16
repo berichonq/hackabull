@@ -12,6 +12,7 @@ import { Schedule } from "../../components/Schedule/Schedule";
 import { Sponsors } from "../../components/Sponsors/Sponsors";
 import { Team } from "../../components/Team/Team";
 import { HomeSection } from "../../components/HomeSection/HomeSection";
+import { Footer } from "../../components/Footer/Footer";
 
 export function Home() {
     //////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,6 +55,7 @@ export function Home() {
                 <div id="team">
                     <Team />
                 </div>
+                <Footer/>
             </div>
         </div>
     );
