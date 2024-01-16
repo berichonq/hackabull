@@ -208,7 +208,7 @@ export function RegistrationForm() {
       <div className="center-h">
         <br />
         <p className="title text-2xl bold-century title-center" id="title">
-          Register for HackaBull 2024!
+          Register for Hackabull 2024!
         </p>
         <br />
         <div className="row">
