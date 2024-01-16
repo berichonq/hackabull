@@ -18,7 +18,7 @@ import { Footer } from "../../components/Footer/Footer";
 export function Home() {
     useEffect(() => {
         // Simulate a loading process, e.g., fetching data
-        setTimeout(() => setIsLoading(false), 2000); // remove timeout in real use case
+        setTimeout(() => setIsLoading(false), 5000); // remove timeout in real use case
     }, []);
 
     //////////////////////////////////////////////////////////////////////////////////////////////
@@ -72,9 +72,7 @@ export function Home() {
                             </div>
                             <Footer />
                         </div>
-                        //{" "}
                     </div>
-                    //{" "}
                 </>
             )}
         </div>
