@@ -1,5 +1,6 @@
 import React from "react";
 import "./Team.css";
+
 import Asadbek from "../../assets/images/Asadbek.png";
 import Linda from "../../assets/images/Linda.png";
 import Quinn from "../../assets/images/Quinn.png";
@@ -32,9 +33,9 @@ export function Team() {
                 </h2>
             </div>
 
-            <div className="row justify-center">
+            <div className="flex-container">
                 {members.map((member, index) => (
-                    <div key={index} className="col-2  m-2 team-card" data-aos="zoom-in">
+                    <div key={index} className="m-2 team-card flex-item" data-aos="zoom-in">
                         <a
                             href={member.link}
                             target="_blank"
