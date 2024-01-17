@@ -33,7 +33,7 @@ export function FAQ() {
                         </div>
                         <div className="flex-none mb-3" data-aos="fade-up-right">
                             <QA
-                                question={"Do I need any prior experience to particpate in Hackabull?"}
+                                question={"Do I need any prior experience to particpate?"}
                                 answer={
                                     "No! Whether you're writing your first line of code or you're a seasoned developer, Hackabull is for everyone who has an interest in technology and a desire to learn."
                                 }
@@ -48,7 +48,7 @@ export function FAQ() {
                                 }
                             />
                         </div>
-                        <div className="flex-none mb-3" data-aos="fade-up-left">
+                        <div className="flex-none mb-3" data-aos="fade-up-right">
                             <QA
                                 question={"How can I register for Hackabull?"}
                                 answer={
@@ -56,7 +56,7 @@ export function FAQ() {
                                 }
                             />
                         </div>
-                        <div className="flex-none mb-3" data-aos="fade-up-left">
+                        <div className="flex-none mb-3" data-aos="fade-up-right">
                             <QA
                                 question={"What should I bring to Hackabull?"}
                                 answer={
@@ -86,7 +86,7 @@ export function FAQ() {
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-right">
+                    <div className="flex-none mb-3" data-aos="fade-up-left">
                         <QA
                             question={"Will there be prizes or swag at Hackabull?"}
                             answer={
@@ -94,7 +94,7 @@ export function FAQ() {
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-right">
+                    <div className="flex-none mb-3" data-aos="fade-up-left">
                         <QA
                             question={"Are there any rules for the projects at Hackabull?"}
                             answer={
@@ -102,7 +102,7 @@ export function FAQ() {
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-right">
+                    <div className="flex-none mb-3" data-aos="fade-up-left">
                         <QA
                             question={"What resources will be available to me at Hackabull?"}
                             answer={
@@ -110,7 +110,7 @@ export function FAQ() {
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-right">
+                    <div className="flex-none mb-3" data-aos="fade-up-left">
                         <QA
                             question={"What if I have more questions about Hackabull?"}
                             answer={

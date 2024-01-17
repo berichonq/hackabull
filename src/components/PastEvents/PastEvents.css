@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
     width: 80%;
     color: #052b56;
 }

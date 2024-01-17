@@ -26,6 +26,7 @@ export function Team() {
         { image: Kashish, link: "https://www.linkedin.com/in/kashishadlakha8" },
         { image: Shivam, link: "https://www.linkedin.com/in/shivamchauhan-" },
         { image: Parag, link: "https://www.linkedin.com/in/parag-jain-usf" },
+        { image: Parag, link: "https://www.linkedin.com/in/parag-jain-usf" },
         // Add other members similarly
     ];
 

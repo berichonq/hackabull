@@ -6,7 +6,7 @@ export function AboutUs() {
         <div className="container about-us mx-5 section section">
           <div className="text-left m-4 pb-3"  data-aos="fade-right">
 
-            <h1 className="-mb-4 antique-tuscan text-9xl about-hackabull">
+            <h1 className=" antique-tuscan text-9xl about-hackabull">
                 About Hackabull
             </h1>
           </div>

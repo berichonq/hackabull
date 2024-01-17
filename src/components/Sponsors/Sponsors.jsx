@@ -14,19 +14,19 @@ import SHPELogo from "../../assets/images/shpe_logo.png";
 
 export function Sponsors() {
     return (
-        <div className="sponsors mt-16 section grey">
+        <div className="sponsors mt-20 grey">
             <div><h2 className="mb-4 antique-tuscan relative z-20 about-us-font-color text-9xl text-center m-4	pb-3" data-aos="fade-up">
                 sponsors
             </h2></div>
             <div className="container relative mx-auto my-8">
                 <div className="flex flex-row items-center justify-between sponsor-text-wrapper">
                     <div className="sponsor-phrase mx-11" data-aos="fade-right">
-                        <h2 className="font-bold mb-4 century-ps about-us-font-color text-left">
+                        <h2 className="font-bold mb-4 century-ps about-us-font-color leading-loose text-5xl text-left">
                             Partnering with leaders in innovation.
                         </h2>
                     </div>
                     <div className="sponsor-text mx-11 overflow-hidden" data-aos="fade-left">
-                        <p className="century-ps about-us-font-color text-left">
+                        <p className="century-ps about-us-font-color text-3xl text-left">
                             Joining forces with industry giants, Hackabull
                             proudly collaborates with some of the most
                             influential names in technology and business. Our

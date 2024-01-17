@@ -12,6 +12,8 @@ import { auth } from "../../config/firebase";
 import { signOut } from "firebase/auth";
 
 import banner from "../../assets/images/banner.png";
+import logo from "../../assets/images/LineArt-bold-white.png";
+
 
 export function HomeSection() {
     let { user } = useContext(Context);
@@ -33,7 +35,7 @@ export function HomeSection() {
 
     return (
         <div>
-            <div className="mx-15 right-0 px-10 mlh navbar-expand-lg">
+            <div className="right-1 px-2 mlh navbar-expand-lg">
                 <a className="navbar-brand" href="#">
                     <img
                         src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
@@ -43,15 +45,16 @@ export function HomeSection() {
                     />
                 </a>
             </div>
-            <nav className="navbar my-2 mx-44 fixed-top navbar-expand-lg bg-glass">
-                <div className="container-fluid mx-20">
-                    <a className="navbar-brand" href="#">
+            <nav className="navbar my-2 mx-28 fixed-top navbar-expand-lg bg-glass">
+                <div className="container-fluid mx-10">
+                    <a className="navbar-brand century-ps about-us-font-color" href="/">
                         <img
-                            src="https://seeklogo.com/images/B/blank-badge-logo-3871B3A656-seeklogo.com.png"
+                            src={logo}
                             alt="Bootstrap"
-                            width="90"
-                            height="54"
+                            width="50"
+                            height="auto"
                         />
+                    {/* <p className="">HACKABULL 2024</p> */}
                     </a>
                     <button
                         className="navbar-toggler"
@@ -66,13 +69,13 @@ export function HomeSection() {
                     <div
                         className="collapse navbar-collapse"
                         id="navbarSupportedContent">
-                        <ul className="navbar-nav mx-auto about-us-font-color mb-2 mb-lg-0">
+                        <ul className="navbar-nav mx-auto century-ps about-us-font-color mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a
                                     className="nav-link about-us-font-color "
                                     aria-current="page"
                                     href="#home">
-                                    Home
+                                    HOME
                                 </a>
                             </li>
                             <li className="nav-item">
@@ -80,7 +83,7 @@ export function HomeSection() {
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#about">
-                                    About
+                                    ABOUT
                                 </a>
                             </li>
                             <li className="nav-item">
@@ -88,7 +91,7 @@ export function HomeSection() {
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#events">
-                                    Past Events
+                                    PAST EVENTS
                                 </a>
                             </li>
                             <li className="nav-item">
@@ -96,7 +99,7 @@ export function HomeSection() {
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#schedule">
-                                    Schedule
+                                    SCHEDULE
                                 </a>
                             </li>
                             <li className="nav-item">
@@ -104,7 +107,7 @@ export function HomeSection() {
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#sponsors">
-                                    Sponsors
+                                    SPONSORS
                                 </a>
                             </li>
                             <li className="nav-item">
@@ -120,7 +123,7 @@ export function HomeSection() {
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#team">
-                                    Team
+                                    TEAM
                                 </a>
                             </li>
                         </ul>
@@ -130,7 +133,7 @@ export function HomeSection() {
                                     <li className="nav-item">
                                         <Link
                                             to="/profile"
-                                            className="nav-link about-us-font-color">
+                                            className="nav-link mx-auto century-ps  mb-2 mb-lg-0 about-us-font-color">
                                             Profile
                                         </Link>
                                     </li>
@@ -139,7 +142,7 @@ export function HomeSection() {
                                     <li className="nav-item">
                                         <Link
                                             to="/register"
-                                            className="nav-link about-us-font-color">
+                                            className="nav-link mx-auto century-ps  mb-2 mb-lg-0 about-us-font-color">
                                             Register
                                         </Link>
                                     </li>
@@ -148,7 +151,7 @@ export function HomeSection() {
                                     <li className="nav-item">
                                         <button
                                             onClick={logout}
-                                            className="nav-link about-us-font-color">
+                                            className="nav-link mx-auto century-ps  mb-2 mb-lg-0 about-us-font-color">
                                             {" "}
                                             Logout{" "}
                                         </button>
@@ -158,7 +161,7 @@ export function HomeSection() {
                                     <li className="nav-item">
                                         <Link
                                             to="/login"
-                                            className="nav-link about-us-font-color">
+                                            className="nav-link mx-auto century-ps  mb-2 mb-lg-0 about-us-font-color">
                                             Login
                                         </Link>
                                     </li>
@@ -172,7 +175,9 @@ export function HomeSection() {
                 <div className="col container banner">
                     <img src={banner} />
                     <div className="apply-btn">
-                        <a className="century-ps team-card apply-btn-link" href="/register">
+                        <a
+                            className="century-ps team-card apply-btn-link"
+                            href="/register">
                             APPLY TO ATTEND
                         </a>
                     </div>

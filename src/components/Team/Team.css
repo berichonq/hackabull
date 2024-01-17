@@ -4,7 +4,7 @@
 }
 
 .flex-container {
-    display:flex;
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 0.3vw;
@@ -16,13 +16,13 @@
 }
 
 .team-card {
-    transition: transform 0.4s ease;
-    max-width: 275px;
+    transition: transform 0.4s ease  !important;
+    max-width: 185px;
 }
 
 .team-card:hover {
     transform: translateY(
         -10px
-    ); /* Adjust the value as needed for the desired effect */
+    ) !important; /* Adjust the value as needed for the desired effect */
     
 }
