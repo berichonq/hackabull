@@ -10,6 +10,8 @@ import Vasili from "../../assets/images/Vasili.png";
 import Diya from "../../assets/images/Diya.png";
 import Michael from "../../assets/images/Michael.png";
 import Kashish from "../../assets/images/Kashish.png";
+import Shivam from "../../assets/images/Shivam.png";
+import Parag from "../../assets/images/Parag.png";
 
 export function Team() {
     const members = [
@@ -22,6 +24,8 @@ export function Team() {
         { image: Diya, link: "https://www.linkedin.com/in/diyajain08" },
         { image: Michael, link: "https://www.linkedin.com/in/ngu-truong" },
         { image: Kashish, link: "https://www.linkedin.com/in/kashishadlakha8" },
+        { image: Shivam, link: "https://www.linkedin.com/in/shivamchauhan-" },
+        { image: Parag, link: "https://www.linkedin.com/in/parag-jain-usf" },
         // Add other members similarly
     ];
 
