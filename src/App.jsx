@@ -13,7 +13,7 @@ function App() {
     });
 
     // Optional: If you still want to use the window event listener
-    // window.addEventListener('load', AOS.refresh);
+    window.addEventListener('load', AOS.refresh);
   }, []);
 
 

@@ -43,7 +43,7 @@ export function HomeSection() {
                     />
                 </a>
             </div>
-            <nav className="navbar my-3 mx-44 fixed-top navbar-expand-lg bg-glass">
+            <nav className="navbar my-2 mx-44 fixed-top navbar-expand-lg bg-glass">
                 <div className="container-fluid mx-20">
                     <a className="navbar-brand" href="#">
                         <img

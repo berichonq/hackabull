@@ -16,7 +16,7 @@ export function PastEvents() {
     }, []);
 
     return (
-        <div className="past-events container my-20 section">
+        <div className="past-events container my-20 ">
             <h2 className="mb-4 antique-tuscan text-8xl text-center m-3 pb-3 past-events-color" data-aos="zoom-in">
                 Past Events
             </h2>

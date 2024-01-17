@@ -1,5 +1,5 @@
 .past-events {
-    height: 100vh; /* Take up the full height of the viewport */
+    height: 100%; /* Take up the full height of the viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,8 +24,8 @@
 }
 
 .carousel-item img {
-    max-height: 100vh;
-    max-width: 100%;
+    max-height: auto;
+    max-width: 80%;
     object-fit: contain;
     margin: auto;
 }

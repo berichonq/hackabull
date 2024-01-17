@@ -3,15 +3,15 @@ import "./AboutUs.css";
 
 export function AboutUs() {
     return (
-        <div className="container about-us section mb-11 section">
+        <div className="container about-us mx-5 section section">
           <div className="text-left m-4 pb-3"  data-aos="fade-right">
 
             <h1 className="-mb-4 antique-tuscan text-9xl about-hackabull">
-                ABOUT Hackabull
+                About Hackabull
             </h1>
           </div>
             <div className="col">
-                <div className="col-md-10 m-2"  data-aos="fade-up-right">
+                <div className="col-md-8 m-4"  data-aos="fade-up-right">
                     <p
                         className="century-ps about-us-font-color text-xl text-left"
                         style={{ columnCount: 2, overflow: "hidden" }}>
@@ -22,7 +22,7 @@ export function AboutUs() {
                         developing groundbreaking projects using trending technologies, and engaging in fun, challenging competitions.
                     </p>
                 </div>
-                <div className="col-md-10 m-4" data-aos="fade-up">
+                <div className="col-md-8 m-4" data-aos="fade-up">
                     <p className="century-ps about-us-font-color text-xl text-left">
                         Whether it's creating innovative software, designing unique digital solutions, or exploring new
                         tech frontiers, Hackabull is where students turn their technological dreams into reality. Join us in

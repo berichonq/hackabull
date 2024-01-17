@@ -23,7 +23,8 @@ export function Home() {
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     // Logout button needs to be moved to navbar. Should only be rendered if user is authenticated
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+    ///////////////////////////////////////
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
