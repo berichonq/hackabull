@@ -2,11 +2,10 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  overflow-x: hidden;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #6e1d00;
-  overflow: hidden;
+  background-color: hsl(16, 100%, 22%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,7 +13,7 @@
 }
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* For Webkit browsers like Chrome, Safari, etc. */
