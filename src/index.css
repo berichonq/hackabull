@@ -6,7 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #6e1d00;
-
+  overflow: hidden;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,6 +14,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 /* For Webkit browsers like Chrome, Safari, etc. */
