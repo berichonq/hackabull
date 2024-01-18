@@ -20,13 +20,13 @@ export function Sponsors() {
             </h2></div>
             <div className="container relative mx-auto my-8">
                 <div className="flex flex-row items-center justify-between sponsor-text-wrapper">
-                    <div className="sponsor-phrase mx-11" data-aos="fade-right">
-                        <h2 className="font-bold mb-4 century-ps about-us-font-color leading-loose text-5xl text-left">
+                    <div className="sponsor-phrase mx-3" data-aos="fade-right">
+                        <h2 className="font-bold mb-4 century-ps about-us-font-color leading-loose text-4xl text-left">
                             Partnering with leaders in innovation.
                         </h2>
                     </div>
-                    <div className="sponsor-text mx-11 overflow-hidden" data-aos="fade-left">
-                        <p className="century-ps about-us-font-color text-3xl text-left">
+                    <div className="sponsor-text mx-3 overflow-hidden" data-aos="fade-left">
+                        <p className="century-ps about-us-font-color text-xl text-left">
                             Joining forces with industry giants, Hackabull
                             proudly collaborates with some of the most
                             influential names in technology and business. Our

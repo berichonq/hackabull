@@ -1,9 +1,8 @@
-.past-events {
-    height: 100%; /* Take up the full height of the viewport */
+.past-events { /* Take up the full height of the viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     color: #052b56;
 }
 
@@ -13,7 +12,7 @@
     margin: 0 auto;
     margin-bottom: 5rem;
     z-index: 9999;
-  }
+}
 
 .past-events-color {
     color: #052b56;
@@ -24,9 +23,9 @@
 
 .carousel-item img {
     max-height: auto;
-    max-width: 80%;
+    max-width: 100%;
     object-fit: contain;
-    margin: auto;
+    margin: AUTO;
 }
 
 .custom-carousel-control {

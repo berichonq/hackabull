@@ -17,7 +17,7 @@ export function PastEvents() {
     }, []);
 
     return (
-        <div className="past-events container my-20">
+        <div className="past-events container mb-32">
             <h2
                 className="mb-4 antique-tuscan text-8xl text-center m-3 pb-3 past-events-color"
                 data-aos="zoom-in">
@@ -29,7 +29,7 @@ export function PastEvents() {
                 className="carousel  slide p-3"
                 data-bs-ride="carousel"
                 data-aos="zoom-in">
-                <ol className="carousel-indicators -bottom-1">
+                <ol className="carousel-indicators -bottom-6">
                     <li
                         data-bs-target="#carouselExampleAutoplaying"
                         data-bs-slide-to="0"

@@ -5,13 +5,13 @@ export function QA({question, answer}) {
   const [expand, setExpand] = useState(false);
   const expandClass = expand ? 'display' : 'hidden';
   const borderRadius = expand ? 'rounded-3xl' : 'rounded-3xl'
-  const ansClass = `${expandClass} century-ps about-us-font-color text-xl text-left text px-4 py-4`
+  const ansClass = `${expandClass} century-ps about-us-font-color text-l text-left text px-4 py-4`
   const container = `${borderRadius} shadow rounded-1xl border border-gray-100`
   
   return (
     <div className={container}>
-      <div className="text-xl relative font-medium flex ">
-        <div className="century-ps about-us-font-color text-xl text-left w-5/6 flex-auto px-4 py-4">
+      <div className="text-l relative font-medium flex ">
+        <div className="century-ps about-us-font-color text-l text-left w-5/6 flex-auto px-4 py-4">
           {question}
         </div>
         <button
@@ -20,7 +20,7 @@ export function QA({question, answer}) {
           onClick={() => setExpand(!expand)}
         >
           {
-            expand ?
+            expand ?  
               <i className="fa-solid fa-plus spin-right"></i>
             :
             <i className="fa-solid fa-plus spin-left"></i>

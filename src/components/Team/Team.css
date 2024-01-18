@@ -17,7 +17,7 @@
 
 .team-card {
     transition: transform 0.4s ease  !important;
-    max-width: 185px;
+    max-width: 275px;
 }
 
 .team-card:hover {

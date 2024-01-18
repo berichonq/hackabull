@@ -41,7 +41,7 @@ export function Home() {
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
     return (
-        <div className="home section">
+        <div className="home">
             {isLoading ? (
                 <div className="loading-screen">
                     <div className="loader"></div>{" "}
