@@ -45,14 +45,15 @@ export function HomeSection() {
                     />
                 </a>
             </div>
-            <nav className="navbar my-2 mx-28 fixed-top navbar-expand-lg bg-glass">
-                <div className="container-fluid mx-10">
-                    <a className="navbar-brand century-ps about-us-font-color" href="/">
+            <nav className="navbar my-2 mx-28 xl:px-10 lg:px-4 md:px-2 fixed-top navbar-expand-lg bg-glass">
+                <div className="container-fluid lg:px-4">
+                    <a className="navbar-brand century-ps  about-us-font-color" href="/">
                         <img
                             src={logo}
                             alt="Bootstrap"
-                            width="50"
-                            height="auto"
+                            // width="50"
+                            // height="auto"
+                            className="w-10"
                         />
                     {/* <p className="">HACKABULL 2024</p> */}
                     </a>
@@ -69,7 +70,7 @@ export function HomeSection() {
                     <div
                         className="collapse navbar-collapse"
                         id="navbarSupportedContent">
-                        <ul className="navbar-nav mx-auto century-ps about-us-font-color mb-2 mb-lg-0">
+                        <ul className="navbar-nav mx-auto century-ps about-us-font-color text-xs lg:text-sm text-lmb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a
                                     className="nav-link about-us-font-color "
@@ -80,7 +81,7 @@ export function HomeSection() {
                             </li>
                             <li className="nav-item">
                                 <a
-                                    className="nav-link about-us-font-color"
+                                    className="nav-link  about-us-font-color"
                                     aria-current="page"
                                     href="#about">
                                     ABOUT
