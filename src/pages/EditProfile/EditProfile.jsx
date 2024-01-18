@@ -102,78 +102,102 @@ export function EditProfile() {
   };
 
   return (
-    <div className="h-screen century-ps text-xl text-left">
-      <div className="row">
-        <div className="pl-5 ml-5 col-lg">
-          <p className="title text-2xl" id="title">
-            Edit your profile
-          </p>
-          <div className="form-line">
-            <label htmlFor="first-name" className="block text-sm font-medium text-gray-900 dark:text-white">
-              First Name
-            </label>
-            <input
-              required
-              id="first-name"
-              autoComplete="given-name"
-              placeholder="First name"
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-            {firstNameError && <p>{firstNameError}</p>}
-          </div>
-          <div className="form-line">
-            <label htmlFor="last-name" className="block text-sm font-medium text-gray-900 dark:text-white">
-              Last Name
-            </label>
-            <input
-              required
-              id="last-name"
-              autoComplete="family-name"
-              placeholder="Last name"
-              onChange={(e) => setLastName(e.target.value)}
-            />
-            {lastNameError && <p>{lastNameError}</p>}
-          </div>
-          <div className="form-line">
-            <label htmlFor="grade-select">
-              If applicable, what year in college are you?{" "}
-            </label>
-            <select
-              required
-              id="grade-select"
-              onChange={(e) => setGrade(e.target.value)}
-            >
-              <option value=""></option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5+">5+</option>
-              <option value="N/A">N/A</option>
-            </select>
-            {gradeError && <p>{gradeError}</p>}
-          </div>
-          <div className="form-line">
-            <label htmlFor="college-input">
-              Please include the full name of your education institution{" "}
-            </label>
-            <input
-              id="college-input"
-              disabled={true ? grade === "N/A" : false}
-              placeholder="University"
-              onChange={(e) => setCollege(e.target.value)}
-            />
-            {collegeError && <p>{collegeError}</p>}
-          </div>
-          <button id="cancel" onClick={returnToProfile}>
-            Cancel
-          </button>
-          &nbsp; &nbsp;
-          <button id="submit" onClick={submitChanges}>
-            Submit changes
-          </button>          
+    <div className="register-container century-ps text-xl text-left">
+      <div className="center-h">
+        <br />
+        <p className="title text-2xl bold-century title-center" id="title">
+          Edit your profile
+        </p>
+        <div className="form-line">
+          <label
+            htmlFor="first-name"
+            className="block text-medium font-medium text-gray-900 dark:text-white "
+          >
+            First Name
+          </label>
+          <input
+            required
+            id="first-name"
+            autoComplete="given-name"
+            placeholder="John"
+            onChange={(e) => setFirstName(e.target.value)}
+            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+          />
+          {firstNameError && <p>{firstNameError}</p>}
         </div>
+        <div className="form-line">
+          <label
+            htmlFor="last-name"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Last Name
+          </label>
+          <input
+            required
+            id="last-name"
+            autoComplete="family-name"
+            placeholder="Doe"
+            onChange={(e) => setLastName(e.target.value)}
+            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+          />
+          {lastNameError && <p>{lastNameError}</p>}
+        </div>
+        <div className="form-line">
+          <label
+            htmlFor="grade-select"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            What college year are you in?{" "}
+          </label>
+          <select
+            required
+            id="grade-select"
+            onChange={(e) => setGrade(e.target.value)}
+            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+          >
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5+">5+</option>
+            <option value="N/A">N/A</option>
+          </select>
+          {gradeError && <p>{gradeError}</p>}
+        </div>
+        <div className="form-line">
+          <label
+            htmlFor="college-input"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Please include the full name of your education institution{" "}
+          </label>
+          <input
+            id="college-input"
+            disabled={true ? grade === "N/A" : false}
+            placeholder="Harvard University"
+            onChange={(e) => setCollege(e.target.value)}
+            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+          />
+          {collegeError && <p>{collegeError}</p>}
+        </div>
+
+        <button
+          className="login-button mt-2"
+          id="submit"
+          onClick={submitChanges}
+        >
+          Submit changes
+        </button>
+        <button
+          className="login-button mt-2"
+          id="cancel"
+          onClick={returnToProfile}
+        >
+          Cancel
+        </button>
       </div>
     </div>
   );
 }
+
