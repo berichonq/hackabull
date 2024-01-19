@@ -119,11 +119,11 @@ export function EditProfile() {
             required
             id="first-name"
             autoComplete="given-name"
-            placeholder="John"
+            placeholder="First name"
             onChange={(e) => setFirstName(e.target.value)}
             className="bg-white border border-gray-800 rounded-md p-2 login-input"
           />
-          {firstNameError && <p>{firstNameError}</p>}
+          {firstNameError && <p className="error-message">{firstNameError}</p>}
         </div>
         <div className="form-line">
           <label
@@ -136,11 +136,11 @@ export function EditProfile() {
             required
             id="last-name"
             autoComplete="family-name"
-            placeholder="Doe"
+            placeholder="Last name"
             onChange={(e) => setLastName(e.target.value)}
             className="bg-white border border-gray-800 rounded-md p-2 login-input"
           />
-          {lastNameError && <p>{lastNameError}</p>}
+          {lastNameError && <p className="error-message">{lastNameError}</p>}
         </div>
         <div className="form-line">
           <label
@@ -163,7 +163,7 @@ export function EditProfile() {
             <option value="5+">5+</option>
             <option value="N/A">N/A</option>
           </select>
-          {gradeError && <p>{gradeError}</p>}
+          {gradeError && <p className="error-message">{gradeError}</p>}
         </div>
         <div className="form-line">
           <label
@@ -175,11 +175,11 @@ export function EditProfile() {
           <input
             id="college-input"
             disabled={true ? grade === "N/A" : false}
-            placeholder="Harvard University"
+            placeholder="University"
             onChange={(e) => setCollege(e.target.value)}
             className="bg-white border border-gray-800 rounded-md p-2 login-input"
           />
-          {collegeError && <p>{collegeError}</p>}
+          {collegeError && <p className="error-message">{collegeError}</p>}
         </div>
 
         <button
