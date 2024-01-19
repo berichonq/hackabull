@@ -25,6 +25,7 @@ export function RegistrationForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [role, setRole] = useState("");
   const [firstTimeHacker, setFirstTimeHacker] = useState("");
   const [transportationNeeded, setTransportationNeeded] = useState("");
 
@@ -37,6 +38,7 @@ export function RegistrationForm() {
   const [emailError, setEmailError] = useState();
   const [passwordError, setPasswordError] = useState();
   const [confirmPasswordError, setConfirmPasswordError] = useState();
+  const [roleError, setRoleError] = useState("");
   const [firstTimeHackerError, setFirstTimeHackerError] = useState();
   const [transportationNeededError, setTransportationNeededError] = useState();
 
@@ -116,6 +118,13 @@ export function RegistrationForm() {
       setCollege("");
     }
 
+    if (!role) {
+      setRoleError("Please select an option");
+      valid = false;
+    } else {
+      setRoleError("");
+    }
+
     if (!firstTimeHacker) {
       setFirstTimeHackerError("Please select an option");
       valid = false;
@@ -187,6 +196,7 @@ export function RegistrationForm() {
             classification: grade,
             first_time_hacker: firstTimeHacker,
             needs_transportation: transportationNeeded,
+            role: role,
           });
           newDocCreated = true;
         } catch (err) {
@@ -364,6 +374,25 @@ export function RegistrationForm() {
         </div>
         <div className="form-line">
           <label
+            htmlFor="role-select"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            I would like to register as a...
+          </label>
+          <select
+            required
+            id="role-select"
+            onChange={(e) => setRole(e.target.value)}
+            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+          >
+            <option value=""></option>
+            <option value={"participant"}>Participant</option>
+            <option value={"volunteer"}>Volunteer</option>
+          </select>
+          {roleError && <p className="error-message">{roleError}</p>}
+        </div>
+        <div className="form-line">
+          <label
             htmlFor="first-time-hacker-select"
             className="block text-medium font-medium text-gray-900 dark:text-white"
           >
@@ -386,7 +415,7 @@ export function RegistrationForm() {
             htmlFor="transportation-select"
             className="block text-medium font-medium text-gray-900 dark:text-white"
           >
-            Is this your first time participating in a hackathon?
+            Will you require assistance with transportation to the event?
           </label>
           <select
             required
