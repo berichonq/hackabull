@@ -7,7 +7,7 @@ import { logOff } from "../../store/user/user-slice";
 import { auth } from "../../config/firebase";
 import { signOut } from "firebase/auth";
 import { AboutUs } from "../../components/AboutUs/AboutUs";
-import { PastEvents } from "../../components/PastEvents/PastEvents";
+import { Gallery } from "../../components/Gallery/Gallery";
 import { FAQ } from "../../components/FAQ/FAQ";
 import { Schedule } from "../../components/Schedule/Schedule";
 import { Sponsors } from "../../components/Sponsors/Sponsors";
@@ -56,7 +56,7 @@ export function Home() {
                             <AboutUs />
                         </div>
                         <div id="events">
-                            <PastEvents />
+                            <Gallery />
                         </div>
                         <div id="schedule">
                             <Schedule />

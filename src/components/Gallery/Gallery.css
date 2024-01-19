@@ -1,4 +1,4 @@
-.past-events { /* Take up the full height of the viewport */
+.gallery { /* Take up the full height of the viewport */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,10 +14,10 @@
     z-index: 9999;
 }
 
-.past-events-color {
+.gallery-color {
     color: #052b56;
 }
-.past-events-p {
+.gallery-p {
     color: #073e7d;
 }
 

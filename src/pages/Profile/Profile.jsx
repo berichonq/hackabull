@@ -206,7 +206,7 @@ export function Profile() {
                   aria-current="page"
                   href="#"
                 >
-                  PAST EVENTS
+                  GALLERY
                 </a>
               </li>
               <li className="nav-item">

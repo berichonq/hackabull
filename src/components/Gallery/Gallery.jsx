@@ -1,5 +1,5 @@
 import React from "react";
-import "./PastEvents.css";
+import "./Gallery.css";
 import { useEffect } from "react";
 import firstImage from "../../assets/images/Hackabull_Carousel_Image1.jpg";
 
@@ -7,7 +7,7 @@ import secondImage from "../../assets/images/Hackabull_Carousel_Image2.jpeg";
 import thirdImage from "../../assets/images/Hackabull_Carousel_Image3.jpeg";
 import fourthImage from "../../assets/images/Hackabull_Carousel_Image4.jpg";
 
-export function PastEvents() {
+export function Gallery() {
     useEffect(() => {
         var myCarousel = document.querySelector("#carouselExampleAutoplaying");
         var carousel = new bootstrap.Carousel(myCarousel, {
@@ -17,11 +17,11 @@ export function PastEvents() {
     }, []);
 
     return (
-        <div className="past-events container mb-32">
+        <div className="gallery container mb-32">
             <h2
-                className="mb-4 antique-tuscan text-8xl text-center m-3 pb-3 past-events-color"
+                className="mb-4 antique-tuscan text-8xl text-center m-3 pb-3 gallery-color"
                 data-aos="zoom-in">
-                Past Events
+                Gallery
             </h2>
 
             <div
@@ -62,7 +62,7 @@ export function PastEvents() {
                                     <h3 className="century-ps p-3 font-bold text-4xl text-left">
                                         Heading for First Slide
                                     </h3>
-                                    <p className="century-ps p-3 past-events-p text-xl text-left">
+                                    <p className="century-ps p-3 gallery-p text-xl text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
@@ -90,7 +90,7 @@ export function PastEvents() {
                                     <h3 className="century-ps font-bold  p-3 text-4xl text-left">
                                         Heading for Second Slide
                                     </h3>
-                                    <p className="century-ps p-3 past-events-p text-xl text-left">
+                                    <p className="century-ps p-3 gallery-p text-xl text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
@@ -119,7 +119,7 @@ export function PastEvents() {
                                     <h3 className="century-ps p-3 text-4xl font-bold text-left">
                                         Heading for Third Slide
                                     </h3>
-                                    <p className="century-ps p-3 past-events-p text-xl text-left">
+                                    <p className="century-ps p-3 gallery-p text-xl text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
@@ -146,7 +146,7 @@ export function PastEvents() {
                                     <h3 className="century-ps font-bold  p-3 text-4xl text-left">
                                         Heading for Second Slide
                                     </h3>
-                                    <p className="century-ps p-3 past-events-p text-xl text-left">
+                                    <p className="century-ps p-3 gallery-p text-xl text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius

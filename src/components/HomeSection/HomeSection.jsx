@@ -92,7 +92,7 @@ export function HomeSection() {
                                     className="nav-link about-us-font-color"
                                     aria-current="page"
                                     href="#events">
-                                    PAST EVENTS
+                                    GALLERY
                                 </a>
                             </li>
                             <li className="nav-item">
