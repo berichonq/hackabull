@@ -18,13 +18,13 @@ import { Footer } from "../../components/Footer/Footer";
 export function Home() {
     useEffect(() => {
         // Simulate a loading process, e.g., fetching data
-        setTimeout(() => setIsLoading(false), 5000); // remove timeout in real use case
+        setTimeout(() => setIsLoading(false), 2500); // remove timeout in real use case
     }, []);
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     // Logout button needs to be moved to navbar. Should only be rendered if user is authenticated
     const [isLoading, setIsLoading] = useState(false);
-    ///////////////////////////////////////
+    ///////////////////////////////////////true loader
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
