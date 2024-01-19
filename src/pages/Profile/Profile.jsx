@@ -314,7 +314,7 @@ export function Profile() {
             )}
             {deleteButtonClicked && !reauthenticated && (
               <>
-                <p>Please re-enter your password</p>
+                <p className="error-message">Please re-enter your password</p>
                 <input
                   required
                   type="password"
@@ -330,7 +330,7 @@ export function Profile() {
             )}
             {reauthenticated && (
               <>
-                <p>{`Are you sure you want to delete your account? This action is irreversible. To confirm, type "${auth?.currentUser?.email}" in the box below`}</p>
+                <p className="error-message">{`Are you sure you want to delete your account? This action is irreversible. To confirm, type "${auth?.currentUser?.email}" in the box below`}</p>
                 <input
                   required
                   className="bg-white border border-gray-800 rounded-md p-2 login-input"

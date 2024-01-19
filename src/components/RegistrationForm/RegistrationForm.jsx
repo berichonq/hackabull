@@ -244,7 +244,7 @@ export function RegistrationForm() {
                 required
                 id="first-name"
                 autoComplete="given-name"
-                placeholder="First Name"
+                placeholder="First name"
                 onChange={(e) => setFirstName(e.target.value)}
                 className="bg-white border border-gray-800 rounded-md p-2 login-input"
               />

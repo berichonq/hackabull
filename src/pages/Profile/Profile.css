@@ -45,3 +45,8 @@
 .padding-top-10 {
   padding-top: 6rem;
 }
+
+.error-message {
+  font-size: 1.0rem;
+  color: red;
+}
