@@ -25,6 +25,8 @@ export function RegistrationForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [firstTimeHacker, setFirstTimeHacker] = useState("");
+  const [transportationNeeded, setTransportationNeeded] = useState("");
 
   // Error states
   const [firstNameError, setFirstNameError] = useState();
@@ -35,6 +37,8 @@ export function RegistrationForm() {
   const [emailError, setEmailError] = useState();
   const [passwordError, setPasswordError] = useState();
   const [confirmPasswordError, setConfirmPasswordError] = useState();
+  const [firstTimeHackerError, setFirstTimeHackerError] = useState();
+  const [transportationNeededError, setTransportationNeededError] = useState();
 
   const [validated, setValidated] = useState();
 
@@ -112,6 +116,20 @@ export function RegistrationForm() {
       setCollege("");
     }
 
+    if (!firstTimeHacker) {
+      setFirstTimeHackerError("Please select an option");
+      valid = false;
+    } else {
+      setFirstTimeHackerError("");
+    }
+
+    if (!transportationNeeded) {
+      setTransportationNeededError("Please select an option");
+      valid = false;
+    } else {
+      setTransportationNeededError("");
+    }
+
     let errorMessage = validateResume();
     if (errorMessage) {
       valid = false;
@@ -167,6 +185,8 @@ export function RegistrationForm() {
             last: lastName,
             university: college,
             classification: grade,
+            first_time_hacker: firstTimeHacker,
+            needs_transportation: transportationNeeded,
           });
           newDocCreated = true;
         } catch (err) {
@@ -341,6 +361,44 @@ export function RegistrationForm() {
             className="bg-white border border-gray-800 rounded-md p-2 login-input"
           />
           {collegeError && <p className="error-message">{collegeError}</p>}
+        </div>
+        <div className="form-line">
+          <label
+            htmlFor="first-time-hacker-select"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Is this your first time participating in a hackathon?
+          </label>
+          <select
+            required
+            id="first-time-hacker-select"
+            onChange={(e) => setFirstTimeHacker(e.target.value)}
+            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+          >
+            <option value=""></option>
+            <option value={true}>Yes</option>
+            <option value={false}>No</option>
+          </select>
+          {firstTimeHackerError && <p className="error-message">{firstTimeHackerError}</p>}
+        </div>
+        <div className="form-line">
+          <label
+            htmlFor="transportation-select"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Is this your first time participating in a hackathon?
+          </label>
+          <select
+            required
+            id="transportation-select"
+            onChange={(e) => setTransportationNeeded(e.target.value)}
+            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+          >
+            <option value=""></option>
+            <option value={true}>Yes</option>
+            <option value={false}>No</option>
+          </select>
+          {transportationNeededError && <p className="error-message">{transportationNeededError}</p>}
         </div>
         <div className="form-line mb-2">
           <label
