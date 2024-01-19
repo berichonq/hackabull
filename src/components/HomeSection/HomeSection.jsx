@@ -128,7 +128,7 @@ export function HomeSection() {
                                 </a>
                             </li>
                         </ul>
-                        <div className="d-flex">
+                        <div>
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 {user && (
                                     <li className="nav-item">
