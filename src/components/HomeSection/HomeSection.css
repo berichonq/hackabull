@@ -1,9 +1,61 @@
 .home_section {
+    
+    background: url("../../assets/images/home_back.png") no-repeat center center;
+    background-size: cover;
+}
+
+.bg-glass {
+    background: rgba(4, 43, 86, 0.37);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+}
+
+.apply-btn {
+    /* width: 60%;
+    height: 7%; */
+    background: linear-gradient(180deg, #093460 0%, #0085a4 55%, #e9f0cb 100%);
+    box-shadow: -4px 5px 6.4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    border: 1px solid #fdedb9;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+.apply-btn-link {
+    color: #fdedb9;
+    font-weight: 700;
+    line-height: 23.33px;
+}
+.navbar-toggler-icon {
+    background-image: none;
+    border-color: #fdedb9; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.navbar-toggler {
+    border-color: #fdedb9; /* Change border color if needed */
+}
+
+.navbar-toggler-icon::after {
+    border-color: #fdedb9; 
+    content: "\f0c9"; /* Unicode for the bars icon in FontAwesome */
+    font-family: "Font Awesome 5 Free"; /* Specify the font family if using FontAwesome or similar */
+    font-weight: 900; /* FontAwesome specific for solid icons */
+    color: #fdedb9; /* Set your desired color */
+    font-size: 1.25rem; /* Adjust the size as needed */
+}
+
+/* .home_section {
     width: 100%;
     height: 100vh;
     background: url("../../assets/images/home_back.png");
-    background-size:  100% 100%;  /* Scale the background width to 100% and height automatically */
-    background-repeat: no-repeat; /* Take up the full height of the viewport */
+    background-size:  100% 100%;  
+    background-repeat: no-repeat; 
     background-position: center;
     background-position-x: center;
     display: flex;
@@ -12,7 +64,6 @@
     color: #fdedb9;
     margin: auto;
     justify-content: flex-start;
-    /* background-color: rgb(0, 153, 255, 0.4); */
     overflow: hidden;
 }
 
@@ -28,28 +79,20 @@
     position: fixed;
     top: 0;
     right: 0;
-    /* left: 0; */
     z-index: 1032;
 }
 
 .banner {
-    margin-top: 7rem;
-    width: 30%;
+    margin-top: 6rem;
+    width: 25%;
     height: auto;
     overflow: hidden;
-    /* background: url("../../assets/images/banner.png");
-    background-size: 100% auto; 
-    background-repeat: no-repeat; */
 }
 
 .apply-btn {
-    width: 60%;
-    margin-top: 15px;
-    height: 50px;
-    padding-left: 15;
-    padding-right: 15;
-    padding-top: 10;
-    padding-bottom: 10;
+    width: 70%;
+    height: 10%;
+    margin-top: 0.5rem;
     background: linear-gradient(180deg, #093460 0%, #0085a4 55%, #e9f0cb 100%);
     box-shadow: -4px 5px 6.4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -64,4 +107,4 @@
     font-weight: 700;
     line-height: 23.33px;
     word-wrap: break-word;
-}
+} */

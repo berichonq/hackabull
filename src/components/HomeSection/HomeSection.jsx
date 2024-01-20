@@ -14,7 +14,6 @@ import { signOut } from "firebase/auth";
 import banner from "../../assets/images/banner.png";
 import logo from "../../assets/images/LineArt-bold-white.png";
 
-
 export function HomeSection() {
     let { user } = useContext(Context);
     let dispatch = useDispatch();
@@ -32,45 +31,46 @@ export function HomeSection() {
         }
     };
     /////////////////////////////////////////////////////////////////////////////////////////////////
-
     return (
         <div>
-            <div className="right-1 px-2 mlh navbar-expand-lg">
-                <a className="navbar-brand" href="#">
+            <div className="fixed top-0 right-0 z-50 pr-1">
+                <a className="navbar-brand m-0 " href="#">
                     <img
                         src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
-                        alt="MLH"
-                        width="90"
-                        height="54"
+                        alt="MLH"  className="w-16 h-auto"
+                        // width="30"
+                        // height="54"
                     />
                 </a>
             </div>
-            <nav className="navbar my-2 mx-28 xl:px-10 lg:px-4 md:px-2 fixed-top navbar-expand-lg bg-glass">
+            <nav className="navbar my-2 mx-20 sm:mx-20 md:mx-20 lg:mx-20 xl:mx-28 2xl:mx-36 px-4 fixed-top navbar-expand-lg bg-glass rounded-xl shadow-lg">
                 <div className="container-fluid lg:px-4">
-                    <a className="navbar-brand century-ps  about-us-font-color" href="/">
+                    <a
+                        className="navbar-brand century-ps  about-us-font-color"
+                        href="/">
                         <img
                             src={logo}
                             alt="Bootstrap"
                             // width="50"
                             // height="auto"
-                            className="w-10"
+                            className="w-11"
                         />
-                    {/* <p className="">HACKABULL 2024</p> */}
+                        {/* <p className="">HACKABULL 2024</p> */}
                     </a>
                     <button
-                        className="navbar-toggler"
+                        className="navbar-toggler about-us-font-color"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent"
                         aria-expanded="false"
                         aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        <span className="navbar-toggler-icon about-us-font-color"></span>
                     </button>
                     <div
                         className="collapse navbar-collapse"
                         id="navbarSupportedContent">
-                        <ul className="navbar-nav mx-auto century-ps about-us-font-color text-xs lg:text-sm text-lmb-2 mb-lg-0">
+                        <ul className="navbar-nav mx-auto century-ps text-xs about-us-font-color sm:text-sm md:text-sm lg:text-sm 2xl:text-sm text-xs text-lmb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a
                                     className="nav-link about-us-font-color "
@@ -129,7 +129,7 @@ export function HomeSection() {
                             </li>
                         </ul>
                         <div>
-                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <ul className="navbar-nav text-xs about-us-font-color sm:text-sm md:text-sm lg:text-sm 2xl:text-sm me-auto mb-2 mb-lg-0">
                                 {user && (
                                     <li className="nav-item">
                                         <Link
@@ -172,14 +172,19 @@ export function HomeSection() {
                     </div>
                 </div>
             </nav>
-            <div className="home_section">
-                <div className="col container banner">
-                    <img src={banner} />
-                    <div className="apply-btn">
+            <div className="home_section w-full h-screen bg-cover bg-no-repeat bg-center flex flex-col justify-start text-[#fdedb9] m-auto overflow-hidden">
+                <div className="col container sm:mt-72 md:mt-24 lg:mt-48 xl:mt-64 sm:w-7/12 md:w-1/3 w-1/4 overflow-hidden">
+                    <img
+                        src={banner}
+                        className="w-full "
+                    />
+                    <div
+                        className="apply-btn mt-2 bg-gradient-to-b rounded-lg border border-[#fdedb9] justify-center items-center flex
+                px-4 py-2 sm:px-4 sm:py-2 md:px-8 md:py-4 lg:px-10 lg:py-5">
                         <a
-                            className="century-ps team-card apply-btn-link"
-                            href="/register">
-                            APPLY TO ATTEND
+                            href="/register"
+                            className="text-xs about-us-font-color sm:text-sm md:text-xs lg:text-xs 2xl:text-sm">
+                            START HACKING
                         </a>
                     </div>
                 </div>
