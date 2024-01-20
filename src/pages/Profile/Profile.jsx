@@ -1,6 +1,7 @@
 import "./Profile.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import { useDispatch, useSelector } from "react-redux";
 import { logOff } from "../../store/user/user-slice";
@@ -161,12 +162,7 @@ export function Profile() {
       >
         <div className="container-fluid ml-20 mr-40">
           <a className="navbar-brand" href="/">
-            <img
-              src={logo}
-              alt="Bootstrap"
-              width="30"
-              height="40"
-            />
+            <img src={logo} alt="Bootstrap" width="30" height="40" />
           </a>
           <p className="">HACKABULL 2024</p>
           <button
@@ -183,77 +179,58 @@ export function Profile() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto about-us-font-color mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  aria-current="page"
-                  href="/"
-                >
+                <a className="nav-link" aria-current="page" href="/">
                   HOME
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  aria-current="page"
-                  href="#"
-                >
+              <div className="nav-item">
+                <HashLink to="/#about" className="nav-link" aria-current="page">
                   ABOUT
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
+                </HashLink>
+              </div>
+              <div className="nav-item">
+                <HashLink
+                  to="/#events"
                   className="nav-link"
                   aria-current="page"
-                  href="#"
                 >
                   GALLERY
-                </a>
-              </li>
+                </HashLink>
+              </div>
               <li className="nav-item">
-                <a
+                <HashLink
                   className="nav-link"
                   aria-current="page"
-                  href="#"
+                  to="/#schedule"
                 >
                   SCHEDULE
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a
+                <HashLink
                   className="nav-link"
                   aria-current="page"
-                  href="#"
+                  to="/#sponsors"
                 >
                   SPONSORS
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  aria-current="page"
-                  href="#"
-                >
+                <HashLink className="nav-link" aria-current="page" to="/#faq">
                   FAQ
-                </a>
+                </HashLink>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  aria-current="page"
-                  href="#"
-                >
+                <HashLink className="nav-link" aria-current="page" to="/#team">
                   TEAM
-                </a>
+                </HashLink>
               </li>
             </ul>
             <div className="d-flex">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 {user && (
                   <li className="nav-item">
-                    <button
-                      onClick={logout}
-                      className="nav-link"
-                    >
+                    <button onClick={logout} className="nav-link">
                       {" "}
                       Logout{" "}
                     </button>
