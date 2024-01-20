@@ -33,17 +33,18 @@ export function HomeSection() {
     /////////////////////////////////////////////////////////////////////////////////////////////////
     return (
         <div>
-            <div className="fixed top-0 right-0 z-50 pr-1">
+            <div className="fixed top-16 md:top-16 lg:top-0 xl:top-0 2xl:top-0 right-0 z-50 pr-1">
                 <a className="navbar-brand m-0 " href="#">
                     <img
                         src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
-                        alt="MLH"  className="w-16 h-auto"
+                        alt="MLH"
+                        className="w-16 h-auto"
                         // width="30"
                         // height="54"
                     />
                 </a>
             </div>
-            <nav className="navbar my-2 mx-20 sm:mx-20 md:mx-20 lg:mx-20 xl:mx-28 2xl:mx-36 px-4 fixed-top navbar-expand-lg bg-glass rounded-xl shadow-lg">
+            <nav className="navbar fixed-top navbar-expand-lg bg-glass shadow-lg px-4 md:my-0 lg:my-2 xl:my-2 2xl:my-2 sm:mx-0 md:mx-0 lg:mx-20 xl:mx-28 2xl:mx-36 rounded-none lg:rounded-xl xl:rounded-xl 2xl:rounded-xl">
                 <div className="container-fluid lg:px-4">
                     <a
                         className="navbar-brand century-ps  about-us-font-color"
@@ -173,11 +174,8 @@ export function HomeSection() {
                 </div>
             </nav>
             <div className="home_section w-full h-screen bg-cover bg-no-repeat bg-center flex flex-col justify-start text-[#fdedb9] m-auto overflow-hidden">
-                <div className="col container sm:mt-72 md:mt-24 lg:mt-48 xl:mt-64 sm:w-7/12 md:w-1/3 w-1/4 overflow-hidden">
-                    <img
-                        src={banner}
-                        className="w-full "
-                    />
+                <div className="col container mt-64 w-64 sm:mt-72 md:mt-24 lg:mt-48 xl:mt-64 sm:w-7/12 md:w-1/3 overflow-hidden">
+                    <img src={banner} className="w-full " />
                     <div
                         className="apply-btn mt-2 bg-gradient-to-b rounded-lg border border-[#fdedb9] justify-center items-center flex
                 px-4 py-2 sm:px-4 sm:py-2 md:px-8 md:py-4 lg:px-10 lg:py-5">
