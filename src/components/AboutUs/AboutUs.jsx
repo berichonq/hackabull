@@ -3,16 +3,16 @@ import "./AboutUs.css";
 
 export function AboutUs() {
     return (
-        <div className="container about-us mx-5 section section">
-            <div className="text-left m-4 pb-3" data-aos="fade-right">
-                <h1 className=" antique-tuscan text-9xl about-hackabull">
+        <div className="container mx-auto p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-20 flex flex-col justify-start text-[#fdedb9] overflow-hidden">
+            <div className="text-left ml-6 pb-3" data-aos="fade-right">
+                <h1 className="antique-tuscan about-us-font-color text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl w-full about-hackabull">
                     About Hackabull
                 </h1>
             </div>
-            <div className="col">
-                <div className="col-md-8 m-4" data-aos="fade-up-right">
+            <div className="flex flex-col">
+                <div className="sm:w-8/12 w-full  m-4" data-aos="fade-up-right">
                     <p
-                        className="century-ps about-us-font-color text-xl text-left"
+                        className="century-ps about-us-font-color text-sm md:text-xs lg:text-base xl:text-xl 2xl:text-2xl text-left"
                         style={{ columnCount: 2, overflow: "hidden" }}>
                         Welcome to Hackabull 6.0, the University of South
                         Florida's annual 24-hour innovation marathon hosted by
@@ -26,8 +26,8 @@ export function AboutUs() {
                         engaging in fun, challenging competitions.
                     </p>
                 </div>
-                <div className="col-md-8 m-4" data-aos="fade-up">
-                    <p className="century-ps about-us-font-color text-xl text-left">
+                <div className="sm:w-8/12 w-full  m-4" data-aos="fade-up">
+                    <p className="century-ps about-us-font-color text-sm md:text-xs lg:text-base xl:text-xl 2xl:text-2xl text-left">
                         Whether it's creating innovative software, designing
                         unique digital solutions, or exploring new tech
                         frontiers, Hackabull is where students turn their
