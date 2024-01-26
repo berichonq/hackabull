@@ -18,9 +18,9 @@ export function Gallery() {
 
     return (
         <div className="gallery container mx-auto mb-32 flex flex-col justify-center w-9/10 text-blue-900">
-            <h2 className="mb-4 text-8xl text-center m-3 pb-3 text-blue-900" data-aos="zoom-in">
+            <h1 className="antique-tuscan about-us-font-color text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl w-full about-hackabull" data-aos="zoom-in">
                 Gallery
-            </h2>
+            </h1>
 
             <div
                 id="carouselExampleAutoplaying"
@@ -51,16 +51,16 @@ export function Gallery() {
                             <div className="col-md-6">
                                 <img
                                     src={firstImage}
-                                    className="d-block w-100"
+                                    className="d-block w-100 p-2"
                                     alt="First slide"
                                 />
                             </div>
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
-                                    <h3 className="century-ps p-3 font-bold text-4xl text-left">
+                                    <h3 className="century-ps pt-3 about-us-font-color font-bold text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Heading for First Slide
                                     </h3>
-                                    <p className="century-ps p-3 gallery-p text-xl text-left">
+                                    <p className="century-ps pt-3 about-us-font-color gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
@@ -79,16 +79,16 @@ export function Gallery() {
                             <div className="col-md-6">
                                 <img
                                     src={secondImage}
-                                    className="d-block w-100"
+                                    className="d-block w-100 p-2"
                                     alt="Second slide"
                                 />
                             </div>
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
-                                    <h3 className="century-ps font-bold  p-3 text-4xl text-left">
+                                    <h3 className="century-ps font-bold  pt-3 about-us-font-color text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Heading for Second Slide
                                     </h3>
-                                    <p className="century-ps p-3 gallery-p text-xl text-left">
+                                    <p className="century-ps pt-3 about-us-font-color gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
@@ -108,16 +108,16 @@ export function Gallery() {
                             <div className="col-md-6">
                                 <img
                                     src={thirdImage}
-                                    className="d-block w-100"
+                                    className="d-block w-100 p-2"
                                     alt="Third slide"
                                 />
                             </div>
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
-                                    <h3 className="century-ps p-3 text-4xl font-bold text-left">
+                                    <h3 className="century-ps pt-3 about-us-font-color text-4xl font-bold text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Heading for Third Slide
                                     </h3>
-                                    <p className="century-ps p-3 gallery-p text-xl text-left">
+                                    <p className="century-ps pt-3 about-us-font-color gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
@@ -135,16 +135,16 @@ export function Gallery() {
                             <div className="col-md-6">
                                 <img
                                     src={secondImage}
-                                    className="d-block w-100"
+                                    className="d-block w-100 p-2"
                                     alt="Fourth slide"
                                 />
                             </div>
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
-                                    <h3 className="century-ps font-bold  p-3 text-4xl text-left">
+                                    <h3 className="century-ps font-bold  pt-3 about-us-font-color text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Heading for Second Slide
                                     </h3>
-                                    <p className="century-ps p-3 gallery-p text-xl text-left">
+                                    <p className="century-ps pt-3 about-us-font-color gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
