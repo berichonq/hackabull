@@ -17,10 +17,8 @@ export function Gallery() {
     }, []);
 
     return (
-        <div className="gallery container mb-32">
-            <h2
-                className="mb-4 antique-tuscan text-8xl text-center m-3 pb-3 gallery-color"
-                data-aos="zoom-in">
+        <div className="gallery container mx-auto mb-32 flex flex-col justify-center w-9/10 text-blue-900">
+            <h2 className="mb-4 text-8xl text-center m-3 pb-3 text-blue-900" data-aos="zoom-in">
                 Gallery
             </h2>
 
@@ -161,20 +159,20 @@ export function Gallery() {
                     </div>
                 </div>
                 <button
-                    className="carousel-control-prev custom-carousel-control"
-                    type="button"
-                    data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
+                className="carousel-control-prev custom-carousel-control absolute top-1/2 -translate-y-1/2 z-5"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
                     <span
                         className="carousel-control-prev-icon"
                         aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>
                 </button>
                 <button
-                    className="carousel-control-next custom-carousel-control"
-                    type="button"
-                    data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
+                className="carousel-control-next custom-carousel-control absolute top-1/2 -translate-y-1/2 z-5"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
                     <span
                         className="carousel-control-next-icon"
                         aria-hidden="true"></span>

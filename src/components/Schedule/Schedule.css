@@ -1,13 +1,12 @@
 .schedule-page {
     display: flex;
-    align-items: center; /* Center vertically */
+    align-items: center;  
     width: 100%;
     flex-direction: column;
 }
 
 .schedule-main {
-    position: relative; /* This is needed to position the pseudo-element correctly */
-    height: 140%;
+    position: relative;  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,22 +16,18 @@
 }
 
 .schedule-main::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: url("../../assets/images/papyrus_rotated.png");
-    background-size: 100% 100%;
-    /* opacity: 1; Adjust this value for desired transparency */
-
+    background-size: 100% 100%; 
     mix-blend-mode: multiply;
-    z-index: 0; /* Ensures the background is behind the content */
+    z-index: 0; 
 }
-
-/* Other styles for your elements */
-
+ 
 
 .container {
     font-family: "CenturyPSPro", serif;
@@ -64,9 +59,7 @@
     color: #fdedb9;
     border: 2px solid #fdedb9;
 }
-
-
-/* Label the data */
+ 
 .schedule td:before {
     font-weight: bold;
     text-align: left;
@@ -75,61 +68,59 @@
 
 @media screen and (max-width: 1000px) {
     .schedule {
-      width: 100vw;
-      height: auto;
+        width: 100vw;
+        height: auto;
     }
     .schedule .tbody tr td {
-      text-decoration: none;
-      display: inline-block;
-      font-weight: medium;
-      color: #ffeaf1;
-      text-align: center;
-      vertical-align: middle;
-      user-select: none;
-      opacity: 1;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: medium;
+        color: #ffeaf1;
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        opacity: 1;
     }
 }
 
 @media screen and (max-width: 1023.5px) {
     .schedule-container {
-      margin: 40px auto 0;
-      display: block;
-      max-width: -moz-fit-content;
-      max-width: fit-content;
-      margin: 0 auto;
-      overflow-x: auto;
-      white-space: nowrap;
+        margin: 40px auto 0;
+        display: block;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        margin: 0 auto;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
 
 @media screen and (max-width: 450px) {
     .schedule {
-      position: relative;
+        position: relative;
     }
     .schedule thead tr th {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.3px;
-      color: #ffffff;
-      opacity: 1;
-      padding: 8px;
-      vertical-align: top;
-      border: 1px solid #ffffff;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        color: #ffffff;
+        opacity: 1;
+        padding: 8px;
+        vertical-align: top;
+        border: 1px solid #ffffff;
     }
     .schedule tbody tr td {
-      font-size: 10px;
-      letter-spacing: 0.3px;
-      font-weight: normal;
-      color: #ffeaf1;
-      background-color: transparent;
-      padding: 8px;
-      text-align: center;
-      border: 1px solid #ffffff;
+        font-size: 10px;
+        letter-spacing: 0.3px;
+        font-weight: normal;
+        color: #ffeaf1;
+        background-color: transparent;
+        padding: 8px;
+        text-align: center;
+        border: 1px solid #ffffff;
     }
-  }
-
-
-/* Custom scrollbar styles */
+}
+ 
 .schedule::-webkit-scrollbar {
     width: 10px;
 }
@@ -147,7 +138,7 @@
 }
 .schedule th,
 .schedule td {
-    font-size: 16px; /* Adjust as needed */
+    font-size: 16px; 
 }
 
 .schedule th {

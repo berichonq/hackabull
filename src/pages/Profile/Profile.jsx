@@ -1,7 +1,7 @@
 import "./Profile.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+// import { HashLink } from "react-router-hash-link";
 
 import { useDispatch, useSelector } from "react-redux";
 import { logOff } from "../../store/user/user-slice";

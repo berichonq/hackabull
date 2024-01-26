@@ -172,21 +172,18 @@ export function HomeSection() {
                         </div>
                     </div>
                 </div>
-            </nav>
-            <div className="home_section w-full h-screen bg-cover bg-no-repeat bg-center flex flex-col justify-start text-[#fdedb9] m-auto overflow-hidden">
-                <div className="col container mt-64 w-64 sm:mt-72 md:mt-24 lg:mt-48 xl:mt-64 2xl:mt-32 sm:w-7/12 md:w-1/3 overflow-hidden">
-                    <img src={banner} className="w-full " />
-                    <div
-                        className="apply-btn mt-2 bg-gradient-to-b rounded-lg border border-[#fdedb9] justify-center items-center flex
-                px-4 py-2 sm:px-4 sm:py-2 md:px-8 md:py-4 lg:px-10 lg:py-5">
-                        <a
-                            href="/register"
-                            className="text-xs about-us-font-color sm:text-sm md:text-xs lg:text-xs 2xl:text-sm">
-                            START HACKING
-                        </a>
-                    </div>
-                </div>
-            </div>
+            </nav><div className="home_section w-full h-screen bg-cover bg-no-repeat bg-center flex items-center justify-start text-[#fdedb9] m-auto overflow-hidden">
+    <div className="col container w-64 overflow-hidden flex flex-col justify-center items-center" style={{ transform: 'translateY(-60%)' }}>
+        <img src={banner} className="w-10/12 sm:w-7/12 md:w-1/3  mb-2" />
+        <div className="apply-btn mt-2 bg-gradient-to-b rounded-lg border border-[#fdedb9] justify-center items-center flex px-4 py-2 sm:px-4 sm:py-2 md:px-8 md:py-4 lg:px-10 lg:py-5">
+            <a href="/register" className="text-xs about-us-font-color sm:text-sm md:text-xs lg:text-xs 2xl:text-sm">
+                START HACKING
+            </a>
+        </div>
+    </div>
+</div>
+
+
         </div>
     );
 }

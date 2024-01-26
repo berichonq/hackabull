@@ -1,4 +1,28 @@
-.gallery { /* Take up the full height of the viewport */
+.gallery-p {
+    color: #073e7d;
+}
+
+.custom-carousel-control {
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-control-prev.custom-carousel-control {
+    left: -100px;
+}
+
+.carousel-control-next.custom-carousel-control {
+    right: -100px;
+}
+
+/* .gallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,43 +49,41 @@
     max-height: auto;
     max-width: 100%;
     object-fit: contain;
-    margin: AUTO;
+    margin: auto;
 }
 
 .custom-carousel-control {
-    width: 100px; /* Adjust for bolder appearance */
-    height: 100px; /* Adjust for bolder appearance */
-    margin: 0px 0px; /* Adjust spacing as needed */
+    width: 100px;
+    height: 100px; 
+    margin: 0px 0px; 
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 50px; /* Adjust icon size */
-    height: 50px; /* Adjust icon size */
+    width: 50px; 
+    height: 50px; 
 }
 
-/* Optional: If you want to move arrows completely outside the carousel, use additional CSS */
 .custom-carousel-control {
     position: absolute;
-    top: 50%; /* Center vertically */
+    top: 50%;
     transform: translateY(-50%);
     z-index: 5;
 }
 
 .carousel-control-prev.custom-carousel-control {
-    left: -100px; /* Adjust distance from carousel */
+    left: -100px; 
 }
 
 .carousel-control-next.custom-carousel-control {
-    right: -100px; /* Adjust distance from carousel */
+    right: -100px;
 }
 
 .carousel-inner {
     position: relative;
 }
 
-/* Ensure content inside each slide is vertically centered */
 .carousel-item .row {
     height: 100%;
     align-items: center;
-}
+} */
