@@ -15,13 +15,13 @@ import SHPELogo from "../../assets/images/shpe_logo.png";
 export function Sponsors() {
     return (
         <div className="sponsors mt-20 grey">
-            <div><h2 className="mb-4 antique-tuscan relative z-20 about-us-font-color text-9xl text-center m-4	pb-3" data-aos="fade-up">
+            <div><h2 className="mb-4 antique-tuscan about-us-font-color text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl w-full about-hackabull text-center m-4	pb-3" data-aos="fade-up">
                 sponsors
             </h2></div>
             <div className="container relative mx-auto my-8">
                 <div className="flex flex-row items-center justify-between sponsor-text-wrapper">
                     <div className="sponsor-phrase mx-3" data-aos="fade-right">
-                        <h2 className="font-bold mb-4 century-ps about-us-font-color leading-loose text-4xl text-left">
+                        <h2 className="font-bold mb-4 leading-loose century-ps about-us-font-color text-3xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl text-left">
                             Partnering with leaders in innovation.
                         </h2>
                     </div>
