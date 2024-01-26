@@ -15,9 +15,11 @@
     "firebase": "^10.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-phone-input-2": "^2.15.1",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.0",
     "react-router-hash-link": "^2.4.3",
+    "react-select": "^5.8.0",
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {

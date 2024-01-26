@@ -20,6 +20,27 @@
   font-weight: bold;
 }
 
+.mlh-link {
+  color: rgb(3, 0, 208);
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns items to the start (left) */
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  margin-bottom: 10px; /* Spacing between each checkbox item */
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 10px; /* Spacing between checkbox and label */
+  margin-top: 0; /* Align the top of the checkbox with the top of the label */
+}
+
 .login-img {
   height: 100vh;
   object-fit: cover;

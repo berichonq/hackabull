@@ -1,7 +1,13 @@
 import "./RegistrationForm.css";
+import { schoolNames } from "./schoolsArray";
+import { countryCodes } from "./countriesArray"
 
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
+import PhoneInput from "react-phone-input-2";
+import 'react-phone-input-2/lib/style.css'
+import Select from "react-select"
 
 import { auth, storage, usersCollectionRef } from "../../config/firebase";
 import {
@@ -16,11 +22,31 @@ import { ref, uploadBytes } from "firebase/storage";
 export function RegistrationForm() {
   let navigate = useNavigate();
 
+  let ages = [];
+  for (let i = 13; i <= 100; i++) {
+    ages.push({ value: i, label: i })
+  }
+
+  let schools = [];
+  for (let i = 0; i < schoolNames.length; i++) {
+    schools.push({ value: schoolNames[i], label: schoolNames[i] })
+  }
+  schools.push({ value: "Other", label: "Other" });
+
+  let countries = [];
+  for (let i = 0; i < countryCodes.length; i++) {
+    countries.push({ value: countryCodes[i], label: countryCodes[i] })
+  }
+
   // Input field states
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState();
+  const [country, setCountry] = useState();
+  const [age, setAge] = useState();
   const [grade, setGrade] = useState("");
   const [college, setCollege] = useState("");
+  const [levelOfStudy, setLevelOfStudy] = useState();
   const [resume, setResume] = useState();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,21 +54,48 @@ export function RegistrationForm() {
   const [role, setRole] = useState("");
   const [firstTimeHacker, setFirstTimeHacker] = useState("");
   const [transportationNeeded, setTransportationNeeded] = useState("");
+  const [checkbox1, setCheckBox1] = useState(false);
+  const [checkbox2, setCheckBox2] = useState(false);
+  const [checkbox3, setCheckBox3] = useState(false);
+
 
   // Error states
   const [firstNameError, setFirstNameError] = useState();
   const [lastNameError, setLastNameError] = useState();
+  const [countryError, setCountryError] = useState();
+  const [ageError, setAgeError] = useState();
   const [gradeError, setGradeError] = useState();
   const [collegeError, setCollegeError] = useState();
+  const [levelOfStudyError, setLevelOfStudyError] = useState();
   const [resumeError, setResumeError] = useState();
   const [emailError, setEmailError] = useState();
   const [passwordError, setPasswordError] = useState();
   const [confirmPasswordError, setConfirmPasswordError] = useState();
   const [roleError, setRoleError] = useState("");
-  const [firstTimeHackerError, setFirstTimeHackerError] = useState();
-  const [transportationNeededError, setTransportationNeededError] = useState();
+  const [checkbox1Error, setCheckbox1Error] = useState("");
+  const [checkbox2Error, setCheckbox2Error] = useState("");
 
   const [validated, setValidated] = useState();
+
+  const handlePhoneOnChange = (value, countryData) => {
+    setPhone('+' + countryData.dialCode + ' ' + value.slice(countryData.dialCode.length))
+  }
+
+  const handleFirstTimeHackerOnChange = (e) => {
+    if (e.length === 0) {
+      setFirstTimeHacker(false);
+      setTransportationNeeded(false);
+    } else if (e.length === 2) {
+      setFirstTimeHacker(true);
+      setTransportationNeeded(true);
+    } else if (e[0].value === 1) {
+      setFirstTimeHacker(true);
+      setTransportationNeeded(false);
+    } else {
+      setFirstTimeHacker(false);
+      setTransportationNeeded(true);
+    }
+  }
 
   // Validate the resume file
   // Returns -1 if no file is chosen, 0 if the file chosen is too large,
@@ -101,21 +154,39 @@ export function RegistrationForm() {
       setLastNameError("");
     }
 
+    if (!country) {
+      setCountryError("Please select an option");
+      valid = false;
+    } else {
+      setCountryError("");
+    }
+
+    if (!age) {
+      setAgeError("Please select an option");
+      valid = false;
+    } else {
+      setAgeError("");
+    }
+
     if (!grade) {
       setGradeError("Please select an option");
       valid = false;
-    } else if (grade !== "N/A") {
-      setGradeError("");
-      if (college.length < 12) {
-        setCollegeError("University must have at least 12 characters");
-        valid = false;
-      } else {
-        setCollegeError("");
-      }
     } else {
       setGradeError("");
-      setCollegeError("")
-      setCollege("");
+    }
+
+    if (!levelOfStudy) {
+      setLevelOfStudyError("Please select an option");
+      valid = false;
+    } else {
+      setLevelOfStudyError("");
+    }
+
+    if (!college) {
+      setCollegeError("Please select an option");
+      valid = false;
+    } else {
+      setCollegeError("");
     }
 
     if (!role) {
@@ -123,20 +194,6 @@ export function RegistrationForm() {
       valid = false;
     } else {
       setRoleError("");
-    }
-
-    if (!firstTimeHacker) {
-      setFirstTimeHackerError("Please select an option");
-      valid = false;
-    } else {
-      setFirstTimeHackerError("");
-    }
-
-    if (!transportationNeeded) {
-      setTransportationNeededError("Please select an option");
-      valid = false;
-    } else {
-      setTransportationNeededError("");
     }
 
     let errorMessage = validateResume();
@@ -162,6 +219,20 @@ export function RegistrationForm() {
       valid = false;
     } else {
       setConfirmPasswordError("");
+    }
+
+    if (!checkbox1) {
+      setCheckbox1Error("You must agree to the MLH Code of Conduct to proceed");
+      valid = false;
+    } else {
+      setCheckbox1Error("");
+    }
+
+    if (!checkbox2) {
+      setCheckbox2Error("You must agree to the MLH Terms and Conditions to proceed");
+      valid = false;
+    } else {
+      setCheckbox2Error("");
     }
 
     return valid;
@@ -192,11 +263,18 @@ export function RegistrationForm() {
           await setDoc(doc(usersCollectionRef, auth?.currentUser?.email), {
             first: firstName,
             last: lastName,
-            university: college,
+            phone: phone,
+            country_of_residence: country,
+            age: age,
             classification: grade,
+            university: college,
+            level_of_study: levelOfStudy,
             first_time_hacker: firstTimeHacker,
             needs_transportation: transportationNeeded,
             role: role,
+            agreed_to_first_checkbox: checkbox1,
+            agreed_to_second_checkbox: checkbox2,
+            agreed_to_third_checkbox: checkbox3,
           });
           newDocCreated = true;
         } catch (err) {
@@ -279,26 +357,17 @@ export function RegistrationForm() {
             </div>
             <div className="form-line">
               <label
-                htmlFor="grade-select"
+                htmlFor="phone"
                 className="block text-medium font-medium text-gray-900 dark:text-white"
               >
-                What college year are you in?{" "}
+                Phone Number
               </label>
-              <select
-                required
-                id="grade-select"
-                onChange={(e) => setGrade(e.target.value)}
-                className="bg-white border border-gray-800 rounded-md p-2 login-input"
-              >
-                <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5+">5+</option>
-                <option value="N/A">N/A</option>
-              </select>
-              {gradeError && <p className="error-message">{gradeError}</p>}
+              <PhoneInput
+                country={'us'}
+                preferredCountries={['us']}
+                countryCodeEditable={false}
+                onChange={handlePhoneOnChange}
+              />
             </div>
           </div>
           <div className="col-lg-6 col-md-12">
@@ -358,19 +427,104 @@ export function RegistrationForm() {
         </div>
         <div className="form-line">
           <label
-            htmlFor="college-input"
+            htmlFor="country-select"
             className="block text-medium font-medium text-gray-900 dark:text-white"
           >
-            Please include the full name of your education institution
+            Country of Residence
           </label>
-          <input
-            id="college-input"
-            disabled={true ? grade === "N/A" : false}
-            placeholder="University"
-            onChange={(e) => setCollege(e.target.value)}
-            className="bg-white border border-gray-800 rounded-md p-2 login-input"
-          />
+          <Select
+            required
+            placeholder={"Select country"}
+            id="country-select"
+            onChange={(e) => setCountry(e.value)}
+            options={countries}
+            isSearchable
+          >
+          </Select>
+          {countryError && <p className="error-message">{countryError}</p>}
+        </div>
+        <div className="form-line">
+          <label
+            htmlFor="age-select"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Age
+          </label>
+          <Select
+            required
+            placeholder={"Select age"}
+            id="age-select"
+            onChange={(e) => setAge(e.value)}
+            options={ages}
+            isSearchable
+          >
+            { ages.map((age) => {
+              return <option key={age} value={age}>{age}</option>
+            }) }
+          </Select>
+          {ageError && <p className="error-message">{ageError}</p>}
+        </div>
+        <div className="form-line">
+          <label
+            htmlFor="grade-select"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Select the year in college you're in
+          </label>
+          <Select
+            required
+            placeholder={"Select grade"}
+            id="grade-select"
+            onChange={(e) => setGrade(e.value)}
+            options={[{value: '1', label: 1}, {value: '2', label: 2}, {value: '3', label: 3}, {value: '4', label: 4}, {value: '5+', label: '5+'}, {value: 'N/A', label: 'N/A'}]}
+          >
+          </Select>
+          {gradeError && <p className="error-message">{gradeError}</p>}
+        </div>
+        <div className="form-line">
+          <label
+            htmlFor="college-select"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Select your school from the list. If it does not appear, select "Other"
+          </label>
+          <Select
+            required
+            placeholder={"Select school"}
+            id="grade-select"
+            onChange={(e) => setCollege(e.value)}
+            options={schools}
+          >
+          </Select>
           {collegeError && <p className="error-message">{collegeError}</p>}
+        </div>
+        <div className="form-line">
+          <label
+            htmlFor="level-of-study-select"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            Select your current level of study
+          </label>
+          <Select
+            required
+            placeholder={"Select level"}
+            id="level-of-study-select"
+            onChange={(e) => setLevelOfStudy(e.value)}
+            options={[{value: "Less than Secondary/High School", label: "Less than Secondary/High School"},
+                      {value: "Secondary/High School", label: "Secondary/High School"},
+                      {value: "Undergraduate University (2 year - community college or similar)", label: "Undergraduate University (2 year - community college or similar)"},
+                      {value: "Undergraduate University (3+ year)", label: "Undergraduate University (3+ year)"},
+                      {value: "Graduate University (Masters, Professional, Docotral, etc.)", label: "Graduate University (Masters, Professional, Docotral, etc.)"},
+                      {value: "Code School/Bootcamp", label: "Code School / Bootcamp"},
+                      {value: "Other Vocational/Trade Program or Apprenticeship", label: "Other Vocational/Trade Program or Apprenticeship"},
+                      {value: "Post Doctorate", label: "Post Doctorate"},
+                      {value: "Other", label: "Other"},
+                      {value: "I'm not currently a student", label: "I'm not currently a student"},
+                      {value: "Prefer not to answer", label: "Prefer not to answer"}
+                    ]}
+          >
+          </Select>
+          {levelOfStudyError && <p className="error-message">{levelOfStudyError}</p>}
         </div>
         <div className="form-line">
           <label
@@ -379,16 +533,14 @@ export function RegistrationForm() {
           >
             I would like to register as a...
           </label>
-          <select
+          <Select
             required
             id="role-select"
-            onChange={(e) => setRole(e.target.value)}
-            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+            placeholder={"Select role"}
+            onChange={(e) => setRole(e.value)}
+            options={[{value: "participant", label: "Participant"}, {value: "volunteer", label: "Volunteer"}]}
           >
-            <option value=""></option>
-            <option value={"participant"}>Participant</option>
-            <option value={"volunteer"}>Volunteer</option>
-          </select>
+          </Select>
           {roleError && <p className="error-message">{roleError}</p>}
         </div>
         <div className="form-line">
@@ -396,38 +548,17 @@ export function RegistrationForm() {
             htmlFor="first-time-hacker-select"
             className="block text-medium font-medium text-gray-900 dark:text-white"
           >
-            Is this your first time participating in a hackathon?
+            Please select all that apply
           </label>
-          <select
+          <Select
             required
             id="first-time-hacker-select"
-            onChange={(e) => setFirstTimeHacker(e.target.value)}
-            className="bg-white border border-gray-800 rounded-md p-2 login-input"
+            placeholder={"Select"}
+            isMulti
+            options={[{value: 1, label: "This is my first hackathon"}, {value: 2, label: "I require assistance with transportation to the event"}]}
+            onChange={(e) => handleFirstTimeHackerOnChange(e)}
           >
-            <option value=""></option>
-            <option value={true}>Yes</option>
-            <option value={false}>No</option>
-          </select>
-          {firstTimeHackerError && <p className="error-message">{firstTimeHackerError}</p>}
-        </div>
-        <div className="form-line">
-          <label
-            htmlFor="transportation-select"
-            className="block text-medium font-medium text-gray-900 dark:text-white"
-          >
-            Will you require assistance with transportation to the event?
-          </label>
-          <select
-            required
-            id="transportation-select"
-            onChange={(e) => setTransportationNeeded(e.target.value)}
-            className="bg-white border border-gray-800 rounded-md p-2 login-input"
-          >
-            <option value=""></option>
-            <option value={true}>Yes</option>
-            <option value={false}>No</option>
-          </select>
-          {transportationNeededError && <p className="error-message">{transportationNeededError}</p>}
+          </Select>
         </div>
         <div className="form-line mb-2">
           <label
@@ -443,6 +574,64 @@ export function RegistrationForm() {
             onChange={(e) => setResume(e.target.files[0])}
           />
           {resumeError && <p className="error-message">{resumeError}</p>}
+        </div>
+        <div className="form-line mb-2">
+          <label
+            htmlFor="disclaimer-1"
+            className="block text-medium font-medium text-gray-900 dark:text-white"
+          >
+            We are currently in the process of partnering with MLH. The following 3 checkboxes are for this partnership. If we do not end up partnering with MLH, your information will not be shared.
+          </label>
+        </div>
+        <div className="form-line mb-2 checkbox-container">
+          <div className="checkbox-item">
+            <input
+              type="checkbox"
+              id="disclaimer1"
+              onChange={(e) => setCheckBox1(e.target.checked)}
+              className="m-2"
+            />
+            <label
+              htmlFor="disclaimer1"
+              className="block text-medium font-medium text-gray-900 dark:text-white"
+            >
+              I have read and agree to the <a href={"https://static.mlh.io/docs/mlh-code-of-conduct.pdf"} className="mlh-link">MLH Code of Conduct</a>.
+            </label>
+          </div>
+
+          <div className="checkbox-item">
+            <input
+              type="checkbox"
+              id="disclaimer2"
+              onChange={(e) => setCheckBox2(e.target.checked)}
+              className="m-2"
+            />
+            <label
+              htmlFor="disclaimer2"
+              className="block text-medium font-medium text-gray-900 dark:text-white"
+            >
+              I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the
+              <a href={"https://mlh.io/privacy"} className="mlh-link"> MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md" className="mlh-link">MLH Contest Terms and Conditions</a> and the
+              <a href={"https://mlh.io/privacy"} className="mlh-link"> MLH Privacy Policy</a>.
+            </label>
+          </div>
+
+          <div className="checkbox-item">
+            <input
+              type="checkbox"
+              id="disclaimer3"
+              onChange={(e) => setCheckBox3(e.target.checked)}
+              className="m-2"
+            />
+            <label
+              htmlFor="disclaimer3"
+              className="block text-medium font-medium text-gray-900 dark:text-white"
+            >
+              I authorize MLH to send me occasional emails about relevant events, career opportunities, and community announcements.
+            </label>
+          </div>
+          {checkbox1Error && <p className="error-message">{checkbox1Error}</p>}
+          {checkbox2Error && <p className="error-message">{checkbox2Error}</p>}
         </div>
         
         <button className="login-button" id="submit" onClick={register}>

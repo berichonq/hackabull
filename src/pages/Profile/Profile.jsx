@@ -44,25 +44,29 @@ export function Profile() {
     // info.push(user.first + " " + user.last);
     info.push(auth?.currentUser?.email);
 
-    switch (user.classification) {
-      case "1":
-        info.push("Freshman at " + user.university);
-        break;
-      case "2":
-        info.push("Sophomore at " + user.university);
-        break;
-      case "3":
-        info.push("Junior at " + user.university);
-        break;
-      case "4":
-        info.push("Senior at " + user.university);
-        break;
-      case "5+":
-        info.push("Super Senior at " + user.university);
-        break;
-      default:
-        info.push("No college enrollment");
-        break;
+    if (user.university == "Other") {
+      return info;
+    } else {
+      switch (user.classification) {
+        case "1":
+          info.push("Freshman at " + user.university);
+          break;
+        case "2":
+          info.push("Sophomore at " + user.university);
+          break;
+        case "3":
+          info.push("Junior at " + user.university);
+          break;
+        case "4":
+          info.push("Senior at " + user.university);
+          break;
+        case "5+":
+          info.push("Super Senior at " + user.university);
+          break;
+        default:
+          info.push("No college enrollment");
+          break;
+      }
     }
 
     return info;
