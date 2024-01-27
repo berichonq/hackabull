@@ -18,7 +18,7 @@ export function Gallery() {
 
     return (
         <div className="gallery container mx-auto mb-32 flex flex-col justify-center w-9/10 text-blue-900">
-            <h1 className="antique-tuscan about-us-font-color text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl w-full about-hackabull" data-aos="zoom-in">
+            <h1 className="antique-tuscan about-us-font-color text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl w-full about-hackabull" data-aos="zoom-in">
                 Gallery
             </h1>
 

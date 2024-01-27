@@ -40,7 +40,7 @@ export function Team() {
 
             <div className="flex-container">
                 {members.map((member, index) => (
-                    <div key={index} className="m-2 team-card flex-item" data-aos="zoom-in">
+                    <div key={index} className="m-2 team-card flex-item w-1/4" /*data-aos="zoom-in"*/>
                         <a
                             href={member.link}
                             target="_blank"

@@ -1,21 +1,20 @@
 import './QnA.css'
 
 import { QA } from "./QA";
-
 export function FAQ() {
+    
     return (
         <div id="faq" className="section container mt-10 montserrat p-10">
             <div data-aos="fade-right">
-                <h1 className="mb-4 antique-tuscan about-us-font-color text-8xl text-left pb-3 fontSize80">
+                <h1 className="mb-4 antique-tuscan about-us-font-color text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl w-full about-hackabull text-left">
                     COMMON QUESTIONS
                 </h1>
             </div>
             <br />
-            <div className="absolute pink_shadow"></div>
             <div className="row">
                 <div className="col-lg-6">
                     <div className="flex-col faq-flex justify-items-center">
-                        <div className="flex-none mb-3" data-aos="fade-up-right">
+                        <div className="flex-none mb-3" data-aos="fade-up">
                             <QA
                                 question={"What is Hackabull?"}
                                 answer={
@@ -23,7 +22,7 @@ export function FAQ() {
                                 }
                             />
                         </div>
-                        <div className="flex-none mb-3" data-aos="fade-up-right">
+                        <div className="flex-none mb-3" data-aos="fade-up">
                             <QA
                                 question={"Who is eligible to participate in Hackabull?"}
                                 answer={
@@ -31,7 +30,7 @@ export function FAQ() {
                                 }
                             />
                         </div>
-                        <div className="flex-none mb-3" data-aos="fade-up-right">
+                        <div className="flex-none mb-3" data-aos="fade-up">
                             <QA
                                 question={"Do I need any prior experience to particpate?"}
                                 answer={
@@ -40,7 +39,7 @@ export function FAQ() {
                             />
                         </div>
 
-                        <div className="flex-none mb-3" data-aos="fade-up-right">
+                        <div className="flex-none mb-3" data-aos="fade-up">
                             <QA
                                 question={"Is there a fee to attend Hackabull?"}
                                 answer={
@@ -48,7 +47,7 @@ export function FAQ() {
                                 }
                             />
                         </div>
-                        <div className="flex-none mb-3" data-aos="fade-up-right">
+                        <div className="flex-none mb-3" data-aos="fade-up">
                             <QA
                                 question={"How can I register for Hackabull?"}
                                 answer={
@@ -56,7 +55,7 @@ export function FAQ() {
                                 }
                             />
                         </div>
-                        <div className="flex-none mb-3" data-aos="fade-up-right">
+                        <div className="flex-none mb-3" data-aos="fade-up">
                             <QA
                                 question={"What should I bring to Hackabull?"}
                                 answer={
@@ -70,7 +69,7 @@ export function FAQ() {
                 </div>
 
                 <div className="col-lg-6">
-                    <div className="flex-none mb-3" data-aos="fade-up-left">
+                    <div className="flex-none mb-3" data-aos="fade-up">
                         <QA
                             question={"Can I participate in Hackabull without a team?"}
                             answer={
@@ -78,7 +77,7 @@ export function FAQ() {
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-left">
+                    <div className="flex-none mb-3" data-aos="fade-up">
                         <QA
                             question={"What kind of projects can I work on at Hackabull?"}
                             answer={
@@ -86,7 +85,7 @@ export function FAQ() {
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-left">
+                    <div className="flex-none mb-3" data-aos="fade-up">
                         <QA
                             question={"Will there be prizes or swag at Hackabull?"}
                             answer={
@@ -94,7 +93,7 @@ export function FAQ() {
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-left">
+                    <div className="flex-none mb-3" data-aos="fade-up">
                         <QA
                             question={"Are there any rules for the projects at Hackabull?"}
                             answer={
@@ -102,7 +101,7 @@ export function FAQ() {
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-left">
+                    <div className="flex-none mb-3" data-aos="fade-up">
                         <QA
                             question={"What resources will be available to me at Hackabull?"}
                             answer={
@@ -110,7 +109,7 @@ export function FAQ() {
                             }
                         />
                     </div>
-                    <div className="flex-none mb-3" data-aos="fade-up-left">
+                    <div className="flex-none mb-3" data-aos="fade-up">
                         <QA
                             question={"What if I have more questions about Hackabull?"}
                             answer={

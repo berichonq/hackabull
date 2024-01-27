@@ -5,7 +5,7 @@ export function AboutUs() {
     return (
         <div className="container mx-auto my-12 p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-20 flex flex-col justify-start text-[#fdedb9] overflow-hidden">
             <div className="text-left my-4 pb-3" data-aos="fade-right">
-                <h1 className="antique-tuscan about-us-font-color text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl w-full about-hackabull">
+                <h1 className="antique-tuscan about-us-font-color text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl w-full about-hackabull">
                     About Hackabull
                 </h1>
             </div>

@@ -5,7 +5,7 @@ export function Schedule() {
     return (
         <div className="schedule-main"  >
             <div>
-                <h1 className=" antique-tuscan about-us-font-color text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl  about-hackabull z-20 text-center m-4	pb-3">
+                <h1 className=" antique-tuscan about-us-font-color text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl  about-hackabull z-20 text-center m-4	pb-3">
                     EVENT TIMELINE
                 </h1>
             </div>

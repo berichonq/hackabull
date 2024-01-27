@@ -15,7 +15,7 @@ import SHPELogo from "../../assets/images/shpe_logo.png";
 export function Sponsors() {
     return (
         <div className="sponsors mt-20 grey">
-            <div><h2 className="mb-4 antique-tuscan about-us-font-color text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-9xl w-full about-hackabull text-center m-4	pb-3" data-aos="fade-up">
+            <div><h2 className="mb-4 antique-tuscan about-us-font-color text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl w-full about-hackabull text-center m-4	pb-3" data-aos="fade-up">
                 sponsors
             </h2></div>
             <div className="container relative mx-auto my-8">
