@@ -19,9 +19,11 @@
     overflow: hidden;
     z-index: 9999 !important;
 }
-.content {
+
+@media  screen and (max-width: 700px) { 
+    .content {
     width: 100%;
-    background-image: url(../../assets/images/background.png);
+    background-image: url(../../assets/images/long_theme.png) !important;
 
     /* background: url("../../assets/images/home_back.png") no-repeat center center;
     background-size: cover; */
@@ -29,7 +31,19 @@
     background-repeat: no-repeat;
     background-color: #6e1d00;
     overflow: hidden;
+} }
+.content {
+
+    width: 100%;
+    background-image: url(../../assets/images/background.png);
+    /* background: url("../../assets/images/home_back.png") no-repeat center center;
+    background-size: cover; */
+    background-size: 100% auto; 
+    background-repeat: no-repeat;
+    background-color: #6e1d00;
+    overflow: hidden;
 }
+
 /* HTML: <div class="loader"></div> */
 /* .loader {
     display: inline-flex;

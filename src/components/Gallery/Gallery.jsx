@@ -18,7 +18,7 @@ export function Gallery() {
 
     return (
         <div className="gallery container mx-auto mb-32 flex flex-col justify-center w-9/10 text-blue-900">
-            <h1 className="antique-tuscan about-us-font-color text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl w-full about-hackabull" data-aos="zoom-in">
+            <h1 className="antique-tuscan gallery-p text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl w-full about-hackabull" data-aos="zoom-in">
                 Gallery
             </h1>
 
@@ -57,10 +57,10 @@ export function Gallery() {
                             </div>
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
-                                    <h3 className="century-ps pt-3 about-us-font-color font-bold text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
+                                    <h3 className="century-ps pt-3 gallery-p font-bold text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Heading for First Slide
                                     </h3>
-                                    <p className="century-ps pt-3 about-us-font-color gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
+                                    <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
@@ -85,10 +85,10 @@ export function Gallery() {
                             </div>
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
-                                    <h3 className="century-ps font-bold  pt-3 about-us-font-color text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
+                                    <h3 className="century-ps font-bold  pt-3 gallery-p text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Heading for Second Slide
                                     </h3>
-                                    <p className="century-ps pt-3 about-us-font-color gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
+                                    <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
@@ -114,10 +114,10 @@ export function Gallery() {
                             </div>
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
-                                    <h3 className="century-ps pt-3 about-us-font-color text-4xl font-bold text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
+                                    <h3 className="century-ps pt-3 gallery-p text-4xl font-bold text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Heading for Third Slide
                                     </h3>
-                                    <p className="century-ps pt-3 about-us-font-color gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
+                                    <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
@@ -141,10 +141,10 @@ export function Gallery() {
                             </div>
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
-                                    <h3 className="century-ps font-bold  pt-3 about-us-font-color text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
+                                    <h3 className="century-ps font-bold  pt-3 gallery-p text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Heading for Second Slide
                                     </h3>
-                                    <p className="century-ps pt-3 about-us-font-color gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
+                                    <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Magnam adipisci iure
                                         quasi inventore labore ex eius
