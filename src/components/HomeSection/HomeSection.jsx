@@ -38,7 +38,7 @@ export function HomeSection() {
                     <img
                         src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
                         alt="MLH"
-                        className="w-16 h-auto"
+                        className="md:w-16 w-12 h-auto"
                         // width="30"
                         // height="54"
                     />
@@ -71,7 +71,7 @@ export function HomeSection() {
                     <div
                         className="collapse navbar-collapse"
                         id="navbarSupportedContent">
-                        <ul className="navbar-nav mx-auto century-ps text-xs about-us-font-color sm:text-sm md:text-sm lg:text-sm 2xl:text-sm text-xs text-lmb-2 mb-lg-0">
+                        <ul className="navbar-nav mx-auto bold-century text-xs about-us-font-color sm:text-sm md:text-sm lg:text-sm 2xl:text-sm text-xs text-lmb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a
                                     className="nav-link about-us-font-color "
@@ -129,7 +129,7 @@ export function HomeSection() {
                                 </a>
                             </li>
                         </ul>
-                        <div>
+                        <div className="block w-full apply-btn border-t my-2 md:hidden" />
                             <ul className="navbar-nav text-xs about-us-font-color sm:text-sm md:text-sm lg:text-sm 2xl:text-sm me-auto mb-2 mb-lg-0">
                                 {user && (
                                     <li className="nav-item">
@@ -169,21 +169,27 @@ export function HomeSection() {
                                     </li>
                                 )}
                             </ul>
-                        </div>
+                        
                     </div>
                 </div>
-            </nav><div className="home_section w-full h-screen bg-cover bg-no-repeat bg-center flex items-center justify-start text-[#fdedb9] m-auto overflow-hidden">
-    <div className="col container w-64 overflow-hidden flex flex-col justify-center items-center" style={{ transform: 'translateY(-60%)' }}>
-        <img src={banner} className="w-10/12 sm:w-7/12 md:w-1/3  mb-2" />
-        <div className="apply-btn mt-2 bg-gradient-to-b rounded-lg border border-[#fdedb9] justify-center items-center flex px-4 py-2 sm:px-4 sm:py-2 md:px-8 md:py-4 lg:px-10 lg:py-5">
-            <a href="/register" className="text-xs about-us-font-color sm:text-sm md:text-xs lg:text-xs 2xl:text-sm">
-                START HACKING
-            </a>
-        </div>
-    </div>
-</div>
-
-
+            </nav>
+            <div className="home_section w-full h-screen bg-cover bg-no-repeat bg-center flex items-center justify-start text-[#fdedb9] m-auto overflow-hidden">
+                <div
+                    className="col container w-64 overflow-hidden flex flex-col justify-center items-center"
+                    style={{ transform: "translateY(-60%)" }}>
+                    <img
+                        src={banner}
+                        className="w-10/12 sm:w-7/12 md:w-1/3  mb-2"
+                    />
+                    <div className="apply-btn mt-2 bg-gradient-to-b rounded-lg border border-[#fdedb9] justify-center items-center flex px-4 py-2 sm:px-4 sm:py-2 md:px-8 md:py-4 lg:px-10 lg:py-5">
+                        <a
+                            href="/register"
+                            className="text-xs bold-century about-us-font-color sm:text-sm md:text-xs lg:text-xs 2xl:text-sm">
+                            START HACKING
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
