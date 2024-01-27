@@ -20,7 +20,7 @@ export function Home() {
 
     useEffect(() => {
         // Simulate a loading process, e.g., fetching data
-        setTimeout(() => setIsLoaded(true), 2500); // Adjust timeout as needed
+        setTimeout(() => setIsLoaded(true), 3000); // Adjust timeout as needed
     }, []);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -38,10 +38,13 @@ export function Home() {
 
     return (
         <div className="home">
-            <div className={`loading-screen ${isLoaded ? 'hidden' : ''}`}>
+            <div className="z-50 relative">
+
+            <div className={`loading-screen z-50 ${isLoaded ? 'hidden' : ''}`}>
                 <div className="loader"></div>
             </div>
-                <div className={`flex flex-col ${!isLoaded ? 'hidden' : ''}`}>
+            </div>
+                <div className="flex flex-col">
                     <div id="home">
                         <HomeSection />
                     </div>
