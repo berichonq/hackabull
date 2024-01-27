@@ -50,7 +50,7 @@ export function Team() {
                     team
                 </h2>
             </div>
-            <div className="flex justify-around flex-wrap">
+            <div className="flex justify-center flex-wrap">
                 {specialMembers.map((member, index) => (
                     <div key={index} className="m-2 team-card flex-item w-1/4 sm:w-1/5 lg:w-1/6 transition duration-400">
                         <a href={member.link} target="_blank" rel="noopener noreferrer">
