@@ -4,9 +4,12 @@
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="2048.000000pt" height="2048.000000pt" viewBox="0 0 2048.000000 2048.000000"
  preserveAspectRatio="xMidYMid meet">
-
+<circle cx="1024" cy="1024" r="1024" fill="#FFFFFF" />
+<!-- <style>
+        path { fill: #0000FF; } /* Replace #000000 with your desired color */
+    </style> -->
 <g transform="translate(0.000000,2048.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+fill="#000000" stroke="none">  
 <path d="M10660 18109 c-52 -5 -104 -13 -115 -17 -11 -5 -54 -17 -95 -27 -41
 -9 -84 -20 -95 -25 -11 -5 -29 -11 -40 -13 -35 -9 -249 -87 -282 -102 -17 -8
 -34 -15 -38 -15 -5 0 -160 -67 -305 -132 -146 -66 -545 -263 -665 -328 -33

@@ -1,27 +1,7 @@
-.team {
-    width: auto;
-    /* background-color: rgba(0, 255, 21, 0.4); */
-}
-
-.flex-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0.3vw;
-}
-
-.flex-item {
-    padding: 20px;
-    margin: 10px;
-}
-
 .team-card {
     transition: transform 0.4s ease  !important;
 }
 
 .team-card:hover {
-    transform: translateY(
-        -10px
-    ) !important; /* Adjust the value as needed for the desired effect */
-    
+    transform: translateY(-10px) !important;
 }
