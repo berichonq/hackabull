@@ -16,16 +16,12 @@ import { HomeSection } from "../../components/HomeSection/HomeSection";
 import { Footer } from "../../components/Footer/Footer";
 
 export function Home() {
+    const [isLoaded, setIsLoaded] = useState(false);
+
     useEffect(() => {
         // Simulate a loading process, e.g., fetching data
-        setTimeout(() => setIsLoading(false), 2500); // remove timeout in real use case
+        setTimeout(() => setIsLoaded(true), 2500); // Adjust timeout as needed
     }, []);
-
-    //////////////////////////////////////////////////////////////////////////////////////////////
-    // Logout button needs to be moved to navbar. Should only be rendered if user is authenticated
-    const [isLoading, setIsLoading] = useState(false);
-    ///////////////////////////////////////true loader
-
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -42,12 +38,10 @@ export function Home() {
 
     return (
         <div className="home">
-            {isLoading ? (
-                <div className="loading-screen">
-                    <div className="loader"></div>{" "}
-                </div>
-            ) : (
-                <div className="flex flex-col">
+            <div className={`loading-screen ${isLoaded ? 'hidden' : ''}`}>
+                <div className="loader"></div>
+            </div>
+                <div className={`flex flex-col ${!isLoaded ? 'hidden' : ''}`}>
                     <div id="home">
                         <HomeSection />
                     </div>
@@ -73,7 +67,7 @@ export function Home() {
                         <Footer />
                     </div>
                 </div>
-            )}
+            
         </div>
     );
 }

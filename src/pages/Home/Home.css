@@ -7,7 +7,9 @@
     align-items: center; 
     height: 100vh;  */
 }
-
+.hidden {
+    display: none !important;
+}
 .loading-screen {
     background-color: #062b56;
     display: flex;
