@@ -130,7 +130,7 @@ export function HomeSection() {
                             </li>
                         </ul>
                         <div className="block w-full apply-btn border-t my-2 md:hidden" />
-                            <ul className="navbar-nav text-xs about-us-font-color sm:text-sm md:text-sm lg:text-sm 2xl:text-sm me-auto mb-2 mb-lg-0">
+                            <ul className="navbar-nav text-xs about-us-font-color sm:text-sm md:text-sm lg:text-sm 2xl:text-sm mb-2 mb-lg-0">
                                 {user && (
                                     <li className="nav-item">
                                         <Link
