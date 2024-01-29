@@ -48,10 +48,10 @@ export function HomeSection() {
                 <div className="container-fluid lg:px-4">
                     <a
                         className="navbar-brand century-ps  about-us-font-color"
-                        href="/">
+                        href="#">
                         <img
                             src={logo}
-                            alt="Bootstrap"
+                            alt="logo"
                             // width="50"
                             // height="auto"
                             className="w-11"

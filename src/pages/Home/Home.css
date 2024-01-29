@@ -32,6 +32,16 @@
     background-color: #6e1d00;
     overflow: hidden;
 } }
+/* 
+@media  screen and (min-width: 722px) { .content {
+
+    width: 100%;
+    background-image: url(../../assets/images/background.png);
+    background-size: 100% auto; 
+    background-repeat: no-repeat;
+    background-color: #6e1d00;
+    overflow: hidden;
+}} */
 .content {
 
     width: 100%;
