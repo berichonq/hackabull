@@ -17,6 +17,8 @@ import { deleteDoc, doc, setDoc } from "firebase/firestore";
 import profilePicture from "../../assets/images/profile-pic.png";
 import logo from "../../assets/images/LineArt-bold-blue.png";
 
+import { HashLink } from "react-router-hash-link";
+
 export function Profile() {
   const user = useSelector((state) => state.user.data);
   const dispatch = useDispatch();
