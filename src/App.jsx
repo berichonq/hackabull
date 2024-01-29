@@ -10,7 +10,7 @@ function App() {
       // // Your settings
       // startEvent: 'load' // This line replaces the need for the additional event listener
       duration: 1000,
-      // offset: -400,
+      offset: -400,
       once: true,
       delay: 0,
       mirror: true,
