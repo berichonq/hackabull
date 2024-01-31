@@ -182,11 +182,11 @@ export function HomeSection() {
                         className="w-10/12 sm:w-7/12 md:w-1/3  mb-2"
                     />
                     <div className="apply-btn mt-2 bg-gradient-to-b rounded-lg border border-[#fdedb9] justify-center items-center flex px-4 py-2 sm:px-4 sm:py-2 md:px-8 md:py-4 lg:px-10 lg:py-5">
-                        <a
-                            href="/register"
+                        <Link
+                            to="/register"
                             className="text-xs bold-century about-us-font-color sm:text-sm md:text-xs lg:text-xs 2xl:text-sm">
                             START HACKING
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
