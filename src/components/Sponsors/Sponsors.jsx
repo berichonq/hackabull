@@ -37,7 +37,7 @@ export function Sponsors() {
                             <img
                                 src={firstImage}
                                 alt="Brand Logo 1"
-                                className="w-auto h-20"
+                                className="w-auto h-12"
                             />
                         </a>
                         <a href="/" className="sponsor-logo-wrapper m-2">
