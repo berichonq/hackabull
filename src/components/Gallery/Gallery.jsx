@@ -58,16 +58,10 @@ export function Gallery() {
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
                                     <h3 className="century-ps pt-3 gallery-p font-bold text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                        Heading for First Slide
+                                        HackJam 2023
                                     </h3>
                                     <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Magnam adipisci iure
-                                        quasi inventore labore ex eius
-                                        assumenda, soluta voluptatibus
-                                        reprehenderit, veniam aperiam quia
-                                        dicta? Asperiores sequi harum fugiat
-                                        illo quasi?
+                                    HackJam 2023 was a remarkable event, bringing together passionate organizations and participants. We offered workshops and educational sessions for first-time hackers, fostering the growth of future tech talent.
                                     </p>
                                 </div>
                             </div>
@@ -86,16 +80,10 @@ export function Gallery() {
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
                                     <h3 className="century-ps font-bold  pt-3 gallery-p text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                        Heading for Second Slide
+                                        Hackabull 2023
                                     </h3>
                                     <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Magnam adipisci iure
-                                        quasi inventore labore ex eius
-                                        assumenda, soluta voluptatibus
-                                        reprehenderit, veniam aperiam quia
-                                        dicta? Asperiores sequi harum fugiat
-                                        illo quasi?
+                                    Hackabull 2023 was an exciting weekend filled with code, workshops, and amazing challenges to improve your hacking skills!
                                     </p>
                                 </div>
                             </div>
@@ -115,16 +103,10 @@ export function Gallery() {
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
                                     <h3 className="century-ps pt-3 gallery-p text-4xl font-bold text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                        Heading for Third Slide
+                                        Hackjam 2022
                                     </h3>
                                     <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Magnam adipisci iure
-                                        quasi inventore labore ex eius
-                                        assumenda, soluta voluptatibus
-                                        reprehenderit, veniam aperiam quia
-                                        dicta? Asperiores sequi harum fugiat
-                                        illo quasi?
+                                    Events like HackJam are not just competitions; they're opportunities for learning, growth, and connecting with like-minded individuals. 
                                     </p>
                                 </div>
                             </div>
@@ -142,16 +124,10 @@ export function Gallery() {
                             <div className="col-md-6 d-flex p-10 align-items-center">
                                 <div>
                                     <h3 className="century-ps font-bold  pt-3 gallery-p text-4xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                        Heading for Second Slide
+                                        Hackabull 2022
                                     </h3>
                                     <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Magnam adipisci iure
-                                        quasi inventore labore ex eius
-                                        assumenda, soluta voluptatibus
-                                        reprehenderit, veniam aperiam quia
-                                        dicta? Asperiores sequi harum fugiat
-                                        illo quasi?
+                                        Over the years we developed a community of like minded individuals looking to compete and create interesting projects
                                     </p>
                                 </div>
                             </div>
