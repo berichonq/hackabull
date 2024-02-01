@@ -9,7 +9,14 @@ export function Schedule() {
                     EVENT TIMELINE
                 </h1>
             </div>
-            <div className="container schedule-page w-full h-vh px-auto">
+            <div className="pb-10">
+                <h2 className="font-bold mb-4 leading-loose century-ps about-us-font-color text-2xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
+                    Stay tuned!
+                </h2>
+            </div>
+            
+            {/* !!!This is the entire schedule element!!! */}
+            {/* <div className="container schedule-page w-full h-vh px-auto">
                 <div className=" text-center w-full z-10 px-20 absolute"></div>
                 <div className="schedule-container pb-4 mb-5 w-5/6 relative z-20 select-none">
                     <table className="schedule">
@@ -198,7 +205,7 @@ export function Schedule() {
                     </table>
                 </div>
                 <br />
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -103,7 +103,7 @@ export function FAQ() {
                     </div>
                     <div className="flex-none mb-3" data-aos="fade-up">
                         <QA
-                            question={"What resources will be available to me at Hackabull?"}
+                            question={"What resources will be available at Hackabull?"}
                             answer={
                                 "We will provide mentors, workshops, and various tools to help you build your project. Plus, there will be plenty of food and drinks to keep you going!"
                             }
