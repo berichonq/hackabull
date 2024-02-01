@@ -10,14 +10,21 @@
 .hidden {
     display: none !important;
 }
+.no-scroll {
+    overflow: hidden;
+}
 .loading-screen {
     background-color: #062b56;
     display: flex;
     justify-content: center; 
     align-items: center; 
-    height: 100vh; 
     overflow: hidden;
     z-index: 9999 !important;
+    position: fixed; /* or 'absolute' */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media  screen and (max-width: 700px) { 

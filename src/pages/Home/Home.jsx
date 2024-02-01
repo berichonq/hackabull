@@ -16,12 +16,22 @@ import { HomeSection } from "../../components/HomeSection/HomeSection";
 import { Footer } from "../../components/Footer/Footer";
 
 export function Home() {
+    
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
         // Simulate a loading process, e.g., fetching data
         setTimeout(() => setIsLoaded(true), 3000); // Adjust timeout as needed
+    
+        // Add the no-scroll class to the body when the loader is active
+        document.body.classList.add('no-scroll');
+    
+        return () => {
+            // Remove the no-scroll class when the component is unmounted or the loader is hidden
+            document.body.classList.remove('no-scroll');
+        };
     }, []);
+    
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
