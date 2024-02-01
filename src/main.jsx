@@ -59,29 +59,27 @@ const persistor = persistStore(store)
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <AuthContext>
-      <Provider store={store}>
-        <PersistGate persistor={persistor}>
-          <BrowserRouter>
-            <Routes>
-              <Route path='/' element={<App />}>
-                <Route exact path='/' element={<Home />}/>
-                <Route path='*' element={<PageNotFound />}/>
-                <Route exact path='/password-reset' element={<PasswordReset />}/>
+  <AuthContext>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<App />}>
+              <Route exact path='/' element={<Home />}/>
+              <Route path='*' element={<PageNotFound />}/>
+              <Route exact path='/password-reset' element={<PasswordReset />}/>
 
-                {/*Only anonymous users can access*/}
-                <Route exact path='/register' element={<Anonymous><Register /></Anonymous>}/>
-                <Route exact path='/login' element={<Anonymous><Login /></Anonymous>}/>
+              {/*Only anonymous users can access*/}
+              <Route exact path='/register' element={<Anonymous><Register /></Anonymous>}/>
+              <Route exact path='/login' element={<Anonymous><Login /></Anonymous>}/>
 
-                {/*Only authenticated users can access*/}
-                <Route exact path='/profile' element={<Protected><Profile /></Protected>}/>
-                <Route exact path='/profile/edit' element={<Protected><EditProfile /></Protected>}/>
-              </Route>
-            </Routes>
-          </BrowserRouter>
-          </PersistGate>
-      </Provider>
-    </AuthContext>
-  </React.StrictMode>,
+              {/*Only authenticated users can access*/}
+              <Route exact path='/profile' element={<Protected><Profile /></Protected>}/>
+              <Route exact path='/profile/edit' element={<Protected><EditProfile /></Protected>}/>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+        </PersistGate>
+    </Provider>
+  </AuthContext>,
 )
