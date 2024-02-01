@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sponsors.css";
-import firstImage from "../../assets/images/logo1.png";
+import firstImage from "../../assets/images/slalom.svg";
 import secondImage from "../../assets/images/logo2.png";
 import thirdImage from "../../assets/images/logo3.png";
 import fourthImage from "../../assets/images/logo4.png";

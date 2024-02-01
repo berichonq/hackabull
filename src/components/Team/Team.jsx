@@ -12,12 +12,15 @@ import Michael from "../../assets/images/Michael.png";
 import Kashish from "../../assets/images/Kashish.png";
 import Shivam from "../../assets/images/Shivam.png";
 import Parag from "../../assets/images/Parag.png";
+import Gehnna from "../../assets/images/Gehnna.png";
+import Adelitta from "../../assets/images/Adelitta.png";
 
 export function Team() {
     const members = [
         { image: Asadbek, link: "https://www.linkedin.com/in/asadbeknematov" },
         { image: Linda, link: "https://www.linkedin.com/in/linda--nguyen/" },
         { image: Quinn, link: "https://www.linkedin.com/in/berichonq" },
+        { image: Adelitta, link: "https://www.linkedin.com/in/adelitta/" },
         { image: Ayush, link: "https://www.linkedin.com/in/ayush278" },
         { image: Marsel, link: "https://www.linkedin.com/in/marsel-fetlyaev" },
         {
@@ -29,9 +32,8 @@ export function Team() {
         { image: Kashish, link: "https://www.linkedin.com/in/kashishadlakha8" },
         { image: Shivam, link: "https://www.linkedin.com/in/shivamchauhan-" },
         { image: Parag, link: "https://www.linkedin.com/in/parag-jain-usf" },
-        { image: Parag, link: "https://www.linkedin.com/in/gehnnaghai/" },
-        { image: Parag, link: "https://www.linkedin.com/in/gehnnaghai/" },
-        // Add other members similarly
+        { image: Gehnna, link: "https://www.linkedin.com/in/gehnnaghai/" },
+        
     ];
     // Filter out Marsel and Shivam
     const specialMembers = members.filter(member =>

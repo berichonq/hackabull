@@ -33,7 +33,8 @@ export function HomeSection() {
     /////////////////////////////////////////////////////////////////////////////////////////////////
     return (
         <div>
-            <div className="fixed top-16 md:top-16 lg:top-0 xl:top-0 2xl:top-0 right-0 z-40 pr-1">
+            {/*Commeneted out till MLH approves*/}
+            {/* <div className="fixed top-16 md:top-16 lg:top-0 xl:top-0 2xl:top-0 right-0 z-40 pr-1">
                 <a className="navbar-brand m-0 " href="#">
                     <img
                         src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-blue.svg"
@@ -43,7 +44,7 @@ export function HomeSection() {
                         // height="54"
                     />
                 </a>
-            </div>
+            </div> */}
             <nav className="navbar z-40 fixed-top navbar-expand-lg bg-glass shadow-lg px-4 md:my-0 lg:my-2 xl:my-2 2xl:my-2 sm:mx-0 md:mx-0 lg:mx-20 xl:mx-28 2xl:mx-36 rounded-none lg:rounded-xl xl:rounded-xl 2xl:rounded-xl">
                 <div className="container-fluid lg:px-4">
                     <a
