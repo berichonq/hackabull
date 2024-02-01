@@ -312,7 +312,7 @@ export function RegistrationForm() {
   };
 
   return (
-    <div className="register-container century-ps text-xl text-left">
+    <div className="register-container century-ps text-xl mb-32 text-left">
       <div className="center-h">
         <br />
         <p className="title text-2xl bold-century title-center" id="title">
