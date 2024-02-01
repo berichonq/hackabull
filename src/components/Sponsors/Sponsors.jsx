@@ -8,9 +8,9 @@ import SHPELogo from "../../assets/images/shpe_logo.png";
 export function Sponsors() {
     return (
         <div className="sponsors mt-20 grey">
-            <div><h2 className="mb-4 antique-tuscan about-us-font-color text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl w-full about-hackabull text-center m-4	pb-3" data-aos="fade-up">
-                sponsors
-            </h2></div>
+            <h1 className="antique-tuscan gallery-p text-7xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl w-full about-hackabull" data-aos="zoom-in">
+                Sponsors
+            </h1>
             <div className="container relative mx-auto my-8">
                 <div className="flex flex-row items-center justify-between sponsor-text-wrapper">
                     <div className="sponsor-phrase mx-3" data-aos="fade-right">
