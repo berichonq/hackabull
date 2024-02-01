@@ -19,6 +19,10 @@ export function PasswordResetForm() {
     }
   };
 
+  const returnToProfile = () => {
+    navigate("/profile");
+  };
+
   return (
     <div className="register-container century-ps text-xl text-left">
       <div className="center-h">
@@ -46,6 +50,13 @@ export function PasswordResetForm() {
         />
         <br />
         <button className="login-button mt-2" onClick={resetPassword}>Reset Password</button>
+        <button
+          className="login-button mt-2"
+          id="cancel"
+          onClick={returnToProfile}
+        >
+          Cancel
+        </button>
       </div>
     </div>
   );

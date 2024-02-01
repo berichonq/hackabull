@@ -15,7 +15,7 @@ import {
 import { deleteDoc, doc, setDoc } from "firebase/firestore";
 
 import profilePicture from "../../assets/images/profile-pic.png";
-import logo from "../../assets/images/LineArt-bold-blue.png";
+import logo from "../../assets/images/arrow-back-11-48.png";
 
 import { HashLink } from "react-router-hash-link";
 
@@ -162,7 +162,7 @@ export function Profile() {
   return (
     <div>
       {/* Nav-bar */}
-      <nav
+      {/* <nav
         className="navbar navbar-light fixed-top navbar-expand-lg bg-light century-ps blue-color"
         style={{ "--bs-bg-opacity": ".5" }}
       >
@@ -246,7 +246,13 @@ export function Profile() {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
+      {/* Return home button */}
+      <div className="px-10 pt-10">
+        <a className="navbar-brand" href="/">
+          <img src={logo} alt="Bootstrap" width="30" height="40" />
+        </a>
+      </div>
       {/* Profile-content */}
       <div className="container-fluid century-ps text-xl text-left register-container">
         <div className="padding-top-10 row center-h">

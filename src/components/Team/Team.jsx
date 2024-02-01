@@ -23,10 +23,7 @@ export function Team() {
         { image: Adelitta, link: "https://www.linkedin.com/in/adelitta/" },
         { image: Ayush, link: "https://www.linkedin.com/in/ayush278" },
         { image: Marsel, link: "https://www.linkedin.com/in/marsel-fetlyaev" },
-        {
-            image: Vasili,
-            link: "https://www.linkedin.com/in/vasilikitaigorodv",
-        },
+        { image: Vasili, link: "https://www.linkedin.com/in/vasilikitaigorodv",},
         { image: Diya, link: "https://www.linkedin.com/in/diyajain08" },
         { image: Michael, link: "https://www.linkedin.com/in/ngu-truong" },
         { image: Kashish, link: "https://www.linkedin.com/in/kashishadlakha8" },
