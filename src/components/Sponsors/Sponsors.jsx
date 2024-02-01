@@ -44,7 +44,7 @@ export function Sponsors() {
                             <img
                                 src={secondImage}
                                 alt="Brand Logo 2"
-                                className="w-auto h-60"
+                                className="w-auto h-30"
                             />
                         </a>
                     </div>

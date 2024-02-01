@@ -61,7 +61,8 @@ export function Gallery() {
                                         HackJam 2023
                                     </h3>
                                     <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                    HackJam 2023 was a remarkable event, bringing together passionate organizations and participants. We offered workshops and educational sessions for first-time hackers, fostering the growth of future tech talent.
+                                    HackJam 2023 was a remarkable event, bringing together passionate organizations and participants. 
+                                    {/* We offered workshops and educational sessions for first-time hackers, fostering the growth of future tech talent. */}
                                     </p>
                                 </div>
                             </div>
@@ -106,7 +107,7 @@ export function Gallery() {
                                         Hackjam 2022
                                     </h3>
                                     <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                    Events like HackJam are not just competitions; they're opportunities for learning, growth, and connecting with like-minded individuals. 
+                                    Events like HackJam are not just competitions. They're opportunities for learning, growth, and connecting with like-minded individuals. 
                                     </p>
                                 </div>
                             </div>
@@ -127,7 +128,7 @@ export function Gallery() {
                                         Hackabull 2022
                                     </h3>
                                     <p className="century-ps pt-3 gallery-p gallery-p text-xl text-center md:text-left ls:text-left xl:text-left 2xl:text-left">
-                                        Over the years we developed a community of like minded individuals looking to compete and create interesting projects
+                                        Over the years we developed a community of like minded individuals looking to compete and create interesting projects.
                                     </p>
                                 </div>
                             </div>
