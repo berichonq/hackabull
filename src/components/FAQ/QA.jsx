@@ -6,7 +6,7 @@ export function QA({question, answer}) {
   const expandClass = expand ? 'display' : 'hidden';
   const borderRadius = expand ? 'rounded-3xl' : 'rounded-3xl'
   const ansClass = `${expandClass} century-ps about-us-font-color text-l text-left text px-4 py-4`
-  const container = `${borderRadius} shadow rounded-1xl border border-gray-100`
+  const container = `${borderRadius} shadow faq_glass rounded-1xl border border-gray-100`
   
   return (
     <div className={container}>
