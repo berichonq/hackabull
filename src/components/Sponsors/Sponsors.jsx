@@ -33,18 +33,18 @@ export function Sponsors() {
                 </div>
                 <div className="static-sponsors my-8">
                     <div className="flex justify-around items-center">
-                        <a href="/" className="sponsor-logo-wrapper m-2">
+                        <a href="https://www.slalom.com/us/en" className="sponsor-logo-wrapper m-2">
                             <img
                                 src={firstImage}
-                                alt="Brand Logo 1"
+                                alt="Slalom"
                                 className="w-auto h-20"
                             />
                         </a>
-                        <a href="/" className="sponsor-logo-wrapper m-2">
+                        <a href="https://soluscode.com/" className="sponsor-logo-wrapper m-2">
                             <img
                                 src={secondImage}
-                                alt="Brand Logo 2"
-                                className="w-auto h-28"
+                                alt="SolusCode"
+                                className="w-auto h-80"
                             />
                         </a>
                     </div>
