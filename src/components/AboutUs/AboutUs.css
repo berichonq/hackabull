@@ -38,9 +38,6 @@
     height: auto;
     font-size: xxx-large;
 }
-
-
-.about-us {
     height: 100vh; 
     display: flex;
     flex-direction: column;
@@ -48,4 +45,9 @@
     color: #fdedb9;    
     padding: 5rem 5rem;
     overflow: hidden;
-} */
+
+ */
+.about-us {
+
+    cursor: url('../../assets/images/cactus.png'), auto;
+}

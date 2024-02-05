@@ -47,7 +47,7 @@ export function Home() {
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
     return (
-        <div className="home">
+        <div className="home about-us">
             <div className="z-50 relative">
 
             <div className={`loading-screen z-50 ${isLoaded ? 'hidden' : ''}`}>
