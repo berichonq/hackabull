@@ -1,7 +1,7 @@
 import "./style.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logOn } from "../../store/user/user-slice";
 
 import { auth, usersCollectionRef } from "../../config/firebase";
@@ -9,6 +9,7 @@ import { auth, usersCollectionRef } from "../../config/firebase";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
 export function EditProfile() {
+  const user = useSelector((state) => state.user.data);
   let navigate = useNavigate();
   let dispatch = useDispatch();
 
@@ -70,9 +71,27 @@ export function EditProfile() {
         await setDoc(doc(usersCollectionRef, auth?.currentUser?.email), {
           first: firstName,
           last: lastName,
-          university: college,
+          phone: user.phone,
+          country_of_residence: user.country_of_residence,
+          age: user.age,
           classification: grade,
+          university: college,
+          level_of_study: user.level_of_study,
+          first_time_hacker: user.first_time_hacker,
+          needs_transportation: user.needs_transportation,
+          role: user.role,
+          agreed_to_first_checkbox: user.agreed_to_first_checkbox,
+          agreed_to_second_checkbox: user.agreed_to_second_checkbox,
+          agreed_to_third_checkbox: user.agreed_to_third_checkbox,
         });
+
+
+        // await setDoc(doc(usersCollectionRef, auth?.currentUser?.email), {
+        //   first: firstName,
+        //   last: lastName,
+        //   university: college,
+        //   classification: grade,
+        // });
         docUpdated = true;
       } catch (err) {
         console.error(err);
