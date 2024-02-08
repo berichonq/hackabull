@@ -1,10 +1,10 @@
 {
     "redirects": [
-        { "source": "/*", "destination": "/", "permanent": true},
-        { "source": "/password-reset", "destination": "/", "permanent": true},
-        { "source": "/register", "destination": "/", "permanent": true},
-        { "source": "/login", "destination": "/", "permanent": true},
-        { "source": "/profile", "destination": "/", "permanent": true},
-        { "source": "/profile/edit", "destination": "/", "permanent": true}
+        { "source": "/*", "destination": "/*", "permanent": true},
+        { "source": "/password-reset", "destination": "/password-reset", "permanent": true},
+        { "source": "/register", "destination": "/register", "permanent": true},
+        { "source": "/login", "destination": "/login", "permanent": true},
+        { "source": "/profile", "destination": "/profile", "permanent": true},
+        { "source": "/profile/edit", "destination": "/profile/edit", "permanent": true}
     ]
 }
