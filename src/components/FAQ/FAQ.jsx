@@ -32,7 +32,7 @@ export function FAQ() {
                         </div>
                         <div className="flex-none mb-3" data-aos="fade-up">
                             <QA
-                                question={"Do I need any prior experience to particpate?"}
+                                question={"Do I need any prior experience to participate?"}
                                 answer={
                                     "No! Whether you're writing your first line of code or you're a seasoned developer, Hackabull is for everyone who has an interest in technology and a desire to learn."
                                 }
