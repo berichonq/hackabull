@@ -51,7 +51,7 @@ export function FAQ() {
                             <QA
                                 question={"How can I register for Hackabull?"}
                                 answer={
-                                    "It's simple! Click on the 'Apply' button at the top of this page to get started!"
+                                    "It's simple! Click on the 'Register Now' button at the top of this page to get started!"
                                 }
                             />
                         </div>
